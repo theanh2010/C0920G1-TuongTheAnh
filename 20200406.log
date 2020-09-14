@@ -1,0 +1,18 @@
+﻿[17:22:12.764] System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Net.UnsafeNclNativeMethods.OSSOCK.recv(IntPtr socketHandle, Byte* pinnedBuffer, Int32 len, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, SocketError& errorCode)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Connection.SyncRead(HttpWebRequest request, Boolean userRetrievedStream, Boolean probeRead)
+   at System.Net.ConnectStream.ProcessWriteCallDone(ConnectionReturnResult returnResult)
+   at System.Net.HttpWebRequest.CheckDeferredCallDone(ConnectStream stream)
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream, CompletionDelegate completionDelegate, AsyncOperation asyncOp)
+   at System.Net.WebClient.UploadValues(Uri address, String method, NameValueCollection data)
+   at TransparentSolution.Helpers.InternetHelper.SendPostRequest(String url, NameValueCollection postData).
+
+[17:22:36.394] OK.
+
+[19:11:14.831] OK.
+
