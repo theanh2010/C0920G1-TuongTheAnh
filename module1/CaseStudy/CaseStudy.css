@@ -1,0 +1,13 @@
+.sandybrown {
+    background-color: sandybrown;
+    color: white;
+    font-family: Arial;
+}
+.bgtable {
+    background-color: lightslategray;
+}
+.bg {
+    background-image: url("https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg");
+    background-repeat: no-repeat;
+    width: 1000px;
+}
