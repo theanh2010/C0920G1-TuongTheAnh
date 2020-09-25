@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Study</title>
+    <link rel="stylesheet" href="CaseStudy.css">
+
+</head>
+<center><h1 style="color: sandybrown">BOOKING NOW</h1></center>
+<body class="bg">
+
+    <table style="width: 1000px" class="bgtable">
+        <tr>
+            <td class="sandybrown"><b>CUSTOMER INFORMATION</b></td>
+            <td class="sandybrown"></td>
+            <td class="sandybrown"></td>
+            <td class="sandybrown"></td>
+        </tr>
+        <tr>
+            <td><b>Title</b></td>
+            <td><b>Last Name *</b></td>
+            <td><b>First Name *</b></td>
+            <td><b>Email *</b></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="Giới tính" value="Mr" > Mr
+                <input type="radio" name="Giới tính" value="Ms" > Ms
+                <input type="radio" name="Giới tính" value="Miss" > Miss
+            </td>
+            <td><input type="text" id="lastName" ></td>
+            <td><input type="text" id="firstName"></td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td><b>Second Email</b></td>
+            <td><b>Phone</b></td>
+            <td><b>Fax</b></td>
+            <td><b>Company Name ( if applicable )</b></td>
+        </tr>
+        <tr>
+            <td><input type="text" id = "secondEmail"></td>
+            <td><input type="text" id = "phone"></td>
+            <td><input type="text" id="fax"></td>
+            <td><input type="text" id="companyName"></td>
+        </tr>
+        <tr>
+            <td><b>Nationality</b></td>
+            <td><b>City</b></td>
+            <td><b>Address</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id = "nationality"></td>
+            <td><input type="text" id = "city"></td>
+            <td><input type="text" id="address"></td>
+            <td></td>
+        </tr>
+    </table>
+    <table style="width: 1000px" class="bgtable">
+        <tr>
+            <td class="sandybrown"><b>RESERVATION DETAILS</b></td>
+            <td class="sandybrown"></td>
+            <td class="sandybrown"></td>
+        </tr>
+        <tr>
+            <td><b>Check In *</b></td>
+            <td><b>Check Out *</b></td>
+            <td><b>Choose Servies *</b></td>
+        </tr>
+        <tr>
+            <td><input type="date" style="width: 250px" id="checkin" ></td>
+            <td><input type="date" style="width: 250px" id="checkout"></td>
+            <td>
+                <select style="width: 250px" id="room">
+                    <option><b>Room 100$/day</b></option>
+                    <option><b>House 300$/day</b></option>
+                    <option>Villa 500$/day</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Choose Room *</b></td>
+            <td><b>Adults *</b></td>
+            <td><b>Child *</b></td>
+        </tr>
+        <tr>
+            <td>
+                <select style="width: 250px" id="vip">
+                    <option>Vip</option>
+                    <option>Business</option>
+                    <option>Normal</option>
+                </select>
+            </td>
+            <td><input type="number" style="width: 250px" id="adults"></td>
+            <td><input type="number" style="width: 250px" id="child"></td>
+        </tr>
+        <tr>
+            <td><p >Indicate here for any special request</p></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <textarea cols="50" rows="5" ></textarea>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <center><button class="sandybrown" onclick="booking()">BOOKING</button></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<p id =information1></p>
+<p id =information2></p>
+<p id =information3></p>
+<p id =information4></p>
+<p id =information5></p>
+<p id =information6></p>
+<p id =information7></p>
+<p id =information8></p>
+<p id =information9></p>
+<p id =information10></p>
+<p id =information11></p>
+<p id =information12></p>
+<p id =information13></p>
+<p id =information14></p>
+<p id =information15></p>
+<p id =information16></p>
+</body>
+<script src="CaseStudy.js"></script>
+</html>

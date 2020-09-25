@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="BaiTap_GoodFastCheap.css" rel="stylesheet">
+    <script src="BaiTap_GoodFastCheap.js"></script>
+</head>
+<body>
+<input type="checkbox" id="good" onclick="check(1)" class="checkbox > GOOD
+<input type="checkbox" id="fast" onclick="check(2)" class="checkbox"> FAST
+<input type="checkbox" id="cheap" onclick="check(3)"class="checkbox"> CHEAP
+<script>
+    let good = document.getElementById("good");
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+
+    function check(number) {
+        switch (number) {
+            case 1 :
+                if (cheap.checked && fast.checked) {
+                    fast.checked = false
+                }
+                break;
+            case 2:
+                if (good.checked && cheap.checked) {
+                    cheap.checkee = false
+                }
+                break;
+            case 3:
+                if (fast.checked && good.checked) {
+                    good.checked = false
+                }
+                break;
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game puzzle</title>
+</head>
+<body>
+<img src="Images/Hinh 1a.png" id="carA" onclick="onchangeImage(1)" width="250 px" height="600 px"/>
+<img src="Images/Hinh 1b.png" id="carB" onclick="onchangeImage(2)" width="250 px" height="600 px"/>
+<img src="Images/Hinh 1c.png" id="carC" onclick="onchangeImage(3)" width="250 px" height="600 px"/>
+<img src="Images/Hinh 1d.png" id="carD" onclick="onchangeImage(4)" width="250 px" height="600 px"/>
+<img src="Images/Hinh 1e.png" id="carE" onclick="onchangeImage(5)" width="250 px" height="600 px"/>
+<script>
+    let imageA =document.getElementById("carA");
+    let imageB =document.getElementById("carB");
+    let imageC =document.getElementById("carC");
+    let imageD =document.getElementById("carD");
+    let imageE =document.getElementById("carE");
+     function onchangeImage(number) {
+         switch (number) {
+             case 1 :
+                 if (imageA.getAttribute("src") === "Images/Hinh 1a.png") {
+                     imageA.src = "Images/Hinh 2a.png";
+                 } else if (imageA.getAttribute("src") === "Images/Hinh 2a.png") {
+                     imageA.src = "Images/Hinh 3a.png";
+                 } else if (imageA.getAttribute("src") === "Images/Hinh 3a.png") {
+                     imageA.src = "Images/Hinh 1a.png";
+                 }
+                 checkimage()
+                 break;
+             case 2 :
+                 if (imageB.getAttribute("src") === "Images/Hinh 1b.png") {
+                     imageB.src = "Images/Hinh 2b.png";
+                 } else if (imageB.getAttribute("src") === "Images/Hinh 2b.png") {
+                     imageB.src = "Images/Hinh 3b.png";
+                 } else if (imageB.getAttribute("src") === "Images/Hinh 3b.png") {
+                     imageB.src = "Images/Hinh 1b.png";
+                 }
+                 checkimage()
+                 break;
+             case 3 :
+                 if (imageC.getAttribute("src") === "Images/Hinh 1c.png") {
+                     imageC.src = "Images/Hinh 2c.png";
+                 } else if (imageC.getAttribute("src") === "Images/Hinh 2c.png") {
+                     imageC.src = "Images/Hinh 3c.png";
+                 } else if (imageC.getAttribute("src") === "Images/Hinh 3c.png") {
+                     imageC.src = "Images/Hinh 1c.png";
+                 }
+                 checkimage()
+                 break;
+             case 4 :
+                 if (imageD.getAttribute("src") === "Images/Hinh 1d.png") {
+                     imageD.src = "Images/Hinh 2d.png";
+                 } else if (imageD.getAttribute("src") === "Images/Hinh 2d.png") {
+                     imageD.src = "Images/Hinh 3d.png";
+                 } else if (imageD.getAttribute("src") === "Images/Hinh 3d.png") {
+                     imageD.src = "Images/Hinh 1d.png";
+                 }
+                 checkimage()
+                 break;
+             case 5 :
+                 if (imageE.getAttribute("src") === "Images/Hinh 1e.png") {
+                     imageE.src = "Images/Hinh 2e.png";
+                 } else if (imageE.getAttribute("src") === "Images/Hinh 2e.png") {
+                     imageE.src = "Images/Hinh 3e.png";
+                 } else if (imageE.getAttribute("src") === "Images/Hinh 3e.png") {
+                     imageE.src = "Images/Hinh 1e.png";
+                 }
+                 checkimage()
+                 break;
+             default:
+                 break;
+         }
+     }
+     function checkimage() {
+         if (imageA.getAttribute("src") ==="Images/Hinh 1a.png" &&
+             imageB.getAttribute("src") ==="Images/Hinh 1b.png" &&
+             imageC.getAttribute("src") ==="Images/Hinh 1c.png" &&
+             imageD.getAttribute("src") ==="Images/Hinh 1d.png" &&
+             imageE.getAttribute("src") ==="Images/Hinh 1e.png"   ){
+                alert("This is pictute A")
+         }else if (imageA.getAttribute("src") ==="Images/Hinh 2a.png" &&
+             imageB.getAttribute("src") ==="Images/Hinh 2b.png" &&
+             imageC.getAttribute("src") ==="Images/Hinh 2c.png" &&
+             imageD.getAttribute("src") ==="Images/Hinh 2d.png" &&
+             imageE.getAttribute("src") ==="Images/Hinh 2e.png"   ) {
+                alert("This is pictute B")
+         }else if (imageA.getAttribute("src") ==="Images/Hinh 3a.png" &&
+             imageB.getAttribute("src") ==="Images/Hinh 3b.png" &&
+             imageC.getAttribute("src") ==="Images/Hinh 3c.png" &&
+             imageD.getAttribute("src") ==="Images/Hinh 4d.png" &&
+             imageE.getAttribute("src") ==="Images/Hinh 5e.png"   ) {
+                alert("This is pictute C")
+         }
+    }
+</script>
+</body>
+</html>

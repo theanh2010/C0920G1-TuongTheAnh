@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id ='image' src="https://gamek.mediacdn.vn/2019/4/26/photo-1-1556272311346286575068.jpg" style="width: 200px" height="200px">
+    <br>
+    <p>Click button below to move the image to right</p>
+    <br>
+    <input type="button" value="ClickMe" onclick="moveRight()">
+</form>
+<script>
+    let imgsc = null;
+        imgsc = document.getElementById('image');
+        window.onload = load;
+     function load() {
+        imgsc.style.position = 'relative';
+        imgsc.style.left = '0px'
+     }
+     function moveRight() {
+        imgsc.style.left = parseInt(imgsc.style.left) + 100 +'px'
+     }
+</script>
+</body>
+</html>
