@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let name ;
-    let email ;
-    let phone ;
-    let nationality ;
-    let city ;
-    let chooseSv ;
-    let chooseRoom ;
-    let typeCustomer ;
-    let discount ;
-    let quantityIncluded ;
-    let rentDays ;
+    let name = "Thế Anh";
+    let email = "123@gmail.com";
+    let phone ="123456789";
+    let nationality ="Việt Nam";
+    let city = "Đà Nẵng";
+    let chooseSv = "Villa";
+    let chooseRoom ="Vip";
+    let typeCustomer ="Diamond";
+    let discount =10;
+    let quantityIncluded =10 ;
+    let rentDays = 1 ;
 
 
 
@@ -25,17 +25,113 @@
                                 "3.Hiển thị giá sau khi đã giảm."));
     switch (choose) {
         case 1 : {
-            alert("Name" + name +"\n" +
-                  "Email" + email +"\n" +
-                  "Phone" + phone +"\n" +
-                  "Nationality" + nationality +"\n" +
-                  "City" + city +"\n" +
-                  "ChooseSv" + chooseSv +"\n" +
-                  "ChooseRoom" + chooseRoom +"\n" +
-                  "TypeCustomer" + typeCustomer +"\n" +
-                  "Discount" + discount +"\n" +
-                  "QuantityIncluded" + quantityIncluded +"\n" +
-                  "Rentdays" + rentDays )
+            alert("Name :" + name +"\n" +
+                  "Email :" + email +"\n" +
+                  "Phone :" + phone +"\n" +
+                  "Nationality :" + nationality +"\n" +
+                  "City :" + city +"\n" +
+                  "ChooseSv :" + chooseSv +"\n" +
+                  "ChooseRoom :" + chooseRoom +"\n" +
+                  "TypeCustomer :" + typeCustomer +"\n" +
+                  "Discount :" + discount +"\n" +
+                  "QuantityIncluded :" + quantityIncluded +"\n" +
+                  "Rentdays :" + rentDays )
+            break;
+        }
+        case  2 : {
+            let chooseEdit = parseInt(prompt("1.Name :" + name +"\n" +
+                "2.Email :" + email +"\n" +
+                "3.Phone :" + phone +"\n" +
+                "4.Nationality :" + nationality +"\n" +
+                "5.City :" + city +"\n" +
+                "6.ChooseSv :" + chooseSv +"\n" +
+                "7.ChooseRoom :" + chooseRoom +"\n" +
+                "8.TypeCustomer :" + typeCustomer +"\n" +
+                "9.Discount :" + discount +"\n" +
+                "10.QuantityIncluded :" + quantityIncluded +"\n" +
+                "11.Rentdays :" + rentDays ));
+            switch (chooseEdit) {
+                    case 1 :{
+                        name =prompt("Enter the name");
+                        break;
+                        email =prompt("Enter the email");
+                        break;
+                        phone =prompt("Enter the phone number");
+                        break;
+                        nationality =prompt("Enter the nationality");
+                        break;
+                        city =prompt("Enter the city");
+                        break;
+                        chooseSv =prompt("Enter the servies");
+                        break;
+                        chooseRoom =prompt("Enter the type rooms");
+                        break;
+                        discount =prompt("Enter the discount");
+                        break;
+                        quantityIncluded =prompt("Enter the quantityIncluded");
+                        break;
+                        rentDays =prompt("Enter the rentdays");
+                        break;
+                    }
+                    default :{
+                        alert("Failed");
+                    }
+
+            }
+            alert("Name :" + name +"\n" +
+                "Email :" + email +"\n" +
+                "Phone :" + phone +"\n" +
+                "Nationality :" + nationality +"\n" +
+                "City :" + city +"\n" +
+                "ChooseSv :" + chooseSv +"\n" +
+                "ChooseRoom :" + chooseRoom +"\n" +
+                "TypeCustomer :" + typeCustomer +"\n" +
+                "Discount :" + discount +"\n" +
+                "QuantityIncluded :" + quantityIncluded +"\n" +
+                "Rentdays :" + rentDays );
+            break;
+        }
+        default : {
+            alert("Sự lựa chọn của bạn không có trong menu");
+        }
+        case 3 : {
+            let money = 0;
+            if (chooseSv === "Villa"){
+                money = 500 ;
+            }else if (chooseSv === "House"){
+                money = 300 ;
+            }else  if (chooseSv === "Room"){
+                money = 100 ;
+            }
+            let temp = 0;
+            if (city === "Đà Nẵng"){
+                temp += 20 ;
+            }else if (city ==="Huế"){
+                temp += 10 ;
+            }else  if (city ==="Quảng Nam"){
+                temp +=5 ;
+            }
+            if (rentDays > 7) {
+                temp += 30;
+            }else if (rentDays > 5){
+                temp += 20;
+            }else  if (rentDays > 2){
+                temp += 10;
+            }
+            if (typeCustomer === "Diamond"){
+                temp +=15;
+            }else if (typeCustomer === "Platium"){
+                temp +=10;
+            }else if (typeCustomer === "Gold") {
+                temp += 5;
+            }else if (typeCustomer === "Silver") {
+                temp += 2;
+            }else if (typeCustomer === "Member"){
+                team += 0;
+            }
+            alert("Total pay: " +(money*rentDays-temp));
+            break;
+
         }
     }
 </script>
