@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Case Study</title>
-    <link rel="stylesheet" href="CaseStudy.css">
+    <link rel="stylesheet" href="Task1_CaseStudy.css">
 
 </head>
 <center><h1 style="color: sandybrown">BOOKING NOW</h1></center>
@@ -73,9 +73,9 @@
             <td><input type="date" style="width: 250px" id="checkout"></td>
             <td>
                 <select style="width: 250px" id="room">
-                    <option><b>Room 100$/day</b></option>
-                    <option><b>House 300$/day</b></option>
-                    <option>Villa 500$/day</option>
+                    <option value="100"><b>Room 100$/day</b></option>
+                    <option value="300"><b>House 300$/day</b></option>
+                    <option value="500">Villa 500$/day</option>
                 </select>
             </td>
         </tr>
@@ -97,15 +97,19 @@
         </tr>
         <tr>
             <td><p >Indicate here for any special request</p></td>
-            <td></td>
-            <td></td>
+            <td><b>Rent Day</b></td>
+            <td><b>Discount</b></td>
         </tr>
         <tr>
             <td>
                 <textarea cols="50" rows="5" ></textarea>
+                <td><input type="number" id = "rentday"></td>
+                <td><input type="number" id = "discount"></td>
             </td>
         </tr>
     </table>
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -140,6 +144,10 @@
 <p id =information14></p>
 <p id =information15></p>
 <p id =information16></p>
+<p id =information17></p>
+<p id =information18></p>
+<p id =information19></p>
+
 </body>
-<script src="CaseStudy.js"></script>
+<script src="Task1_CaseStudy.js"></script>
 </html>

@@ -13,6 +13,8 @@ let chooseSv = document.getElementById("vip");
 let chooseRoom = document.getElementById("room");
 let adults = document.getElementById("adults");
 let chills = document.getElementById("child");
+let rentday = document.getElementById("rentday");
+let discount = document.getElementById("discount");
 
 function booking() {
     document.getElementById("information1").innerText = lastName.value;
@@ -30,5 +32,8 @@ function booking() {
     document.getElementById("information13").innerText = chooseRoom.value;
     document.getElementById("information14").innerText = adults.value;
     document.getElementById("information15").innerText = chills.value;
-
+    document.getElementById("information16").innerText = rentday.value;
+    document.getElementById("information17").innerText = discount.value;
+    let result = rentday.value * chooseRoom.value * (1 - discount.value/100);
+    document.getElementById('information18').innerText="Số Tiền Phải Trả Là : " + result
 }
