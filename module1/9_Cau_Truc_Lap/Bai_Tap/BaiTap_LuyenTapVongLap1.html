@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // for (let num = 1 ; num <= 100; num++){
+    //     document.write(num +"</br>")
+    //     if (num == 99){
+    //         alert("Hop thoai thong bao da hoan thanh")
+    //     }
+    // }
+  // let temp = prompt("Nhap nhiet do");
+  // while (temp >= 0){
+  //     if (temp <= 20 ){
+  //         alert("Tang nhiet do");
+  //     }else if (temp >=100){
+  //         alert("Giam nhiet do");
+  //     }
+  //     break;
+  //     temp ++;
+  // }
+  //   let i;
+  //   let fib = [];
+  //
+  //   fib[0] = 0;
+  //   fib[1] = 1;
+  //   for (i = 2; i <= 10; i++) {
+  //       fib[i] = fib[i - 2] + fib[i - 1];
+  //       document.write(fib[i]+ "</br>");
+  //   }
+      let i;
+      let fib = [];
+
+      fib[0] = 0;
+      fib[1] = 1;
+      for (i = 2; i <= 5; i++) {
+          fib[i] = fib[i - 2] + fib[i - 1];
+          if (fib[i] % 5 === 0) {
+              document.write(fib[i] + "</br>");
+          }
+      }
+</script>
+</body>
+</html>
