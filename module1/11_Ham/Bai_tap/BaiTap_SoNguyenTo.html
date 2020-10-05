@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số cần tìm:"));
+    let array = [];
+    for (let j = 0; j < n ; j++) {
+        array[j] = prompt("nhập số " + j);
+    }
+    function checkPrimeOfArray() {
+        for (let i = 0; i < array.length; i++) {
+            let flag = true;
+            if (array[i] < 2) {
+                flag = false;
+            } else {
+                for (let j = 2; j < array[i]; j++) {
+                    if (array[i] % j == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true) {
+                alert(array[i] + " là số nguyên tố")
+            } else {
+                alert(array[i] + " không phải là số nguyên tố")
+            }
+        }
+    }
+    checkPrimeOfArray();
+</script>
+</body>
+</html>

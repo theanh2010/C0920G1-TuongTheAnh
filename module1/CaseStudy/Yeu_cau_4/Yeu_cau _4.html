@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let listCustomer = [];
+    displayMenu();
+
+    function displayMenu() {
+        let choose = prompt("Chọn chức năng:\n" +
+            "1. Add customer\n" +
+            "2.Delete customer\n" +
+            "3.Display\n" +
+            "4. Exit"
+        );
+        switch (choose) {
+            case "1":
+                addCustomer();
+                break;
+            case "2":
+                deleteCustomer();
+                break;
+            case "3":
+                displayCustomer();
+                break;
+            case "4":
+
+        }
+    }
+
+    function addCustomer() {
+        let name;
+        let customerNumber = parseInt(prompt("Nhập số lượng khách hàng cần nhập"));
+        for (let i = 0; i < customerNumber; i++) {
+
+                name=prompt("Nhập tên khách hàng thứ "+(i+1));
+                listCustomer.push(name);
+                }
+        displayMenu();
+    }
+
+    function deleteCustomer() {
+        let check= false;
+        let name = prompt("Nhập khách hàng muốn khóa");
+        for (let i=0; i<listCustomer.length; i++){
+            if (listCustomer[i]===name){
+                listCustomer.splice(i,1);
+                check=true;
+            }
+        }
+        if (!check){
+            alert("Tên bạn nhập vào không có trong danh sách");
+        }
+        displayMenu();
+    }
+
+    function displayCustomer() {
+        let result = "";
+        listCustomer.sort();
+        for (let i =0; i < listCustomer.length; i++) {
+            result += (i + 1) + " . " + listCustomer[i] + "\n";
+        }
+        alert(result);
+        displayMenu();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name ;
+    let cmnd ;
+    let birthday ;
+    let email ;
+    let check = false ;
+    let tempName ="";
+    name = prompt("Input name :");
+    name = name.trim(). toLowerCase();
+    for (let i=0 ; i<name.length; i++) {
+        if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+            continue;
+        }
+        if (i === 0 || name.charAt(i-1)===" ") {
+            tempName +=name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName += name.charAt(i);
+    }
+    alert(tempName);
+    do {
+        cmnd = prompt("Input cmnd :");
+        if(!isNaN(cmnd)){
+            cmnd =Number.parseFloat(cmnd);
+        }
+        if(!Number.isInteger(cmnd)){
+            alert("không đúng số cmnd");
+            continue;
+        }
+        if (cmnd<100000 || cmnd >99999999){
+            alert("không đúng só cmnd");
+        }
+        check = true;
+    }while (!check);
+    check = false ;
+
+    do {
+        let countAt = 0;
+        let countDoc = 0;
+        email = prompt("Input email :") ;
+        for (let i = 0;i <email.length; i++){
+            if (email.charAt(i) === "@"){
+                countAt++;
+                for (let j = i+1 ; j <email.length;j++){
+                    if(email.charAt(j) === "."){
+                        countDoc++;
+                    }
+                }
+            }
+        }
+        if (countAt!=1 || countDoc < 1){
+            alert("Email bạn nhập đúng")
+        }else {
+            check=true;
+        }
+    } while (!check);
+    check= false;
+</script>
+</body>
+</html>

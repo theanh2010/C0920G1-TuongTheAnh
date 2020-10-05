@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num">
+<select id = "from">
+    <option value="feet">FEET</option>
+    <option value="meters">METERS</option>
+</select>
+<select id ="to">
+    <option value="meters">METERS</option>
+    <option value="feet">FEET</option>
+</select>
+<button onclick="change()">CHANGE</button>
+<p id="result">Kết quả là :</p>
+<script>
+    let result = 0 ;
+    function change() {
+        let num = document.getElementById("num").value;
+        let from = document.getElementById("from").value;
+        let to= document.getElementById("to").value;
+        if (from === "feet" && to === "meters"){
+            result = 0.305* num;
+        }else if (from === "meters" && to === "feet") {
+            result = 3.279*num;
+        }else {
+            result = 0;
+        }
+        document.getElementById("result").innerText= result;
+    }
+</script>
+</body>
+</html>
