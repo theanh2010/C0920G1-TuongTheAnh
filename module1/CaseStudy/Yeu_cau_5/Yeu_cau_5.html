@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let listCustomer = [];
+    displayMenu();
+
+    function displayMenu() {
+        let choose = prompt("Chọn chức năng:\n" +
+            "1.Add customer\n" +
+            "2.Delete Customer\n" +
+            "3.Display Information Customer\n" +
+            "4.Edit Information Customer\n" +
+            "5.Exit"
+        );
+        switch (choose) {
+            case "1":
+                addCustomer();
+                break;
+            case "2":
+                deleteCustomer();
+                break;
+            case "3":
+                displayCustomer();
+                break;
+            case "4":
+                editInformation();
+                break;
+            case "5":
+        }
+    }
+
+    function addCustomer() {
+        let cusInfo = [];
+        let name = prompt("Input name");
+        let cmnd = prompt("Input cmnd: ");
+        let email = prompt("Input email: ");
+        let address= prompt("Input address: ");
+        let typeSv = prompt("Input typeSv: ");
+        let typeRoom = prompt("Input typeRoom: ");
+        let typeCustomer = prompt("Input typeCustomer: ");
+        let discount = prompt("Input discount: ");
+        let quantityIncluded = prompt("Input quantityIncluded: ");
+        let rentDays = prompt("Input rentDays: ");
+            cusInfo.push(name);
+            cusInfo.push(cmnd);
+            cusInfo.push(email);
+            cusInfo.push(address);
+            cusInfo.push(typeSv);
+            cusInfo.push(typeRoom);
+            cusInfo.push(typeCustomer);
+            cusInfo.push(discount);
+            cusInfo.push(quantityIncluded);
+            cusInfo.push(rentDays);
+
+            listCustomer.push(cusInfo);
+            alert("bạn đã nhập thành công");
+        displayMenu();
+    }
+    displayMenu();
+
+    function deleteCustomer() {
+        let result = "";
+        listCustomer.sort();
+        for (let i =0; i < listCustomer.length; i++) {
+            result += i +" . " + listCustomer[i][0] + "\n";
+        }
+        let chooseDelete = parseInt(prompt("Nhập tên khách hàng muốn xóa\n"+result));
+        let check = parseInt(prompt("bạn có thực sự muốn xóa không ? \n"+
+                                        "1. Có\n"+ "2. Không"));
+        if (check === 1) {
+            listCustomer.splice(chooseDelete, 1);
+            alert("bạn đã xóa thành công");
+        }else {
+            alert("Cancel")
+        }
+        displayMenu();
+    }
+    displayMenu();
+
+    function displayCustomer() {
+        let result = "";
+        listCustomer.sort();
+        for (let i =0; i < listCustomer.length; i++) {
+            result += i +" . " + listCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(result));
+        alert("Name :" + listCustomer[chooseDisplay][0] +"\n" +
+            "cmnd :" + listCustomer[chooseDisplay][1] +"\n" +
+            "Email :" + listCustomer[chooseDisplay][2] +"\n" +
+            "Address :" + listCustomer[chooseDisplay][3] +"\n" +
+            "ChooseSv :" + listCustomer[chooseDisplay][4] +"\n" +
+            "ChooseRoom :" + listCustomer[chooseDisplay][5] +"\n" +
+            "TypeCustomer :" + listCustomer[chooseDisplay][6] +"\n" +
+            "Discount :" + listCustomer[chooseDisplay][7] +"\n" +
+            "QuantityIncluded :" + listCustomer[chooseDisplay][8] +"\n" +
+            "Rentdays :" + listCustomer[chooseDisplay][9] );
+        displayMenu();
+    }
+    displayMenu();
+    function editInformation() {
+        let result = "";
+        listCustomer.sort();
+        for (let i = 0; i < listCustomer.length; i++) {
+            result +=i + " . " + listCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(result));
+        let chooseEdit = parseInt(prompt("1.Name :" + listCustomer[chooseDisplay][0] + "\n" +
+            "2.cmnd :" + listCustomer[chooseDisplay][1] + "\n" +
+            "3.Email :" + listCustomer[chooseDisplay][2] + "\n" +
+            "4.Address :" + listCustomer[chooseDisplay][3] + "\n" +
+            "5.ChooseSv :" + listCustomer[chooseDisplay][4] + "\n" +
+            "6.ChooseRoom :" + listCustomer[chooseDisplay][5] + "\n" +
+            "7.TypeCustomer :" + listCustomer[chooseDisplay][6] + "\n" +
+            "8.Discount :" + listCustomer[chooseDisplay][7] + "\n" +
+            "9.QuantityIncluded :" + listCustomer[chooseDisplay][8] + "\n" +
+            "10.Rentdays :" + listCustomer[chooseDisplay][9]));
+        switch (chooseEdit) {
+            case 1 : {
+                listCustomer[chooseDisplay][0] = prompt("Enter the name");
+                break;
+            }case 2 : {
+                listCustomer[chooseDisplay][1] = prompt("Enter the cmnd");
+                break;
+            }case 3 : {
+                listCustomer[chooseDisplay][2] = prompt("Enter the Email ");
+                break;
+            }case 4 : {
+                listCustomer[chooseDisplay][3] = prompt("Enter the Address");
+                break;
+            }case 5 : {
+                listCustomer[chooseDisplay][4] = prompt("Enter the servies");
+                break;
+            }case 6 : {
+                listCustomer[chooseDisplay][5] = prompt("Enter the type rooms");
+                break;
+            }case 7 : {
+                listCustomer[chooseDisplay][6] = prompt("Enter the type customer");
+                break;
+            }case 8 : {
+                listCustomer[chooseDisplay][7] = prompt("Enter the discount");
+                break;
+            }case 9 : {
+                listCustomer[chooseDisplay][8] = prompt("Enter the quantityIncluded");
+                break;
+            }case 10 : {
+                listCustomer[chooseDisplay][9] = prompt("Enter the rentdays");
+                break;
+            }
+            default : {
+                alert("Failed");
+            }
+        }
+    }
+    displayMenu();
+
+
+</script>
+</body>
+</html>

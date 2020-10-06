@@ -35,7 +35,7 @@
                   "TypeCustomer :" + typeCustomer +"\n" +
                   "Discount :" + discount +"\n" +
                   "QuantityIncluded :" + quantityIncluded +"\n" +
-                  "Rentdays :" + rentDays )
+                  "Rentdays :" + rentDays );
             break;
         }
         case  2 : {
@@ -51,25 +51,34 @@
                 "10.QuantityIncluded :" + quantityIncluded +"\n" +
                 "11.Rentdays :" + rentDays ));
             switch (chooseEdit) {
-                    case 1 :{
-                        name =prompt("Enter the name");
+                    case 1 : {
+                        name = prompt("Enter the name");
                         break;
+                    }case 2 : {
                         email =prompt("Enter the email");
                         break;
+                    }case 3 : {
                         phone =prompt("Enter the phone number");
-                        break;
+                        break ;
+                    }case 4 : {
                         nationality =prompt("Enter the nationality");
                         break;
+                    }case  5 : {
                         city =prompt("Enter the city");
-                        break;
+                        break ;
+                    }case 6 : {
                         chooseSv =prompt("Enter the servies");
                         break;
+                    }case 7 : {
                         chooseRoom =prompt("Enter the type rooms");
                         break;
-                        discount =prompt("Enter the discount");
+                    }case 8 : {
+                        discount = prompt("Enter the discount");
                         break;
-                        quantityIncluded =prompt("Enter the quantityIncluded");
+                    }case 9 : {
+                        quantityIncluded = prompt("Enter the quantityIncluded");
                         break;
+                    }case 10 : {
                         rentDays =prompt("Enter the rentdays");
                         break;
                     }

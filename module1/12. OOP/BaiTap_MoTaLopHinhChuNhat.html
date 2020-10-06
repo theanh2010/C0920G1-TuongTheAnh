@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle{
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        getLength(){
+            return this.length;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getC(){
+            return (this.length + this.width)*2;
+        }
+        getS(){
+            return this.length*this.width;
+        }
+    }
+    let length = parseInt(prompt("Nhập chiều dài"));
+    let width = parseInt(prompt("Nhập chiều rộng"));
+    let rectangle = new Rectangle(length,width);
+    if (length>width) {
+        alert("chiều dài là :" + rectangle.getLength());
+        alert("chiều rộng là :" + rectangle.getWidth());
+        alert("chu vi là :" + rectangle.getC());
+        alert("diện tích là :" + rectangle.getS());
+    }else {
+        alert("bạn đã nhập sai chiều dài không thể bé hơn chiều rộng")
+    }
+</script>
+</body>
+</html>
