@@ -7,10 +7,9 @@
 <body>
 <script>
     class Temperture {
-        constructor(c,f,k) {
+        constructor(c) {
             this.c = c;
-            this.f = f;
-            this.k = k;
+
         }
         getC(){
             return this.c;
@@ -22,7 +21,7 @@
             return this.c + 273 ;
         }
     }
-    let temperture = new Temperture(20,"","");
+    let temperture = new Temperture(20);
     alert(temperture.getC());
     alert(temperture.getF());
     alert(temperture.getK());
