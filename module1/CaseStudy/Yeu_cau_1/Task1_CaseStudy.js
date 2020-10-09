@@ -17,23 +17,8 @@ let rentday = document.getElementById("rentday");
 let discount = document.getElementById("discount");
 
 function booking() {
-    document.getElementById("information1").innerText = lastName.value;
-    document.getElementById("information2").innerText = firstName.value;
-    document.getElementById("information3").innerText = email.value;
-    document.getElementById("information4").innerText = secondEmail.value;
-    document.getElementById("information5").innerText = phone.value;
-    document.getElementById("information6").innerText = fax.value;
-    document.getElementById("information7").innerText = companyName.value;
-    document.getElementById("information8").innerText = nationality.value;
-    document.getElementById("information9").innerText = city.value;
-    document.getElementById("information10").innerText = checkin.value;
-    document.getElementById("information11").innerText = checkout.value;
-    document.getElementById("information12").innerText = chooseSv.value;
-    document.getElementById("information13").innerText = chooseRoom.value;
-    document.getElementById("information14").innerText = adults.value;
-    document.getElementById("information15").innerText = chills.value;
-    document.getElementById("information16").innerText = rentday.value;
-    document.getElementById("information17").innerText = discount.value;
     let result = rentday.value * chooseRoom.value * (1 - discount.value/100);
-    document.getElementById('information18').innerText="Số Tiền Phải Trả Là : " + result
+    alert("Last name : "+lastName.value +"\n"+"First name : "+firstName.value+"\n"+"Email : "+email.value+"\n"+"Second Email : "+secondEmail.value+"\n"+"Phone : "+phone.value+"\n"+"Fax : "+fax.value+"\n"+"Company Name : "+companyName.value+"\n"+
+        "Nationality : "+nationality.value+"\n"+"City : "+city.value+ "\n"+"Check in : "+checkin.value+"\n"+"Check out : "+checkout.value+"\n"+"Choose Sv : "+chooseSv.value+"\n"+
+        "Adults : "+adults.value+"\n"+"Chills : "+chills.value+"\n"+"Rentday : "+rentday.value+"\n"+"Discount : "+discount.value+"\n"+"Tổng tiền phải trả là : "+result);
 }

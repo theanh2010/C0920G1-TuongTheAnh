@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="imgHero" style="position: absolute;left: 0px;top: 0px;" >
+<script>
+        class Hero {
+            constructor(srcImg, speed, left, top) {
+                this.srcImg = srcImg;
+                this.speed = speed;
+                this.left = left;
+                this.top = top;
+            }
+            displayHero(){
+                let hero = document.getElementById("imgHero");
+                hero.src = this.srcImg;
+                hero.style.left = this.left +"px";
+                hero.style.top = this.top +"px";
+            }
+            moveLeft() {
+                if(this.left>0) {
+                    this.left -=this.speed;
+                    this.displayHero();
+                }
+            }
+            moveRight() {
+                this.left +=this.speed;
+                this.displayHero();
+            }
+            moveUp() {
+                if(this.top>0) {
+                    this.top -=this.speed;
+                    this.displayHero();
+                }
+            }
+            moveDown() {
+                this.top +=this.speed;
+                this.displayHero();
+            }
+        }
+    let hero = new Hero("hung.PNG", 20,0,0);
+    function moveHero(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                hero.moveLeft();
+                break;
+            case 38:
+                hero.moveUp();
+                break;
+            case 39:
+                hero.moveRight();
+                break;
+            case 40:
+                hero.moveDown();
+                break;
+        }
+    }
+    hero.displayHero();
+    window.addEventListener("keydown",moveHero);
+ </script>
+</body>
+</html>
