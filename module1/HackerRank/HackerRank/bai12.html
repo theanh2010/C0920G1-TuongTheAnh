@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang Tan So</title>
+</head>
+<body>
+<h1>Đếm tần số xuất hiện của 1 từ trong 1 chuỗi ký tự.</h1>
+<div id="demo"></div>
+<script>
+    function kiemtra(arr) {
+        let count;
+        let kq = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== '') {
+                count = 1;
+                for (let j = i+1; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        count++;
+                        // arr[j] = '';
+                    }
+                }
+                kq.push(arr[i] + ' ' + count);
+            }
+        }
+        return kq;
+    }
+    function show(str) {
+        let result = document.getElementById('demo');
+        let arr = str.split(' ');
+        let kq = '';
+        for (let i = 0; i < arr.length; i++) {
+            kq += arr[i] + '<br>';
+        }
+        kq += 'So tu co trong chuoi :' + arr.length + '<br>';
+        kq += kiemtra(arr);
+        result.innerHTML = kq;
+    }
+    function Main() {
+        let str = prompt('Nhap vao chuoi');
+        show(str);
+    }
+    Main();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào số N muốn tính đến :"))
+    sum = 0;
+    function igiaithua(x) {
+        let giaithua = 1;
+        for (j = 1 ; j <= x ; j++){
+            giaithua = giaithua * j;
+        }
+        return giaithua;
+    }
+    for ( i= 1 ;i <= n ; i++){
+        if (i % 2 == 0){
+            continue;
+        }
+        sum += 1/igiaithua(i)
+    }
+    document.write("Tổng từ 15(-1)"+n+"*1/"+n+  " = " + sum)
+</script>
+</body>
+</html>

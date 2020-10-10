@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<h1>8.	Nhập 2 số nguyên dương a và b. Sau đó in ra ước chung lớn nhất và bội chung nhỏ nhất của 2 số nguyên dương a và b đó.</h1>
+<script>
+    let a = parseInt(prompt("Nhập số a :"))
+    let b = parseInt(prompt("Nhập số b :"))
+
+    function uoc(a, b) {
+        while (a * b != 0) {
+            if (a > b)
+            {
+                a = a - b
+            }
+            else
+            {
+                b = b - a
+            }
+        }
+        return a+b;
+    }
+    function boi(a,b) {
+        c = Math.abs(a*b)
+        return c/uoc(a,b)
+    }
+    let uoc1 = uoc(a,b);
+    let boi1 = boi(a,b);
+    alert("ước chung lớn nhất :" + uoc1 + "\n" + " Bội chung nhỏ nhất  : " + boi1)
+</script>
+</body>
+</html>

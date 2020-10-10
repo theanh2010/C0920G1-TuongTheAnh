@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai10</title>
+</head>
+<body>
+<h1>10. Nhập một chuổi ký tự tuỳ ý, sau đó thực hiện công việc sau:
+    a. In mỗi từ trên mỗi dòng
+    b. Đếm số từ có trong chuổi đã cho.
+    b. Đưa ra bảng tần số xuất hiện của các từ.
+</h1>
+<p id="result"></p>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+    function xulychuoi(str) {
+        let temp = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) === " " && str.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (str.charAt(i - 1) === " ") {
+                temp += str.charAt(i);
+                continue;
+            }
+            temp += str.charAt(i);
+        }
+        return str = temp.trim();
+    }  function inxuongdong(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>")
+        }
+    }
+
+    function demsotu(str) {
+        let count = 1;
+        for (let i = 0; i < str.length; i++) {
+            if ((str.charAt(i) !== " ") && (str.charAt(i + 1) === " ")) {
+                count++;
+            }
+        }
+        return count;
+    }
+    function tanso(str){
+        let count;
+        let result = [];
+        for (i = 0; i < str.length; i++){
+            if(str[i] !== -1){
+                count = 1 ;
+                for (j = 0 ; j < str.length; j++){
+                    if (str[i] == str[j]){
+                        count ++;
+                    }
+                }
+                result.push(str[i] + " " + count);
+            }
+        }
+        return result;
+    }
+    function intu(str) {
+        let count;
+        let kq = [];
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] !== '') {
+                count = 1;
+                for (let j = i+1; j < str.length; j++) {
+                    if (str[i] === str[j]) {
+                        count++;
+                        // arr[j] = '';
+                    }
+                }
+                kq.push(str[i] + ' ' + count);
+            }
+        }
+        return kq;
+    }
+    let string = prompt("nhap vao chuoi");
+    let newstring = xulychuoi(string);
+    let newarr = newstring.split(" ");
+    document.getElementById("result1").innerHTML = intu(newarr);
+    document.getElementById("result").innerHTML = tanso(newstring);
+    inxuongdong(newarr);
+    document.getElementById("result2").innerHTML = "số từ trong câu : " + demsotu(newstring);
+</script>
+</body>
+</html>

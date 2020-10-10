@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<h1>9.	Nhập vào một chuỗi ký tự  thực hiện công việc sau:
+    a.	In ra chuỗi đảo ngược của chuỗi đã cho
+    b.	Đổi chuổi đã cho sang chữ hoa
+    c.	Đổi chuỗi đã cho sang chữ thường
+    d.	Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ thường và ngược lại)
+</h1>
+Đảo chuỗi :<p id="result"></p> <br>
+Đổi chuỗi ra in hoa :<p id="result1"></p> <br>
+Đổi chuỗi ra in thường :<p id="result2"></p> <br>
+Đảo chuỗi :<p id="result3"></p> <br>
+Đảo từ :<p id="result4"></p> <br>
+
+<script>
+    let array = prompt("Nhập vào chuỗi ký tự ");
+    array1 = array.split("");
+    function daochuoi(array1) {
+        array1 = array1.reverse();
+        return array1;
+    }
+    function daotu(array1) {
+        array1 = array.split(" ");
+        array1 = array1.reverse();
+        return array1;
+    }
+    function inhoa(array) {
+        array = array.toUpperCase();
+        return array;
+    }
+    function inthuong(array){
+        array = array.toLowerCase();
+        return array;
+    }
+    function daonguoc(array){
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+        for(let x=0; x<array.length; x++)
+        {
+            if(UPPER.indexOf(array[x]) !== -1)
+            {
+                result.push(array[x].toLowerCase());
+            }
+            else if(LOWER.indexOf(array[x]) !== -1)
+            {
+                result.push(array[x].toUpperCase());
+            }
+            else
+            {
+                result.push(array[x]);
+            }
+        }
+        return result;
+    }
+    let inthuong1 = inthuong(array);
+    let daochuoi1 = daochuoi(array1);
+    let inhoa1 = inhoa(array);
+    let daonguoc1 = daonguoc(array);
+    let daotu1 = daotu(array);
+    document.getElementById("result").innerHTML = daochuoi1;
+    document.getElementById("result1").innerHTML = inhoa1;
+    document.getElementById("result2").innerHTML = inthuong1;
+    document.getElementById("result3").innerHTML = daonguoc1;
+    document.getElementById("result4").innerHTML = daotu1;
+
+</script>
+</body>
+</html>
