@@ -1,0 +1,119 @@
+1*Các câu lệnh để submit 1 file README.MD lên github là gì? Giải thích tác dụng của từng câu lệnh
+-git add readme.md (đẩy file lên remote)
+-git commit -m “ten” (để ghi lại việc thêm hay thay đổi file hay thư mục vào repository)
+-git push origin master(dùng để cập nhật các nhanhs từ xa  với những thay đổi mới  nhất mà bạn đã commit)
+2*Nêu các thẻ để tạo danh sách ?Sự khác nhau giữa <ul> và <ol> ?
+ul là sẽ có ký tự tròn đầu mỗi dòng
+ol là sẽ có ký tự đánh số trên mỗi dòng
+
+3*Các thẻ tạo nên 1 table? Phân biệt th và td?
+Table,th,tr,td
+Thẻ table là tạo bảng
+Thẻ th dùng để tạo tiêu đề căn giữa
+Thẻ tr dùng để tạo một dòng
+Thẻ td dùng để tạo một ô dữ 
+4*Phân biệt innerHTML và innerText?
+-hai thẻ đó chèn vào nhau
+-inner html nó sẽ hiển thị cả kiểu dữ liệu và siêu dữ liệu
+-inenr text nó chỉ hiển thị kiểu dữ liệu và không quan tâm đến siêu dữ liệu
+5*Phân biệt get và post.
+-get là dữ liệu gửi đi sẽ hiển thị trên thanh địa chỉ của trình duyệt không bảo mật
+- là dữ liệu gửi đi không hiển thị trên thanh địa chỉ của trình duyệt và bảo mật hơn get
+6*Mô tả thuật toán tìm kiếm 1 phần tử trong mảng bằng mã giả?
+7*Mô tả thuật toán sắp xếp mảng số nguyên bằng mã giả?
+8*Cách khai báo biến bằng từ khóa let và var khác nhau như thế nào ?. Phạm vi của biến?
+-let là nằm trong các khối lệnh block bên trong hay ngoài cũng 
+-var có thể khai báo trùng lặp và var có thể nằm bất cứ đâu vì nó có hoisting 
+*phạm vi của biến 
+-có hai loại phạm vi trong js  biến cục bộ và biến toàn cục , biến toàn cục được khai báo ngoài hàm  trong khi đó biến cục bộ được lưu khai báo  trong  một hàm ( nên với cùng một tên biến chúng ta có thể khai báo  ở những hàmm khác )
+9*Trong Javascript có bao nhiêu loại kiểu dữ liệu ?. Làm thế nào để xác định được biến có kiểu dữ liệu gì?
+- js có hai kiểu dữ liệu là kiểu nguyên thủy và kiểu đối tượng
+* xác định biến có kiểu dữ liệu gì 
+- để xác định kiểu dữ liệu của biến dùng typerOf
+
+10*Các cách ép sang kiểu String trong Javascript?
+*Có hai cách
+- + sau thêm “ ”
+- tostring
+11*Các cách tạo chuỗi chứa dấu nháy ?NaN là gì? NaN === NaN có đúng không?Vì sao?
+alert("''")
+not a number
+không biết được giá trị thực của NaN trước khi pareInt ra
+12*Toán tử ba ngôi là gì? Cú pháp?
+-cho phép gán giá trị cho một biến dựa theo điều kiện mà không cần dùng câu lệnh if else bằng cáchs sử dụng toán tử ba ngôi
+-Cú pháp
+- điều kiện ? dúng  :  sai
+13*Toán tử == và === khác và giống nhau như thế nào
+- == dùng để kiểm tra xem hai phần tử được kiểm tra đó có bằng không , nó chỉ xét giá trị còn kiểu dữ liệu thì khoong
+- === dùng để kiểm tra xem hai phần từ được kiểm tra đó có bằng nhau không nó xét cả giá trị và cả kiểu dữ liệu
+14*Phân biệt giữa 2 toán tử && và || trong JavaScript?
+-&& là cả hai điều kiện đều phải đúng 
+-|| một điều kiện đúng là được
+15*Các hàm dùng để tạo thông báo trong Javascript ?
+-alert,document write,confirm,
+16*Casting data type trong JS
+-to string,number,bolean,
+17*Có bao nhiêu Statement control trong Java Script ?
+- lặp ,nhảy,điều kiện
+18*So sánh sự khác nhau giữa if và switch case?.
++IF:Có thể sử dụng để so sánh lớn hơn, nhỏ hơn
+    Mỗi câu lệnh IF có một biểu thức điều kiện và giá trị trả về là true or false
+    Biểu thức điều kiện cần trả về giá trị kiểu boolean
+    Chỉ có một khối lệnh được thực thi nếu điều kiện đúng
++Switch-case : Chỉ có thể để so sánh bằng và khác nhau
+	       Tất cả các trường hợp(case) đều so sánh với giá trị của biểu thức điều kiện duy nhất
+	       Biểu thức điều kiện cần trả về giá trị kiểu type, short , char , int hoặc string
+	       Nếu điều kiện đúng mà không có câu lệnh break thì tất cả các khối lệnh ở phía sau cũng đc thực thi
+19*Switch case so sánh == hay ===. Đặt ra trường hợp là so sánh bằng thì khi nào sử dụng if bậc thang? Khi nào sử dụng switch case
+- dùng === 
+*Khi nào dùng bậc thang,khi nào dùng swhich case
+- dùng if bậc thang khi từ ba trường hợp trở xuống
+-dùng swhich case khi có ba trường hợp trơr lên
+20*Các biểu thức và luồng thực thi của for. Nếu thiếu 1 hoặc tất cả các biểu thức thì vòng for sẽ chạy như thế nào?
+- thì nó sẽ không chạy vòng for
+21*Đặt ra 1 bài toán. Xác định bài toán cần sử dụng vòng lặp nào?So sánh giống và khác nhau giữa for, while và do..while
+22*So sánh null và rỗng
+- null là không xác định hoặc không tồn tại
+- rỗng là không có gì trong đó
+23*Đặc điểm mảng một chiều trong Javascript
+- loại biến đặc biệt có thể lưu trữ nhiều giá trị đông thời
+24*Các cách khởi tạo một mảng kiểu String trong JavaScript- 1 số hàm thao tác với mảng?
+-let arr = [“”]
+-Let arr = new array
+-Let array = array
+25*Phân biệt push() và unshift()?
+- push là thêm ở cuối cùng của mạng
+-unshift là thêm ở đâu mảng 
+26*Phân biệt push() và pop()?
+-push là thêm cuối mảng
+-Pop xóa ở cuối
+27*Phân biệt shift() và unshift()?
+- unshift là thêm ở đầu
+-shift là xóa ở đầu 
+28*Phân biệt tham trị và tham chiếu trong Javascript( giải thích đến cách sử dụng ô nhớ)
+-js là truyền tham trị  còn truyền tham chiếu phải thông qua tham trị 
+29*Phân biệt giữa Hàm có return và hàm không có return
+-hàm có return  thì khi thực thi chương trình của hàm sẽ dừng lại ở ngay lệnh return 
+-hàm không có return trường hợp bạn gán giá trị của biến cho hàm ko có return thì nó sẽ trả về 
+30*So sánh break, continue và return
+-break là dừng lại khi thực hiện  xong khối lệnh đó
+-continue là bỏ qua bước nhảy bỏ qua một bước lặp (các khối lệnh dưới continue sẽ bị bỏ qua và thực hiện vòng lặp mới) 
+31*Lập trình hướng đối tượng là gì
+- là mô phòng các đối tượng thực tế trong cuộc sống có các thuộc tính và tính chất của đối tượng
+32*Các đặc điểm trong Lập trình hướng đối tượng. Đưa ra 1 ví dụ 1 trong 4 tính chất.
+33*Constructor là gì? Trong 1 class có nhiều hơn 1 contrustor được hay không?
+- constructor được định nghĩa các thuôc tính và phương thức ban đầu cho đối tượng được tạo ra sử dụng từ khóa new 	
+- không vì yêu cầu của js là như vậy
+34*Những phương thức nào cho phép tương tác với chuỗi
+-length,index,concat....
+35*Các câu lệnh để vẽ 1 hình tròn. Giải thích từng câu lệnh?
+-thẻ đóng mở canvas 
+-let ctx = c.contest(“2d”) tạo hình 2d
+-ctx beginPath () bắt đầu vẽ
+-ctx.arc (tọa độ x, y của tâm hình tròn x được tính từ trái qua phải ,y được tính từ trên xuống dưới ,bán kính , vị trí bắt đầu vẽ”ở giữa là không”,2*Math.Pi là vẽ hết một hình tron )
+36*Trình bày ý tưởng của 1 thuật toán bất kì?
+37*Cho 1 bài toán liên quan đến ++ trước và ++ sau. Yêu cầu dự đoán kết quả, và tại sao lại có kết quả như vậy?
+-a++ là thực hiện biểu thức rồi mới tăng 
+-++a là tăng rồi mơis thực hiện biểu thức
+(mở qiuz bài 5 ra xem)
+38*Các loại toán tử trong js? Cho biết độ ưu tiên của các toán tử trong một biểu thức?

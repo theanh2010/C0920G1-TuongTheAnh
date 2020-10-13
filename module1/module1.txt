@@ -12,7 +12,7 @@
 2.Git & HTMl
 -git là một hệ thống điều khiển theo kiểu phân tán được sử dụng để quản lí mã nguồn và ghi nhận các thay đổi
 -git hub là dịch vụ của git đc sử dụng free
--git add : đẩy file lên
+-git add : đưa file lên
  git commit: ghi nhân thay đổi
  git push : đưa cái thay đổi từ local lên remote
  git clone : sao chép một repo
@@ -64,7 +64,7 @@
                              ++a là tăng rồi mới thực hiện biểu thức
 -------------------------------------------------------------------------------------------------------------------------------------- 
 6.IF & IF ELSE
--Câu lệnh diều khiển là một nhóm các câu lệnh nhằm thay đổi luồng thực thi của chương trình.Có 3 câu lệnh điều khiển trong JS + câu lệnh điều kiện (conditional -statement)
+-Câu lệnh điều khiển là một nhóm các câu lệnh nhằm thay đổi luồng thực thi của chương trình.Có 3 câu lệnh điều khiển trong JS + câu lệnh điều kiện (conditional -statement)
 															      + câu lệnh lặp ( loop - statement)
 															      + câu lệnh nhảy ( jump -statement)
 -Câu lệnh điều kiện còn được gọi là câu lệnh đưa ra quyết định cho phép thay đổi luồng thực thi của chương trình
@@ -126,6 +126,67 @@
 +Tính bao đóng (Encapsulation): là khả năng truy xuất vào các thành phần của đối tượng trong khi vẫn đảm bảo che giấu các đặc tính riêng tư trong đối tượng
 +Tính đa hình (Polymorphism) :là thể hiện khi với cùng một phương thức nhưng có thể có các cách ứng xử khác nhau ở các lớp giao diện
 +Tính kế thừa (Inheritance) : cho phép đối tượng có thể chia sẻ hay mở rộng các thuộc tính và phương thức của nó mà không phải tiến hành định nghĩa lại
+------------------------------------------------------------------------------------------------------------------------------------------------
+AUDIT MODULE1
+1.Các câu lệnh để submit 1 file README.MD lên github là gì? Giải thích tác dụng của từng câu lệnh
+git add: đưa file vào vùng staged
+git commit : ghi nhận thay đổi
+git push origin master : đẩy file từ local lên remote
+2.Nêu các thẻ để tạo danh sách ?Sự khác nhau giữa <ul> và <ol> ?
+<ol> có thứ tự đánh số 1 , 2 ,3
+<ul> không có thứ tự
+<li> từng dòng
+3.Các thẻ tạo nên 1 table? Phân biệt th và td?
+<table><tr><th><td>
+<th> là tiêu đề được in đậm và căn giữa còn <td> thì không
+4.Phân biệt innerHTML và innerText?
+innerText: in ra nội dung định dạng text;innerHTML : in ra nội dung dạng text và cả định dạng đi kèm
+5.Phân biệt get và post.
+-Get : 
++thường dùng để yêu cầu những dữ liệu từ severs
++gửi dữ liệu thông qua các url trên trình duyệt
++dữ liệu gửi đi là text
++get bị giới hạn ngôn ngữ,kích thước gửi đi tùy theo hệ điều hành của trình duyệt
++get có thể được xem lại trong history và trình duyệt và có thể bookmark lại còn post thì không
+-Post :
++thường dùng cho mục đích thêm mới chỉnh sửa dữ liệu
++post gửi theo gói gọn tập tin vì vậy post bảo mật hơn get
++không bị giới hạn ngôn ngữ dữ liệu được truyền đi
+6.Mô tả thuật toán tìm kiếm 1 phần tử trong mảng bằng mã giả?
+
+7.Mô tả thuật toán sắp xếp mảng số nguyên bằng mã giả?
+8.Cách khai báo biến bằng từ khóa let và var khác nhau như thế nào ?. Phạm vi của biến?
+9.Trong Javascript có bao nhiêu loại kiểu dữ liệu ?. Làm thế nào để xác định được biến có kiểu dữ liệu gì?
+10.Các cách ép sang kiểu String trong Javascript?
+11.Các cách tạo chuỗi chứa dấu nháy ?NaN là gì? NaN === NaN có đúng không?Vì sao?
+12.Toán tử ba ngôi là gì? Cú pháp?
+13.Toán tử == và === khác và giống nhau như thế nào
+14.Phân biệt giữa 2 toán tử && và || trong JavaScript?
+15.Các hàm dùng để tạo thông báo trong Javascript ?
+16.Casting data type trong JS
+17.Có bao nhiêu Statement control trong Java Script ?
+18.So sánh sự khác nhau giữa if và switch case?.
+19.Switch case so sánh == hay ===. Đặt ra trường hợp là so sánh bằng thì khi nào sử dụng if bậc thang? Khi nào sử dụng switch case
+so sánh === trường hợp nếu ít hơn 3 điều kiện thì dùng if bậc thang còn nhiều hơn thì dùng switch case
+20.Các biểu thức và luồng thực thi của for. Nếu thiếu 1 hoặc tất cả các biểu thức thì vòng for sẽ chạy như thế nào?
+21.Đặt ra 1 bài toán. Xác định bài toán cần sử dụng vòng lặp nào?So sánh giống và khác nhau giữa for, while và do..while
+22.So sánh null và rỗng
+21.Đặc điểm mảng một chiều trong Javascript
+22.Các cách khởi tạo một mảng kiểu String trong JavaScript- 1 số hàm thao tác với mảng?
+23.Phân biệt push() và unshift()?
+24.Phân biệt push() và pop()?
+-Phân biệt shift() và unshift()?
+-Phân biệt tham trị và tham chiếu trong Javascript( giải thích đến cách sử dụng ô nhớ)
+-Phân biệt giữa Hàm có return và hàm không có return
+25.So sánh break, continue và return
+26.Lập trình hướng đối tượng là gì
+27.Các đặc điểm trong Lập trình hướng đối tượng. Đưa ra 1 ví dụ 1 trong 4 tính chất.
+28.Constructor là gì? Trong 1 class có nhiều hơn 1 contrustor được hay không?
+29.Những phương thức nào cho phép tương tác với chuỗi
+30.Các câu lệnh để vẽ 1 hình tròn. Giải thích từng câu lệnh?
+31.Trình bày ý tưởng của 1 thuật toán bất kì?
+32.Cho 1 bài toán liên quan đến ++ trước và ++ sau. Yêu cầu dự đoán kết quả, và tại sao lại có kết quả như vậy?
+33.Các loại toán tử trong js? Cho biết độ ưu tiên của các toán tử trong một biểu thức?
 
 
 
