@@ -11,6 +11,7 @@
     let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
     let regexCmnd = /^[\d]{8,8}$/;
     let listCustomer=[];
+    let listEmployees = [];
     displayMenu();
         function displayMenu() {
         let choose = prompt("Chọn chức năng:\n" +
@@ -19,7 +20,10 @@
             "3.Display Information Customer\n" +
             "4.Edit Information Customer\n" +
             "5.Display totalPay\n" +
-            "6.Exit"
+            "6.Add new Employees\n" +
+            "7.Display information Employees\n" +
+            "8.Salary of Employees \n" +
+            "9.Exit"
         );
         switch (choose) {
             case "1":
@@ -38,6 +42,15 @@
                 displayTotalpay();
                 break;
             case "6":
+                addNewEmployees();
+                break;
+            case "7":
+                displayInformationEmployees();
+                break;
+            case "8":
+                salaryOfEmployees();
+                break;
+            case "9":
         }
     }
     function addCustomer() {
@@ -216,6 +229,71 @@
         }
         let chooseDisplay = parseInt(prompt(result));
         alert("Tổng tiền phải thanh toán là " +listCustomer[chooseDisplay].getTotalPay() );
+    }
+    displayMenu();
+    function addNewEmployees() {
+        let checkValid= false;
+        let name1 = prompt("Input name");
+        let cmnd;
+        do {
+            cmnd = prompt("Input cmnd: ");
+            if(cmnd.match(regexCmnd)){
+                checkValid=true;
+            }else {
+                alert("Chứng minh nhân dân nhập vào không hợp lệ")
+            }
+        }while (!checkValid);
+        checkValid=false;
+        let birthday;
+        do {
+            birthday = prompt("Input birthday: ");
+            if (birthday.match(regexBirthday)){
+                checkValid= true;
+            }else {
+                alert("Ngày sinh không hợp lệ")
+            }
+        }while (!checkValid);
+        checkValid=false;
+        let email;
+        do {
+            email = prompt("Input email: ");
+            if (email.match(regexEmail)){
+                checkValid=true;
+            }else{
+                alert("Email không hợp lệ")
+            }
+        }while (!checkValid);
+        let phone1= prompt("Input phone: ");
+        let level1 = prompt("Input level: ");
+        let position1 = prompt("Input position: ");
+        let employee1 = new Employee1(name1,birthday,cmnd,phone1,email,level1,position1);
+        listEmployees.push(employee1);
+        alert("bạn đã nhập thành công");
+    }
+    displayMenu();
+    function displayInformationEmployees() {
+        let result = "";
+        listEmployees.sort();
+        for (let i = 0; i < listEmployees.length; i++) {
+            result += i +" . " + listEmployees[i].getName1() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(result));
+        alert("Name :" + listEmployees[chooseDisplay].getName1() +"\n" +
+            "Birthday :" + listEmployees[chooseDisplay].getBirthday() +"\n" +
+            "Cmnd :" + listEmployees[chooseDisplay].getCmnd() +"\n" +
+            "Phone :" + listEmployees[chooseDisplay].getPhone1() +"\n" +
+            "Email :" + listEmployees[chooseDisplay].getEmail() +"\n" +
+            "Level :" + listEmployees[chooseDisplay].getLevel1() +"\n" +
+            "Position :" + listEmployees[chooseDisplay].getPosition1());
+    }
+    displayMenu();
+    function salaryOfEmployees() {
+        let result = "";
+        for (let i = 0; i < listEmployees.length; i++) {
+            result +=i + " . " + listEmployees[i].getName1() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(result));
+        alert("lương của nhân viên là " +listEmployees[chooseDisplay].getSalary() );
     }
     displayMenu();
 </script>

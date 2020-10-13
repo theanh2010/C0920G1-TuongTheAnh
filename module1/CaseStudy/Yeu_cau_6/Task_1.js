@@ -106,3 +106,46 @@ class Customer {
         return this.rentdays = rentdays;
     }
 }
+class Employee1 {
+    constructor(name1,birthday,cmnd,phone1,email,level1,position1) {
+        this.name1 = name1;
+        this.birthday = birthday;
+        this.cmnd = cmnd;
+        this.phone1 = phone1;
+        this. email = email;
+        this.level1 = level1;
+        this.position1 = position1;
+    };
+    getName1(){
+        return this.name1;
+    }
+    getBirthday(){
+        return this.birthday;
+    }
+    getCmnd(){
+        return this.cmnd;
+    }
+    getPhone1(){
+        return this.phone1;
+    }
+    getEmail(){
+        return this.email;
+    }
+    getLevel1(){
+        return this.level1;
+    }
+    getPosition1(){
+        return this.position1;
+    }
+    getSalary(){
+        if (this.position1==="Manager"){
+            this.salary = 500 ;
+        }else if (this.position1==="Sale"){
+            this.salary = 300 ;
+        }else if (this.position1==="Marketing"){
+            this.salary = 200 ;
+        }
+        return this.salary;
+
+    }
+}

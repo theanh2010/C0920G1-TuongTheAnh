@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>ThangNam</title>
 </head>
-<body>
+<body><table>
 Tháng : <input id="month" type="text"> <br>
 Năm :   <input id ="year" type="text">  <br>
 <button onclick="day()">Tính số ngày : </button>
 <p id="ketqua"></p>
+</table>
 <script>
         function day() {
             let month = document.getElementById('month').value;
@@ -26,9 +27,9 @@ Năm :   <input id ="year" type="text">  <br>
                     document.getElementById('ketqua').innerHTML =("Tháng " + month + " có 31 ngày");
                     break;
                 case 2:
-                    if (year % 4 == 0) {
-                    if (year % 100 == 0) {
-                        if (year % 400 == 0) {
+                    if (year % 4 === 0) {
+                    if (year % 100 === 0) {
+                        if (year % 400 === 0) {
                             document.getElementById('ketqua').innerHTML = ("Tháng 2 29 ngày");
                         } else {
                             document.getElementById('ketqua').innerHTML = ("Tháng 2 có 28 ngày");

@@ -1,0 +1,134 @@
+1.thuật toán (PSEUDO-CODE & FLOWCHART)
+-lập trình là quá trình tạo ra tập các chỉ số dẫn ( intrucstion) để ra lệnh cho máy tính hoàn thành một công việc
+-lập trình bao gồm : tìm hiểu yêu cầu,phân tích thiết kế, viết code , kiểm thử , triển khai, bảo trì, mở rộng
+-ngôn ngữ lập trình là phương tiện để các lập trình viên viết ra chỉ dẫn cho máy
+-ngôn ngữ lập trình +Lập trình client-side (người dùng thấy đc)- javacript
+		    +lập trình sever-side (người dùng không thấy đc)-java,php
+-Thuật toán bao tập hợp các cách để giải quyết bài toán
+-Mô tả thuật toán: Mã giả (liệt kê tuần tự bằng ngôn ngữ tự nhiên)->ưu:đơn giản, không cần kiến thức cách biểu diễn
+								    nhược:dài dòng , không cấu trúc ,khó hiểu
+		   Lưu đồ (mô tả bài toán bằng hình khối)->hình chữ nhật :tính toán; hình bình hành:output,input;hình thoi : điều kiện
+--------------------------------------------------------------------------------------------------------------------------------------------------
+2.Git & HTMl
+-git là một hệ thống điều khiển theo kiểu phân tán được sử dụng để quản lí mã nguồn và ghi nhận các thay đổi
+-git hub là dịch vụ của git đc sử dụng free
+-git add : đẩy file lên
+ git commit: ghi nhân thay đổi
+ git push : đưa cái thay đổi từ local lên remote
+ git clone : sao chép một repo
+ git status : kiểm tra hai repo
+ git pull : update thông tin từ remote
+-HTML(hyper text markup language): ngôn ngữ đánh giá siêu văn bản
+-----------------------------------------------------------------------------------------------------------------------------------------------------	
+3.HTML Form & Table
+-Phân biệt get & post :
+-Get : 
++thường dùng để yêu cầu những dữ liệu từ severs
++gửi dữ liệu thông qua các url trên trình duyệt
++dữ liệu gửi đi là text
++get bị giới hạn ngôn ngữ,kích thước gửi đi tùy theo hệ điều hành của trình duyệt
++get có thể được xem lại trong history và trình duyệt và có thể bookmark lại còn post thì không
+-Post :
++thường dùng cho mục đích thêm mới chỉnh sửa dữ liệu
++post gửi theo gói gọn tập tin vì vậy post bảo mật hơn get
++không bị giới hạn ngôn ngữ dữ liệu được truyền đi
+-thành phần thẻ form :input type(text,button,checker,radio,reset;button;hidden)
+-Table : cosplan "":hàng ngang
+	rowplan "" : hàng dọc
+------------------------------------------------------------------------------------------------------------------------------------------------------
+4.JS overview
+-JS là ngôn ngữ lập trình được sử dụng nhiều trên các wed dùng để thay đổi giao diện, nội dung , tính tương tác của trang wed
+-debug :quá trình kiểm tra và sữa chưa các lỗi trong một chương trình
+-innertext và innerHTML : để lấy giá trị trong thẻ HTML(innerText: in ra nội dung định dạng text;innerHTML : in ra nội dung dạng text và cả định dạng đi kèm )
+------------------------------------------------------------------------------------------------------------------------------------------
+5.Biển, kiểu dữ liệu toán tử
+-biến là tên gọi được gắn cho một vùng nhớ chứa dữ liệu, dũ liệu đc gán trong vùng nhớ của biến đc gọi là value
+-khai báo biến dùng let hoặc var 
+-phân biết let và var: + var có hoisted còn let thì không
+		       + phạm vi sử dụng của biến :var được dùng trong function còn let thì dùng trong block( trong hay ngoài cũng được)
+		       + var có thể khai báo nhiều lần còn let sẽ chỉ có thể khai báo 1 lần
+-kiểu dữ liệu (Datatype) : kiểu dữ liệu là một cách phân tích dữ liệu cho trình biên dịch hoặc thông dịch cho các lập trình viên muốn sử dụng dữ liệu	
+-có 2 loại kiểu dữ liệu : 
+-kiểu dữ liệu nguyên thủy (primitive)+bloolean(true or flase)
+                                     + number ( số)
+                                     +string ( chuỗi)
+			             +undified ( chưa xác định )
+			             +symbol ( kí tự)
+-kiểu dữ liệu đối tượng (object) : +null ( vô giá trị)
+			           +object ( đối tượng)
+			           +arrays ( mảng)				  
+-Toán tử (operator) : toán tử là các ký hiệu được sử dụng dể thực hiện các thao tác trong các biểu thức và sinh ra kết quả cuối
+-Khác nhau giữa  "==" và "===" : "==" là bằng nhau có thể không cùng kiểu dữ liệu
+				"===" là bằng nhau dồng thời cùng kiểu dữ liệu
+-Khác nhau giữa a++ và ++a : a++ là thực hiện biểu thức rồi mới tăng
+                             ++a là tăng rồi mới thực hiện biểu thức
+-------------------------------------------------------------------------------------------------------------------------------------- 
+6.IF & IF ELSE
+-Câu lệnh diều khiển là một nhóm các câu lệnh nhằm thay đổi luồng thực thi của chương trình.Có 3 câu lệnh điều khiển trong JS + câu lệnh điều kiện (conditional -statement)
+															      + câu lệnh lặp ( loop - statement)
+															      + câu lệnh nhảy ( jump -statement)
+-Câu lệnh điều kiện còn được gọi là câu lệnh đưa ra quyết định cho phép thay đổi luồng thực thi của chương trình
+-Câu lệnh If là đánh giá một điều kiện và lựa chọn thực thi một khối lệnh dựa trên điều kiện đó. nếu điều kiện đúng trả về true khối lệnh đc thực thi còn sai thì sẽ đc bỏ qua
+-Swicth -case :là một cấu trúc điều kiện cho phép lựa chọn thực thi các khối lệnh khác nhau dựa trên các kết quả so sánh
+-So sánh if  và switch-case :
++IF:Có thể sử dụng để so sánh lớn hơn, nhỏ hơn
+    Mỗi câu lệnh IF có một biểu thức điều kiện và giá trị trả về là true or false
+    Biểu thức điều kiện cần trả về giá trị kiểu boolean
+    Chỉ có một khối lệnh được thực thi nếu điều kiện đúng
++Switch-case : Chỉ có thể để so sánh bằng và khác nhau
+	       Tất cả các trường hợp(case) đều so sánh với giá trị của biểu thức điều kiện duy nhất
+	       Biểu thức điều kiện cần trả về giá trị kiểu type, short , char , int hoặc string
+	       Nếu điều kiện đúng mà không có câu lệnh break thì tất cả các khối lệnh ở phía sau cũng đc thực thi
+----------------------------------------------------------------------------------------------------------------------------------------
+7.Vòng lặp
+-Vòng lặp cho phép tự động thực hiện một khối lệnh lặp đi lặp lại dựa vào một điều kiện cho trước
+-vòng lặp bao gồm :+một điều kiện để đánh giá ( lúc nào thì lặp)
+		   +một khối lệnh để thực thi (lặp cái gì ? )
+-vòng lặp for thường dùng khi biết trước số lần lặp còn while dùng khi ko biết trước số lần lặp
+-điểm khác nhau giữa while - do while : thân của vòng lặp do -while được hiện ít nhất là một lần kể cả biểu thức trả về sai
+------------------------------------------------------------------------------------------------------------------------------------------
+8.Mảng
+-Mảng là một loại biến đặc biệt, có thể lưu được nhiều giá trị thay vì chỉ một giá trị như các biến thông thường
+-Mảng trong JS có thể lưu được nhiều kiểu dữ liệu
+-Mỗi phần tử được xác định bằng	một thứ tự gọi là index
+-Vòng lặp for-in được sử dụng để duyệt qua các phần tử trong conlection , sử dụng vòng lặp for để duyệt các phần tử đi qua mảng
+-Khác biệt khi sử dụng for và for-in : +có thể sử dụng index để duyệt bằng for, không có index nếu sử dụng for-in
+				       +có thể sử dụng for để duyệt theo các chiều khác nhau còn for-in chỉ duyệt từ đầu đến cuối mảng
+-Các phương thức ( tự xem)
+-Mảng đa chiều là mảng có các phần tử là các mảng khác
+-Mảng 2 chiều là +mảng nhiều chiều đc sử dụng phổ biến
+                 +mảng hai chiều gồm các phần tử, mỗi phần tử là một mảng một chiều
+                 +mảng 2 chiều mà một mảng gôm n dòng và m cột,số phần tử trong mảng là n*m
+------------------------------------------------------------------------------------------------------------------------------------------
+9.Function
+-Hàm là một nhóm các câu lệnh thực hiên nhiệm vụ xác định
+-Hàm là thuật ngữ được sử dụng phổ biến trong lập trình hướng đối tượng
+-Hàm giúp tái sử dụng code, để tránh phải viết code lặp đi lặp lại của một chức năng, hàm giúp chia nhỏ bài toán để dễ dàng giải quyết vấn đề
+-câu lệnh return : +dùng để trả về giá trị và kết thúc lời gọi hàm
+		   +mỗi hàm chỉ có duy nhất một câu lệnh return ( trả về một giá trị )
+       		   +1 hàm có thể có nhiều câu lệnh return trong if-else
+-Phân biệt tham số và đối số :+Tham số hay còn gọi tham số hình thức là các biến được khai báo trong phần header của hàm
+     			      +Đối số còn gọi là tham số thực là các giá trị được truyền vào cho tham số khi gọi hàm
+-Phân biệt truyền tham trị và chuyền chiếu trị : 
++Truyền tham trị là clone giá trị và truyền giá trị đó vào tham số giá trị này và là kiểu dữ liệu nguyên thủy
++Truyền chiếu trị là chuyền thằng 1 tham chiếu đến ô nhớ của biến (thường là kiểu đối tượng),khi truyền bằng tham chiếu thì giá trị của các biến bên ngoài sẽ thay đổi theo
+------------------------------------------------------------------------------------------------------------------------------------------------
+10.OOP
+-Ngôn ngữ lập trình hướng đối tượng OOP ( Object Oriented ProGramming) : là lập trình mô phỏng các đối tượng thực tế trong cuộc sống
+-Ưu điểm là dễ dàng quản lý code khi có sự thay đổi chương trình, dễ mở rộng dự án , tiết kiệm tài nguyên cho hệ thống và có tính bảo mật cao, có khả năng tái sử dụng
+-Nhược điểm là có thể khiến dữ liệu được xử lí tách rời, khi cấu trúc dữ liệu thay đổi thì thuật toán sẽ bị thay đổi theo.
+-Class và object : +class là một khuôn mấu qui định thuộc tính và hành vi của một tập hợp các đối tượng tương đồng nhau
+		   +object là thể hiện cụ thể các hành vi của thuộc tính
+-Thuộc tính và hành vi của đối tượng : +thuộc tính là những đặc điểm đặc trưng của đối tượng thể hiện thông qua các giá trị cụ thể
+                                       +hành vi là cách thức mà qua đó các đối tượng thể hiện thông qua sự hoạt động hay chức năng của chúng
+-Các đặc trưng của lập trình hướng đối tượng :
++Tính trừu tượng (Abstraction): loại bỏ những thuộc tính và hành vi không quan trọng của đối tượng chỉ giữ lại những thuộc tính và hành vi có liên quan đến vấn đề đang giải quyết
++Tính bao đóng (Encapsulation): là khả năng truy xuất vào các thành phần của đối tượng trong khi vẫn đảm bảo che giấu các đặc tính riêng tư trong đối tượng
++Tính đa hình (Polymorphism) :là thể hiện khi với cùng một phương thức nhưng có thể có các cách ứng xử khác nhau ở các lớp giao diện
++Tính kế thừa (Inheritance) : cho phép đối tượng có thể chia sẻ hay mở rộng các thuộc tính và phương thức của nó mà không phải tiến hành định nghĩa lại
+
+
+
+
+
+

@@ -6,10 +6,8 @@
 </head>
 <body>
 <script>
+    let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
     let name ;
-    let cmnd ;
-    let birthday ;
-    let email ;
     let check = false ;
     let tempName ="";
     name = prompt("Input name :");
@@ -25,6 +23,7 @@
         tempName += name.charAt(i);
     }
     alert(tempName);
+    let cmnd ;
     do {
         cmnd = prompt("Input cmnd :");
         if(!isNaN(cmnd)){
@@ -40,7 +39,17 @@
         check = true;
     }while (!check);
     check = false ;
-
+    let birthday ;
+    do {
+        birthday=prompt("Input birthday");
+        if (birthday.match(regexBirthday)){
+            check=true;
+        }else {
+            alert("ngày sinh không đúng định dạng")
+        }
+    }while (!check);
+    check = false;
+    let email ;
     do {
         let countAt = 0;
         let countDoc = 0;

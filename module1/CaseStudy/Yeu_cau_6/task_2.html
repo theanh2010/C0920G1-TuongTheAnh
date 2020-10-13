@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let listEmployees = [];
+    class Employee {
+        constructor(name,birthday1,cmnd,phone,email,level,position) {
+            this.name = name;
+            this.birthday1 = birthday1;
+            this.cmnd = cmnd;
+            this.phone = phone;
+            this. email = email;
+            this.level = level;
+            this.position = position;
+        };
+        getName(){
+            return this.name;
+        }
+        getBirthday1(){
+            return this.birthday1;
+        }
+        getCmnd(){
+            return this.cmnd;
+        }
+        getPhone(){
+            return this.phone;
+        }
+        getEmail(){
+            return this.email;
+        }
+        getLevel(){
+            return this.level;
+        }
+        getPosition(){
+            return this.position;
+        }
+        getSalary(){
+            if (this.position==="Manager"){
+                this.salary = 500 ;
+            }else if (this.position==="Sale"){
+                this.salary = 300 ;
+            }else if (this.position==="Marketing"){
+                this.salary = 200 ;
+            }
+            return this.salary;
+
+        }
+        setName(name){
+            return this.name = name ;
+        }
+        setBirthday1(birthday1){
+            return this.birthday1 = birthday1;
+        }
+        setCmnd(cmnd){
+            return this.cmnd = cmnd;
+        }
+        setPhone(phone){
+            return this.phone = phone;
+        }
+        setEmail(Email){
+            return this.email = email;
+        }
+        setLevel(){
+            return this.level =level ;
+        }
+        setPosition(){
+            return this.position = position;
+        }
+    }
+displayMenu();
+function displayMenu() {
+    let choose = prompt("Chọn chức năng:\n" +
+        "1.Add new Employees\n" +
+        "2.Display information Employees\n" +
+        "3.Salary of Employees \n" +
+        "4.Exit");
+
+    switch (choose) {
+        case "1":
+            addNewEmployees();
+            break;
+        case "2":
+            displayInformationEmployees();
+            break;
+        case "3":
+            salaryOfEmployees();
+            break;
+        case "4":
+    }
+}    
+function addNewEmployees() {
+    let name = prompt("Input name");
+    let brithday1= prompt("Input birthday: ");
+    let cmnd = prompt("Input cmnd: ");
+    let phone= prompt("Input phone: ");
+    let email = prompt("Input email: ");
+    let level = prompt("Input level: ");
+    let position = prompt("Input position: ");
+    let employee = new Employee(name,brithday1,cmnd,phone,email,level,position);
+    listEmployees.push(employee);
+    alert("bạn đã nhập thành công");
+};
+    displayMenu();
+function displayInformationEmployees() {
+    let result = "";
+    listEmployees.sort();
+    for (let i = 0; i < listEmployees.length; i++) {
+        result += i +" . " + listEmployees[i].getName() + "\n";
+    }
+    let chooseDisplay = parseInt(prompt(result));
+    alert("Name :" + listEmployees[chooseDisplay].getName() +"\n" +
+        "Birthday :" + listEmployees[chooseDisplay].getBirthday1() +"\n" +
+        "Cmnd :" + listEmployees[chooseDisplay].getCmnd() +"\n" +
+        "Phone :" + listEmployees[chooseDisplay].getPhone() +"\n" +
+        "Email :" + listEmployees[chooseDisplay].getEmail() +"\n" +
+        "Level :" + listEmployees[chooseDisplay].getLevel() +"\n" +
+        "Position :" + listEmployees[chooseDisplay].getPosition());
+};
+
+    displayMenu();
+    function salaryOfEmployees() {
+        let result = "";
+        for (let i = 0; i < listEmployees.length; i++) {
+            result +=i + " . " + listEmployees[i].getName() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(result));
+        alert("lương của nhân viên là " +listEmployees[chooseDisplay].getSalary() );
+    }
+    displayMenu();
+</script>
+</body>
+</html>
