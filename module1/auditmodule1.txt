@@ -117,3 +117,6 @@ không biết được giá trị thực của NaN trước khi pareInt ra
 -++a là tăng rồi mơis thực hiện biểu thức
 (mở qiuz bài 5 ra xem)
 38*Các loại toán tử trong js? Cho biết độ ưu tiên của các toán tử trong một biểu thức?
+39.phân biệt hàm trả về và hàm ko trả về
+hàm trả về dùng return để trả về kết quả có thể sử dụng lại được
+40.

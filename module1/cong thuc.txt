@@ -1,0 +1,74 @@
+Công thức tính lãi kép hàng năm là:
+
+A = P*(1+ r/n)^nt
+
+Trong đó
+
+A= giá trị tương lai
+P= số tiền gốc (đầu tư ban đầu)
+r= lãi suất danh nghĩa hàng năm
+n= số tiền lãi được nhập gốc mỗi năm
+t= số năm tiền được mượn,
+Ví dụ: Số tiền 1500.00 đô-la được gửi tại một ngân hàng chi trả lãi suất hàng năm là 4.3%, được nhập gốc đều đặn hàng quý. Tính số dư sau 6 năm
+
+A: sử dụng công thức bên trên
+
+P= 1500;
+
+r= 0.043;
+
+n= 4;
+
+t= 6.
+
+Ta sẽ có công thức cụ thể như sau: A= 1500 x (1 + 0.043/4)^(4×6) = 1938.84
+1/. Dấu hiệu chia hết cho 2:
+
+Các chữ số tận cùng là : 0;2;4;6;8 thì chia hết cho 2.
+
+Hoặc : Các số chẵn thì chia hết cho 2
+
+Chú ý : Các số tận cùng là 1;3;5;7;9 thì không chia hết cho 2.Hoặc các số lẻ thì không chia hết cho 2.
+
+2/. Dấu hiệu chia hết cho 3 :
+
+Là các số có tổng các chữ số chia hết cho 3 thì số đó chia hết cho 3.
+
+Ví dụ : 726 chia hết cho 3 vì 7 + 2 + 6 = 15 chia hết cho 3
+
+Chú ý : Các số có tổng các chữ số không chia hết cho 3 thì không chia hết cho 3 đồng thời tổng này chia cho 3 dư bao nhiêu thì số đó chia cho 3 dư bấy nhiêu.Ví dụ : Số 5213 không chia hết cho 3 vì 5+2+1+3=11 mà 11:3 = 3 dư 2 nên số 5213 : 3 = 1737 dư 2.
+
+3/. Dấu hiệu chia hết cho 4 :
+
+NHỮNG SỐ CÓ HAI CHỮ SỐ CUỐI TẠO THÀNH MỘT SỐ CHIA HẾT CHO 4 THÌ SỐ ĐÓ CHIA HẾT CHO 4.
+
+4/. Dấu hiệu chia hết cho 5 : Các số có tận cùng là 0 hoặc 5 thì chia hết cho 5.
+
+5/. Dấu hiệu chia hết cho 6 : Một số vừa chia hết cho 2 vừa chia hết cho 3 thì chia hết cho 6.
+
+Hoặc : Những số chẵn chia hết cho 3 thì chia hết cho 6 và chỉ những số đó mới chia hết cho 6.
+
+6/. Dấu hiệu chia hết cho 7 :
+
+Lấy chữ số đầu tiên nhân với 3 rồi cộng thêm chữ số tiếp theo, được bao nhiêu lại nhân với 3 rồi cộng thêm chữ số tiếp theo… cứ như vậy cho đến chữ số cuối cùng của số cần nhận biết. Nếu kết quả cuối cùng này chia hết cho 7 thì số đó chia hết cho 7.
+Để nhanh gọn, cứ mỗi lần nhân với 3 và cộng thêm chữ số tiếp theo nếu có số 
+≥
+ 7 thì ta lấy kết quả trừ đi 7 hoặc trừ đi các số là bội số của 7 (14,21…) rồi tiếp tục như trên.
+Thí dụ :  Số cần nhận biết là 203:
+Lấy 2 x 3 = 6 → 6 + 0 = 6 → 3 x 6 = 18 → 18 + 3 = 21 → 203 chia hết cho 7
+
+7/. Dấu hiệu chia hết cho 8 :
+
+Những số có 3 chữ số cuối tạo thành một số chia hết cho 8 thì chia hếtcho 8.
+
+8/. Dấu hiệu chia hết cho 9 : Các số có tổng các chữ số chia hết cho 9 thì chia hết cho 9.
+9/. Dấu hiệu chia hết cho 11 :
+Từ trái sang phải ta coi các chữ số thứ nhất, thứ ba, thứ năm… là chữ số hàng lẻ, coi các chữ số thứ hai, tứ tư, thứ sáu…là chữ số hàng chẵn. Những số có tổng các chữ số hàng chẵn trừ đi tổng các chữ số hàng lẻ là một số chia hết cho 11 thì số đó chia hết cho 11 và chỉ những số đó mới chia hết cho 11.
+
+10/. Dấu hiệu chia hết cho 12: Những số vừa chia hết cho 3 vừa chia hết cho 4 thì chia hết cho 12.
+
+11/. Dấu hiệu chia hết cho 15: Những số vừa chia hết cho 3 vừa chia hết cho 5 thì chia hết cho 15.
+
+12/. Dấu hiệu chia hết cho 18: Những số vừa chia hết cho 2 vừa chia hết cho 9 thì chia hết cho 18. 
+
+

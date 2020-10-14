@@ -1,0 +1,24 @@
+*từ khóa mặc định khi chúng ta không khai báo là var
+*let là nằm trong khối lệnh
+*var là nằm chỗ nào cũng được
+*var không thể thoát ra khỏi function nó chỉ thoát ra khỏi vòng for, while ....
+*kiểu dữ liệu nguyên thủy tất cả sẽ lưu bên stack
+*còn oop thì lưu giá trị bên heap và tên biến bên stack
+*js là truyền 100% là tham trị còn truyền tham chiếu thông qua tham trị
+*các cách ép kiểu dữ liệu : number,string,bolean
+*dưới 3 thì so sanh ì else bậc thang còn trên 3 thì which case
+*điểm đặc biệt mảng một chiều truy xuất bằng index và length
+*toán tử ba ngôi : điều kiện ? đúng : sai
+*có4 tính chất oop
+  +kế thừa
+  +bao đống
+  +đa hình
+  +trừu tượng
+in laf vi tri
+of la gia tri
+ham co return la ket thuc khoi lenh do va trả về kết quả đó và kết quả đó được dùng lại
+muốn rẽ nhanh chương trình thì sử dụng if
+muốn chỉ đến giá trị trong heap thì chúng ta sử dụng
+for cos thể thay thế cho do while
+còn do while không  thể thay thế cho for
+trong biến toàn cục và cục bộ thì nó sẽ ưu tiên cho biến cục bộ trước rồi ms đến biến toàn cục
