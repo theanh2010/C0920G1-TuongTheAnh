@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="hinhtron" width="500" height="500" style="border: solid #bc2cff"></canvas>
 <script>
     class Circle{
         constructor(radius,color) {
@@ -21,10 +22,16 @@
             return Math.PI * this.radius * this.radius
         }
     }
-    let circle = new Circle(2,"red");
+    let radius = parseInt(prompt("nhap ban kinh"));
+    let circle = new Circle(radius,"red");
     alert(circle.getArea());
     alert(circle.getRadius());
-    alert(circle.getColor())
+    alert(circle.getColor());
+    let c  = document.getElementById("hinhtron");
+    let ctx = c.getContext("2d")
+    ctx.beginPath();
+    ctx.arc(50,150,circle.radius,0,2*Math.PI);
+    ctx.stroke()
 </script>
 </body>
 </html>

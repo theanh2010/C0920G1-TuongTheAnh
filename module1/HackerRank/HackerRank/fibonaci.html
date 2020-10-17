@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = 0;
+    // let b = 1;
+    // let c =0;
+    //
+    // let n = parseInt(prompt("Nhập số phần tử :"));
+    // for (let i = 0; i < n; i++) {
+    //     c = a + b;
+    //     console.log(a)
+    //     a=b;
+    //     b=c;
+    //
+    // }
+    let n= parseInt(prompt("nhập số phần tử"));
+    let a =1;
+    let b = 1;
+    let c = 2;
+    let check = false;
+    function isFibonacci() {
+       if (n<1){
+           alert(n +"không phải");
+           return check
+       }
+        else if (n<4){
+           alert(n +"là số thuộc dãy số fibonacci");
+           check = true;
+           return check;
+       }
+        while (c < n){
+            a = b;
+            b = c;
+            c = a + b ;
+        }
+        if (c === n){
+            check = true;
+            console.log(check);
+            alert("dung");
+            return check;
+        }else {
+            alert("sai");
+            return check;
+        }
+
+    }
+    isFibonacci(n)
+
+
+</script>
+</body>
+</html>

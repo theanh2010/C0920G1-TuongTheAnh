@@ -8,6 +8,7 @@
 -Mô tả thuật toán: Mã giả (liệt kê tuần tự bằng ngôn ngữ tự nhiên)->ưu:đơn giản, không cần kiến thức cách biểu diễn
 								    nhược:dài dòng , không cấu trúc ,khó hiểu
 		   Lưu đồ (mô tả bài toán bằng hình khối)->hình chữ nhật :tính toán; hình bình hành:output,input;hình thoi : điều kiện
+                   ngôn ngữ lập trình
 --------------------------------------------------------------------------------------------------------------------------------------------------
 2.Git & HTMl
 -git là một hệ thống điều khiển theo kiểu phân tán được sử dụng để quản lí mã nguồn và ghi nhận các thay đổi
@@ -115,12 +116,18 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------
 10.OOP
 -Ngôn ngữ lập trình hướng đối tượng OOP ( Object Oriented ProGramming) : là lập trình mô phỏng các đối tượng thực tế trong cuộc sống
+-Sự khác nhau giữa lập trình hướng đối tượng là ngôn ngữ thủ tục thiên về chưc năng hơn là thuộc tính
 -Ưu điểm là dễ dàng quản lý code khi có sự thay đổi chương trình, dễ mở rộng dự án , tiết kiệm tài nguyên cho hệ thống và có tính bảo mật cao, có khả năng tái sử dụng
 -Nhược điểm là có thể khiến dữ liệu được xử lí tách rời, khi cấu trúc dữ liệu thay đổi thì thuật toán sẽ bị thay đổi theo.
 -Class và object : +class là một khuôn mấu qui định thuộc tính và hành vi của một tập hợp các đối tượng tương đồng nhau
-		   +object là thể hiện cụ thể các hành vi của thuộc tính
+		   +object là thể hiện cụ thể các hành vi của class
 -Thuộc tính và hành vi của đối tượng : +thuộc tính là những đặc điểm đặc trưng của đối tượng thể hiện thông qua các giá trị cụ thể
                                        +hành vi là cách thức mà qua đó các đối tượng thể hiện thông qua sự hoạt động hay chức năng của chúng
+contrustor là hàm khởi tạo đối tượng
+this đại diện cho đối tượng 
+phân biệt với tham số
+super phương thức khởi tạo của lớp cha
+đại diện cho lớp cha
 -Các đặc trưng của lập trình hướng đối tượng :
 +Tính trừu tượng (Abstraction): loại bỏ những thuộc tính và hành vi không quan trọng của đối tượng chỉ giữ lại những thuộc tính và hành vi có liên quan đến vấn đề đang giải quyết
 +Tính bao đóng (Encapsulation): là khả năng truy xuất vào các thành phần của đối tượng trong khi vẫn đảm bảo che giấu các đặc tính riêng tư trong đối tượng
@@ -187,9 +194,17 @@ so sánh === trường hợp nếu ít hơn 3 điều kiện thì dùng if bậc
 31.Trình bày ý tưởng của 1 thuật toán bất kì?
 32.Cho 1 bài toán liên quan đến ++ trước và ++ sau. Yêu cầu dự đoán kết quả, và tại sao lại có kết quả như vậy?
 33.Các loại toán tử trong js? Cho biết độ ưu tiên của các toán tử trong một biểu thức?
+ có 4 cách nhúng js
+viết trong thẻ <script>
+viết bằng file <js src >
+viết trực tiếp trong html
+nhúng link online ( thư viện)
+phân biệt break và continue
+khai báo mảng 2 chiều
 
 
 
-
+a =5
+b = ++a
 
 

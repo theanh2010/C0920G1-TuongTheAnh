@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    listCustomer=[];
+    class Customer {
+        constructor(id, name, phone, address, email) {
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+            this.address = address;
+            this.email = email;
+        };
+        getId(){
+            return this.id;
+        }
+        getName(){
+            return this.name;
+        }
+        getPhone(){
+            return this.phone;
+        }
+        getAddress(){
+            return this.address;
+        }
+        getEmail(){
+            return this.email;
+        };
+        setId(id){
+            return this.id = id ;
+        }
+        setName(name){
+            return this.name = name;
+        }
+        setPhone(phone){
+            return this.phone = phone;
+        }
+        setAddress(address){
+            return this.address = address;
+        }
+        setEmail(Email){
+            return this.email = email;
+        }
+}
+displayMenu();
+function displayMenu() {
+    let choose = prompt("Chọn chức năng:\n" +
+        "1.Add new customer\n" +
+        "2.Display information customer\n" +
+        "3.Search Customer\n" +
+        "4.Exit");
+
+    switch (choose) {
+        case "1":
+            addNewCustomer();
+            break;
+        case "2":
+            displayInformationCustomer();
+            break;
+        case "3":
+            searchCustomer();
+        case "4":
+    }
+}
+function addNewCustomer() {
+    let id = prompt("Input id");
+    let name= prompt("Input name: ");
+    let phone= prompt("Input phone: ");
+    let address= prompt("Input address: ");
+    let email = prompt("Input email: ");
+
+    let customer = new Customer(id,name,phone,address,email);
+    listCustomer.push(customer);
+    alert("bạn đã nhập thành công");
+    displayMenu();
+};
+displayMenu();
+function displayInformationCustomer() {
+    let result = "";
+    listCustomer.sort();
+    for (let i = 0; i < listCustomer.length; i++) {
+        result += i +" . " + listCustomer[i].getId() + "\n";
+    }
+    let chooseDisplay = parseInt(prompt(result));
+    alert("Id :" + listCustomer[chooseDisplay].getId() +"\n" +
+        "Name :" + listCustomer[chooseDisplay].getName() +"\n" +
+        "Phone :" + listCustomer[chooseDisplay].getPhone() +"\n" +
+        "Address :" + listCustomer[chooseDisplay].getAddress() +"\n" +
+        "Email :" + listCustomer[chooseDisplay].getEmail());
+    displayMenu();
+
+};
+displayMenu();
+function searchCustomer() {
+    let r = prompt("nhập vào tên");
+    for (let i = 0; i < listCustomer.length; i++) {
+        if (r === listCustomer[i].getName()) {
+            alert("Id :" + listCustomer[i].getId() + "\n" +
+                "Name :" + listCustomer[i].getName() + "\n" +
+                "Phone :" + listCustomer[i].getPhone() + "\n" +
+                "Address :" + listCustomer[i].getAddress() + "\n" +
+                "Email :" + listCustomer[i].getEmail());
+        }
+    }
+    displayMenu();
+}displayMenu();
+
+</script>
+</body>
+</html>

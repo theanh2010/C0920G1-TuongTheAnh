@@ -5,36 +5,47 @@
     <title>Title</title>
 </head>
 <body>
+<canvas style="height: 500px; width: 350px; border: solid red" id="hinhchunhat"></canvas>
 <script>
-    class Rectangle{
-        constructor(length,width) {
+
+    class Rectangle {
+        constructor(length, width) {
             this.length = length;
             this.width = width;
         }
-        getLength(){
+
+        getLength() {
             return this.length;
         }
-        getWidth(){
+
+        getWidth() {
             return this.width;
         }
-        getC(){
-            return (this.length + this.width)*2;
+
+        getC() {
+            return (this.length + this.width) * 2;
         }
-        getS(){
-            return this.length*this.width;
+
+        getS() {
+            return this.length * this.width;
         }
     }
+
     let length = parseInt(prompt("Nhập chiều dài"));
     let width = parseInt(prompt("Nhập chiều rộng"));
-    let rectangle = new Rectangle(length,width);
-    if (length>width) {
+    let rectangle = new Rectangle(length, width);
+    if (length > width) {
         alert("chiều dài là :" + rectangle.getLength());
         alert("chiều rộng là :" + rectangle.getWidth());
         alert("chu vi là :" + rectangle.getC());
         alert("diện tích là :" + rectangle.getS());
-    }else {
+    } else {
         alert("bạn đã nhập sai chiều dài không thể bé hơn chiều rộng")
     }
+    let c = document.getElementById("hinhchunhat");
+    let ctx = c.getContext("2d");
+    ctx.stroke();
+    ctx.fillRect(10, 10, rectangle.length, rectangle.width);
 </script>
 </body>
 </html>

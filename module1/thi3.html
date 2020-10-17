@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+// <!-- Nhaappj số phan tu-->
+    let n = parseInt(prompt("Nhập số phần tử :"));
+    while (n > 50 || n < 0){
+        n = parseInt(prompt("Nhập lại số phần tử ( < 20) :"));
+    }
+
+    let k = parseInt(prompt("Nhập K:"));
+    let count = 0;
+    let a = new Array(n);
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Nhập vào số từng phần tử"));
+        }
+    for (let j = 0 ; j < a.length; j++){
+        for (let x = j + 1 ; x < a.length ; x++){
+            if (j === x){
+            } else if ((a[j] + a[x]) % k === 0){
+                count++;
+                console.log(a[j] + '+' + a[x])
+            }
+        }
+    }
+    console.log(a);
+    console.log(count);
+</script>
+</body>
+</html>

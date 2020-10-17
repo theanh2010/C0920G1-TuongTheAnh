@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result = 0;
+    let a = parseInt(prompt("nhập số điểm"));
+    while (a > 100 || a< 0){
+        a = parseInt(prompt("nhập lại số điểm"));
+    }
+    lamTronDiem(a);
+    function lamTronDiem(a) {
+        if (0<a && a<50){
+            alert("bạn đã thi trượt");
+        } else if(a % 5 >= 3){
+                result = a - (a % 5) + 5;
+                alert(" Bạn đã thi đậu; số điểm đc làm tròn là :"+ result );
+        } else {
+                alert(a);
+        }
+    }
+</script>
+</body>
+</html>

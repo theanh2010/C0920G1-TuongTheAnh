@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>9. Tính S(n) = 1 + 1.2 + 1.2.3 + … + 1.2.3…n</h3>
+<body>
+<script>
+let n =parseInt(prompt("nhap n"))
+let giaithua = 1;
+for (i = 1 ; i <=n ; i++ ){
+    giaithua *= i
+}
+let sum =0;
+    for ( j = 1 ; j <=n; j++){
+        sum += giaithua
+    }
+    document.write(sum)
+</script>
+</body>
+</html>

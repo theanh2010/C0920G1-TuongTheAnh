@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số phần tử :"));
+    while (n > 20){
+        n = parseInt(prompt("Nhập lại số phần tử ( < 20) :"));
+    }
+    function nhapMang(n) {
+        let a = new Array();
+        for (let i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Nhập vào số từng phần tử"));
+            alert(a)
+        }
+        return a;
+    }
+    function tinhtong(a){
+        let tong = 0;
+        for (let i = 0 ; i < a.length;i++){
+            if ( a[i] % 3=== 0 && a[i]%5===0){
+                tong += a[i];
+            }
+        }
+        return tong;
+    }
+    let nhapmang = nhapMang(n);
+    let tong = tinhtong(nhapmang);
+    document.write(tong)
+</script>
+</body>
+</html>

@@ -5,12 +5,17 @@
 </head>
 <body>
 <script>
-    let x = 1, i;
-    for (i = 0; i < 3; i = i + 2) {
-        x = x + 1;
-    }
-    console.log(x);
-    console.log(i);
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+
+    // Create gradient
+    let grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
 </script>
 </body>
 
