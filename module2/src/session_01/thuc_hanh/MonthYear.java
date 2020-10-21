@@ -11,21 +11,18 @@ public class MonthYear {
         int year = scanner.nextInt();
         switch (month){
             case 2 :
-                if (year % 4 == 0){
-                    if (year % 100 == 0){
-                        if (year % 400 == 0){
-                            System.out.println("tháng 2 năm " +  year + " có 29 ngày");
-                        }
-                    }
-                }else {
-                    System.out.println("tháng 2 năm " + year + " có 28 ngày");
-                }
+                if (year % 400 == 0) {
+                    System.out.println("tháng 2 năm " + year +" là năm nhuận có 29 ngày");
+                }else if (year % 4 == 0 && year % 100 != 0){
+                    System.out.println("tháng 2 năm " + year +" là năm nhuận có 29 ngày");
+                }else
+                    System.out.println("tháng 2 năm " + year +" không phải là năm nhuận có 28 ngày");
                 break;
             case 4 :
             case 6 :
             case 9 :
             case 11 :
-                System.out.println("tháng có 30 ngày");
+                System.out.println("tháng "+ month + " có 30 ngày");
                 break;
             case 1 :
             case 3 :
@@ -34,7 +31,7 @@ public class MonthYear {
             case 8 :
             case 10 :
             case 12 :
-                System.out.println("tháng có 31 ngày");
+                System.out.println("tháng "+ month +" có 31 ngày");
                 break;
         }
     }
