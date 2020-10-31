@@ -3,9 +3,9 @@ package session_05_ke_thua.bai_tap.point2d;
 import java.util.Arrays;
 
 public class Point2D {
-    private float[] XY =new float[2];
-    private float x ;
-    private float y ;
+//    private float[] XY =new float[2];
+    private float x  = 2;
+    private float y = 1;
     public Point2D(){}
     public Point2D(float x , float y){
         this.x = x;
@@ -32,9 +32,7 @@ public class Point2D {
         this.y = y;
     }
     public float[] getXY(){
-        XY[0] = x;
-        XY[1] = y;
-        return XY;
+        return new float[]{this.x, this.y};
     }
 
     @Override

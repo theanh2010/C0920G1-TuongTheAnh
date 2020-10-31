@@ -1,4 +1,4 @@
-package session_05_ke_thua.thuc_hanh;
+package session_06_abstractClass_interface.bai_tap.interface_resize_for_shape;
 public class Shape {
     private String color ="blue";
     private boolean isFilled = true;
