@@ -1,7 +1,5 @@
 package session_06_abstractClass_interface.bai_tap.interface_resize_for_shape;
 
-import session_05_ke_thua.thuc_hanh.Shape;
-
 public class Circle extends Shape implements Resizeable{
     private double radius = 1.0;
     public Circle(){
@@ -33,7 +31,8 @@ public class Circle extends Shape implements Resizeable{
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + getRadius() +
+                "radius=" + radius +
+                " area = " + getArea()+
                 '}';
     }
 

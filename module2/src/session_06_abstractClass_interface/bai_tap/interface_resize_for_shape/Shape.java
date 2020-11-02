@@ -25,6 +25,10 @@ public class Shape {
         isFilled = filled;
     }
 
+    public  void abc(){
+        System.out.println("cha");
+    }
+
     @Override
     public String toString() {
         return "Shape{" +

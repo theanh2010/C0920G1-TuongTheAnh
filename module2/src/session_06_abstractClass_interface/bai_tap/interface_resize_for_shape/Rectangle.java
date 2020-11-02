@@ -1,8 +1,6 @@
 package session_06_abstractClass_interface.bai_tap.interface_resize_for_shape;
 
-import session_05_ke_thua.thuc_hanh.Shape;
-
-public class Rectangle extends Shape implements Resizeable  {
+public class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double length = 1.0;
     public Rectangle(){
@@ -34,12 +32,16 @@ public class Rectangle extends Shape implements Resizeable  {
     public void setLength(double length) {
         this.length = length;
     }
+    public double getArea(){
+        return this.length * this.width;
+    }
 
     @Override
     public String toString() {
         return "Rectangle{" +
                 "width=" + width +
                 ", length=" + length +
+                ", area= " + getArea() +
 
                 '}';
     }
@@ -49,4 +51,5 @@ public class Rectangle extends Shape implements Resizeable  {
         setWidth(getWidth() * percent);
         setLength(getLength() * percent);
     }
+
 }
