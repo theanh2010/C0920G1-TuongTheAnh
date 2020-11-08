@@ -14,7 +14,7 @@ public class TreeMappublic {
      * @param args
      */
     public static void main(String[] args) {
-        String str = "The Anh dep trai qua di"
+        String str = "The Anh dep trai qua     di   "
                 + "      \n Phuc ngu qua di";
         System.out.println("---------------------------------");
         System.out.println(str);

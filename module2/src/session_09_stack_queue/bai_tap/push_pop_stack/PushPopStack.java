@@ -26,9 +26,11 @@ public class PushPopStack {
             arrayList.set(i,stackList.pop());
         }
         System.out.println(arrayList.toString());
+        System.out.println("-----------------------------------");
             Scanner input = new Scanner(System.in);
             java.util.Stack<String> stack = new Stack<>();
             String string = input.nextLine();
+//            tạo mảng mword
             String[] mWord = string.split(" ",string.length());
             String str = "";
             for (String array: mWord){
