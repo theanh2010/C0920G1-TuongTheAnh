@@ -11,33 +11,33 @@ public class MainController {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String choose = null;
+        int choose ;
         boolean isExit = false;
         CustomerManager customerManager = new CustomerManager();
         int customerId;
         showMenu();
         while (true) {
-            choose = input.nextLine();
+            choose = input.nextInt();
             switch (choose) {
-                case "1":
+                case 1:
                     addNewServices();
                     break;
-                case "2":
+                case 2:
                     showServices();
                     break;
-                case "3":
+                case 3:
                     customerManager.addNewCustomer();
                     break;
-                case "4":
+                case 4:
                     customerManager.showInformationOfCustomer();
                     break;
-                case "5":
+                case 5:
 //                    addNewBooking();
                     break;
-                case "6":
+                case 6:
 //                    showInformationOfEmployee();
                     break;
-                case "7":
+                case 7:
                     System.out.println("existed !");
                     isExit = true;
                     break;
@@ -63,15 +63,16 @@ public class MainController {
     }
     public static void addNewServices() {
         ServicesManager servicesManager = new ServicesManager();
-        boolean isExit = false;
         System.out.println("1. Add New Villa");
         System.out.println("2. Add New House");
         System.out.println("3. Add New Room");
         System.out.println("4. Back To Menu");
         System.out.println("5. Exit");
         System.out.println("----------------------------------------------------");
-        int choiceServices = input.nextInt();
+
+        boolean isExist = false;
         while (true) {
+            int choiceServices = input.nextInt();
             switch (choiceServices) {
                 case 1:
                     servicesManager.addNewVilla();
@@ -87,14 +88,18 @@ public class MainController {
                     break;
                 case 5:
                     System.out.println("existed !");
-                    isExit = true;
+                    isExist = true;
                     break;
                 default:
                     System.out.println("please choose again");
+            }if (isExist){
+                break;
             }
+            addNewServices();
         }
     }
-    public static void showServices(){
+
+    public static void showServices() {
         ServicesManager servicesManager = new ServicesManager();
         System.out.println("1. Show all Villa");
         System.out.println("2. Show all House");
@@ -105,49 +110,36 @@ public class MainController {
         System.out.println("7. Back to menu");
         System.out.println("8. Exit");
         System.out.println("---------------------------------------------------");
-        int choiceShowServices = input.nextInt();
-        while (true)
-        switch (choiceShowServices){
-            case 1 :
-                servicesManager.showAllVilla();
-                break;
-            case 2 :
-                servicesManager.showAllHouse();
-                break;
-            case 3 :
-                servicesManager.showAllRoom();
-                break;
-            case 4 :
+        boolean isExist = false;
+        while (true) {
+            int choiceShowServices = input.nextInt();
+            switch (choiceShowServices) {
+                case 1:
+                    servicesManager.showAllVilla();
+                    break;
+                case 2:
+                    servicesManager.showAllHouse();
+                    break;
+                case 3:
+                    servicesManager.showAllRoom();
+                    break;
+                case 4:
 //                showAllNameVillaNotDuplicate();
 //            case 5 :
 //                showAllNameHouseNotDuplicate();
 //            case 6 :
 //                showAllNameRoomNotDuplicate();
-//            case 7 :
-//                backToMenu();
-            case 8 :
+                case 7:
+                    showMenu();
+                    break;
+                case 8:
+                    System.out.println("existed !");
+                    isExist = true;
+                    break;
+            }if (isExist){
                 break;
+            }
+            showServices();
         }
     }
-//    public static void addNewCustomer(){
-//
-//    }
-//    public static void showInformationOfCustomer(){}
-//    public static void addNewBooking(){
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("1. Booking Villa");
-//        System.out.println("2. Booking House");
-//        System.out.println("3. Booking Room");
-//        int choiceAddNewBooking = input.nextInt();
-//        switch (choiceAddNewBooking){
-////            case 1:
-////                bookingVilla();
-////            case 2:
-////                bookingHouse();
-////            case 3:
-////                bookingRoom();
-//        }
-//    }
-//    public static void showInformationOfEmployee(){}
-//}
 }
