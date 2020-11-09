@@ -1,8 +1,8 @@
-package case_study.controller.add_customer;
+package case_study.models.customer;
 
 import case_study.models.services.Services;
 
-public class Customer extends Services {
+public class Customer  {
     int id;
     String nameCustomer ;
     String birthday;
@@ -11,8 +11,7 @@ public class Customer extends Services {
     String email;
     String typeCustomer;
     String address;
-
-    public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress) {
+    public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress , Services services) {
         this.id = id;
         this.nameCustomer = nameCustomer;
         this.birthday = birthday;
@@ -21,10 +20,24 @@ public class Customer extends Services {
         this.email = email;
         this.typeCustomer = typeCustomer;
         this.address = adress;
+
     }
+
+
 
     public Customer() {
 
+    }
+
+    public Customer(int id, String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String address) {
+        this.id =id;
+        this.nameCustomer = nameCustomer;
+        this.birthday = birthday;
+        this.cmnd = cmnd;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.typeCustomer= typeCustomer;
+        this.address = address;
     }
 
     public String getNameCustomer() {
@@ -90,9 +103,22 @@ public class Customer extends Services {
     public void setAddress(String address) {
         this.address = address;
     }
+     public String showInfor(){
+         return this.toString();
+     }
 
     @Override
-    public String showInfor() {
-        return null;
+    public String toString() {
+        return
+                " Id : " + id + "\n" +
+                " Name Customer : " + nameCustomer + '\n' +
+                " birthday : " + birthday + '\n' +
+                " cmnd : " + cmnd + '\n' +
+                " phoneNumber : " + phoneNumber + '\n' +
+                " email : " + email + '\n' +
+                " typeCustomer : " + typeCustomer + '\n' +
+                " address : " + address + "\n" +
+                "-----------------------------------------------------------";
+
     }
 }

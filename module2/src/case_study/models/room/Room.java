@@ -3,7 +3,7 @@ package case_study.models.room;
 import case_study.models.services.Services;
 
 public class Room extends Services {
-    String accompaniedService = "free";
+    String accompaniedService ;
     public Room(){}
 
     public Room(String accompaniedService) {
@@ -25,6 +25,13 @@ public class Room extends Services {
 
     @Override
     public String showInfor() {
-        return null;
+        return this.toString();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "AccompaniedService : " + accompaniedService +"\n"+
+                "-----------------------------------------------------";
     }
 }

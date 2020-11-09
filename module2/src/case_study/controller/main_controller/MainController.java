@@ -1,8 +1,9 @@
 package case_study.controller.main_controller;
 
 
-import case_study.controller.add_customer.CustomerManager;
-import case_study.models.services.ServicesManager;
+import case_study.services.CustomerManager;
+import case_study.services.EmployeeServices;
+import case_study.services.ServicesManager;
 
 
 import java.util.Scanner;
@@ -11,33 +12,44 @@ public class MainController {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int choose ;
+    showMenu();
+    }
+    public static void showMenu() {
+        System.out.println("chọn chức năng");
+        System.out.println("1. Add New Services");
+        System.out.println("2. Show Services");
+        System.out.println("3. Add New Customer");
+        System.out.println("4. Show Information Of Customer");
+        System.out.println("5. Add New Booking");
+        System.out.println("6. Show Information Of Employee");
+        System.out.println("7. Exit");
+        System.out.println("--------------------------------------------------");
+        String choose ;
         boolean isExit = false;
         CustomerManager customerManager = new CustomerManager();
         int customerId;
-        showMenu();
         while (true) {
-            choose = input.nextInt();
+            choose = input.nextLine();
             switch (choose) {
-                case 1:
+                case "1":
                     addNewServices();
                     break;
-                case 2:
+                case "2":
                     showServices();
                     break;
-                case 3:
+                case "3":
                     customerManager.addNewCustomer();
                     break;
-                case 4:
+                case "4":
                     customerManager.showInformationOfCustomer();
                     break;
-                case 5:
+                case "5":
 //                    addNewBooking();
                     break;
-                case 6:
-//                    showInformationOfEmployee();
+                case "6":
+                    EmployeeServices.showInformationOfEmployee();
                     break;
-                case 7:
+                case "7":
                     System.out.println("existed !");
                     isExit = true;
                     break;
@@ -50,17 +62,6 @@ public class MainController {
             showMenu();
         }
     }
-    public static void showMenu() {
-        System.out.println("chọn chức năng");
-        System.out.println("1. Add New Services");
-        System.out.println("2. Show Services");
-        System.out.println("3. Add New Customer");
-        System.out.println("4. Show Information Of Customer");
-        System.out.println("5. Add New Booking");
-        System.out.println("6. Show Information Of Employee");
-        System.out.println("7. Exit");
-        System.out.println("--------------------------------------------------");
-    }
     public static void addNewServices() {
         ServicesManager servicesManager = new ServicesManager();
         System.out.println("1. Add New Villa");
@@ -72,28 +73,28 @@ public class MainController {
 
         boolean isExist = false;
         while (true) {
-            int choiceServices = input.nextInt();
+            String choiceServices = input.nextLine();
             switch (choiceServices) {
-                case 1:
+                case "1":
                     servicesManager.addNewVilla();
                     break;
-                case 2:
+                case "2":
                     servicesManager.addNewHouse();
                     break;
-                case 3:
+                case "3":
                     servicesManager.addNewRoom();
                     break;
-                case 4:
+                case "4":
                     showMenu();
                     break;
-                case 5:
+                case "5":
                     System.out.println("existed !");
                     isExist = true;
                     break;
                 default:
                     System.out.println("please choose again");
             }if (isExist){
-                break;
+               break;
             }
             addNewServices();
         }
@@ -112,33 +113,34 @@ public class MainController {
         System.out.println("---------------------------------------------------");
         boolean isExist = false;
         while (true) {
-            int choiceShowServices = input.nextInt();
+            String choiceShowServices = input.nextLine();
             switch (choiceShowServices) {
-                case 1:
+                case "1":
                     servicesManager.showAllVilla();
                     break;
-                case 2:
+                case "2":
                     servicesManager.showAllHouse();
                     break;
-                case 3:
+                case "3":
                     servicesManager.showAllRoom();
                     break;
-                case 4:
+                case "4":
 //                showAllNameVillaNotDuplicate();
 //            case 5 :
 //                showAllNameHouseNotDuplicate();
 //            case 6 :
 //                showAllNameRoomNotDuplicate();
-                case 7:
+                case "7":
                     showMenu();
                     break;
-                case 8:
+                case "8":
                     System.out.println("existed !");
                     isExist = true;
                     break;
             }if (isExist){
                 break;
             }
+            System.out.println("------------------------------------------");
             showServices();
         }
     }

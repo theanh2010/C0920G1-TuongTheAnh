@@ -1,7 +1,8 @@
-package case_study.models.services;
+package case_study.services;
 
 import case_study.models.house.House;
 import case_study.models.room.Room;
+import case_study.models.services.Services;
 import case_study.models.villa.Villa;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class ServicesManager extends Services {
         String costServices = inputCostServices();
         String quantityIncluded = inputQuantityIncluded();
         String rentalType = inputRentalType();
-        String accompaniedService = "";
+        String accompaniedService = "FREE";
         Room room = new Room(nameServices,areaServices,costServices,quantityIncluded,rentalType,accompaniedService);
         servicesRoomList.add(room);
     }
@@ -103,33 +104,17 @@ public class ServicesManager extends Services {
     }
     public void showAllVilla(){
         for (Services villa : servicesVillaList){
-            System.out.println("Name Services  :" + villa.getNameServices());
-            System.out.println("Area Services  :" + villa.getAreaServices());
-            System.out.println("Cost Services  " + villa.getCostServices());
-            System.out.println("Quantity Included " + villa.getQuantityIncluded());
-            System.out.println("Rental Type " + villa.getRentalType());
-            System.out.println("Standard Villa "  );
-            System.out.println("Comfortable Description Villa " + villa.getNameServices());
-            System.out.println("Floor Villa " + villa.getNameServices());
-            System.out.println("Area Pool Villa " + villa.getNameServices());
+            System.out.println(villa.showInfor());
         }
     }
     public void showAllHouse(){
         for (Services house : servicesHouseList){
-            System.out.println("Name Services  :" + house.getNameServices());
-            System.out.println("Area Services  :" + house.getAreaServices());
-            System.out.println("Cost Services  " + house.getCostServices());
-            System.out.println("Quantity Included " + house.getQuantityIncluded());
-            System.out.println("Rental Type " + house.getRentalType());
+            System.out.println(house.showInfor());
         }
     }
     public void showAllRoom(){
         for (Services room : servicesRoomList){
-            System.out.println("Name Services  :" + room.getNameServices());
-            System.out.println("Area Services  :" + room.getAreaServices());
-            System.out.println("Cost Services  " + room.getCostServices());
-            System.out.println("Quantity Included " + room.getQuantityIncluded());
-            System.out.println("Rental Type " + room.getRentalType());
+            System.out.println(room.showInfor());
         }
     }
     @Override

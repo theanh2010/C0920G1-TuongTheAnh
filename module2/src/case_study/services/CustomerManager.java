@@ -1,6 +1,7 @@
-package case_study.controller.add_customer;
+package case_study.services;
 
-import session_10_tree_map.bai_tap.quan_li_san_pham.Product;
+
+import case_study.models.customer.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +12,12 @@ public class CustomerManager extends Customer {
     public static List<Customer> customerList = new ArrayList<>();
     public CustomerManager(){
     }
-    public CustomerManager(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress) {
-        super(id,nameCustomer, birthday, cmnd, phoneNumber, email, typeCustomer, adress);
+    public CustomerManager(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String address ) {
+        super(id,nameCustomer, birthday, cmnd, phoneNumber, email, typeCustomer, address);
     }
     public void  addNewCustomer(){
         int id = (customerList.size() > 0 ) ? (customerList.size() + 1) : 1;
-        System.out.println("Product Id = " + id);
+        System.out.println("Customer Id = " + id);
         String nameCustomer  = inputNameCustomer();
         String birthday = inputBirthday();
         String cmnd = inputCmnd();
@@ -55,15 +56,10 @@ public class CustomerManager extends Customer {
         System.out.println("Input address :  ");
         return input.nextLine();
     }
+
     public void showInformationOfCustomer(){
         for (Customer customer : customerList){
-            System.out.println("Name customer : " + customer.getNameCustomer());
-            System.out.println("Birthday customer : " + customer.getBirthday());
-            System.out.println("Cmnd customer : " + customer.getCmnd());
-            System.out.println("Phone number customer : " + customer.getPhoneNumber());
-            System.out.println("Email customer : " + customer.getEmail());
-            System.out.println("Type customer : " + customer.getTypeCustomer());
-            System.out.println("Address customer : " + customer.getAddress());
+            System.out.println(customer.showInfor());
         }
     }
 }

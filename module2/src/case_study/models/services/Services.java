@@ -56,5 +56,15 @@ public abstract class Services {
     }
 
     public abstract String showInfor();
+
+    @Override
+    public String toString() {
+        return  "Name Services : " + nameServices + '\n' +
+                "Area Services : " + areaServices + '\n' +
+                "Cost Services : " + costServices + '\n' +
+                "Quantity Included : " + quantityIncluded + '\n' +
+                "Rental Type : " + rentalType + '\n'+
+                "---------------------------------------------------------------";
+    }
 }
 

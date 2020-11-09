@@ -48,6 +48,14 @@ public class House extends Services {
 
     @Override
     public String showInfor() {
-        return null;
+        return this.toString();
+    }
+
+    @Override
+    public String toString() {
+        return   super.toString()+
+                "Standard House : " + standardHouse + '\n' +
+                "Comfortable Description House : " + comfortableDescriptionHouse + '\n' +
+                "Floor House : " + floorHouse  ;
     }
 }
