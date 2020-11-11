@@ -63,8 +63,7 @@ public abstract class Services {
                 "Area Services : " + areaServices + '\n' +
                 "Cost Services : " + costServices + '\n' +
                 "Quantity Included : " + quantityIncluded + '\n' +
-                "Rental Type : " + rentalType + '\n'+
-                "---------------------------------------------------------------";
+                "Rental Type : " + rentalType + '\n';
     }
 }
 

@@ -56,6 +56,7 @@ public class House extends Services {
         return   super.toString()+
                 "Standard House : " + standardHouse + '\n' +
                 "Comfortable Description House : " + comfortableDescriptionHouse + '\n' +
-                "Floor House : " + floorHouse  ;
+                "Floor House : " + floorHouse + "\n" +
+                "--------------------------------------------------";
     }
 }

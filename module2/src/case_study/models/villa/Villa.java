@@ -67,7 +67,7 @@ public class Villa extends Services {
                 "Standard Villa : " + standardVilla + '\n' +
                 "Comfortable Description Villa : " + comfortableDescriptionVilla + '\n' +
                 "Floor Villa : " + floorVilla + '\n' +
-                "Area Pool Villa : " + areaPoolVilla +
+                "Area Pool Villa : " + areaPoolVilla +"\n"+
                 "---------------------------------------------------";
     }
 }

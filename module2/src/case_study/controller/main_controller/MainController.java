@@ -1,9 +1,9 @@
 package case_study.controller.main_controller;
 
 
-import case_study.services.CustomerManager;
-import case_study.services.EmployeeServices;
-import case_study.services.ServicesManager;
+import case_study.manager.CustomerManager;
+import case_study.manager.EmployeeManager;
+import case_study.manager.ServicesManager;
 
 
 import java.util.Scanner;
@@ -47,7 +47,7 @@ public class MainController {
 //                    addNewBooking();
                     break;
                 case "6":
-                    EmployeeServices.showInformationOfEmployee();
+                    EmployeeManager.showInformationOfEmployee();
                     break;
                 case "7":
                     System.out.println("existed !");
@@ -69,7 +69,7 @@ public class MainController {
         System.out.println("3. Add New Room");
         System.out.println("4. Back To Menu");
         System.out.println("5. Exit");
-        System.out.println("----------------------------------------------------");
+        System.out.println("--------------------------------------------------");
 
         boolean isExist = false;
         while (true) {
@@ -110,7 +110,7 @@ public class MainController {
         System.out.println("6. Show All Name Room Not Duplicate");
         System.out.println("7. Back to menu");
         System.out.println("8. Exit");
-        System.out.println("---------------------------------------------------");
+        System.out.println("--------------------------------------------------");
         boolean isExist = false;
         while (true) {
             String choiceShowServices = input.nextLine();
@@ -137,10 +137,10 @@ public class MainController {
                     System.out.println("existed !");
                     isExist = true;
                     break;
-            }if (isExist){
+            }if (!isExist){
                 break;
             }
-            System.out.println("------------------------------------------");
+            System.out.println("--------------------------------------------------");
             showServices();
         }
     }

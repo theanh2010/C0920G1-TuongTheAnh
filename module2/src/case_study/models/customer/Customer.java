@@ -11,6 +11,7 @@ public class Customer  {
     String email;
     String typeCustomer;
     String address;
+    Services services;
     public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress , Services services) {
         this.id = id;
         this.nameCustomer = nameCustomer;
@@ -20,24 +21,10 @@ public class Customer  {
         this.email = email;
         this.typeCustomer = typeCustomer;
         this.address = adress;
-
+        this.services = services;
     }
-
-
 
     public Customer() {
-
-    }
-
-    public Customer(int id, String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String address) {
-        this.id =id;
-        this.nameCustomer = nameCustomer;
-        this.birthday = birthday;
-        this.cmnd = cmnd;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.typeCustomer= typeCustomer;
-        this.address = address;
     }
 
     public String getNameCustomer() {
@@ -112,13 +99,14 @@ public class Customer  {
         return
                 " Id : " + id + "\n" +
                 " Name Customer : " + nameCustomer + '\n' +
-                " birthday : " + birthday + '\n' +
-                " cmnd : " + cmnd + '\n' +
-                " phoneNumber : " + phoneNumber + '\n' +
-                " email : " + email + '\n' +
-                " typeCustomer : " + typeCustomer + '\n' +
-                " address : " + address + "\n" +
-                "-----------------------------------------------------------";
+                " Birthday : " + birthday + '\n' +
+                " Cmnd : " + cmnd + '\n' +
+                " PhoneNumber : " + phoneNumber + '\n' +
+                " Email : " + email + '\n' +
+                " Type Customer : " + typeCustomer + '\n' +
+                " Address : " + address + "\n" +
+                " Services : " + services.getNameServices() + "\n"+
+                "--------------------------------------------------";
 
     }
 }

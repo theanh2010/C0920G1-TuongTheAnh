@@ -1,4 +1,4 @@
-package case_study.services;
+package case_study.manager;
 
 import case_study.models.employee.Employee;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-public class EmployeeServices {
+public class EmployeeManager {
     public static void showInformationOfEmployee() {
         Employee employee1 = new Employee("Lê Văn A", 11, "Đà Nẵng");
         Employee employee2 = new Employee("Trần Văn C", 12, "Hải Phòng");

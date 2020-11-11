@@ -1,4 +1,4 @@
-package case_study.services;
+package case_study.manager;
 
 import case_study.models.house.House;
 import case_study.models.room.Room;
@@ -9,49 +9,44 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ServicesManager extends Services {
+public class ServicesManager  {
     public static Scanner input = new Scanner(System.in);
-    public static List<Services> servicesVillaList = new ArrayList<>();
-    public static List<Services> servicesHouseList = new ArrayList<>();
-    public static List<Services> servicesRoomList = new ArrayList<>();
+    public static List<Villa> servicesVillaList = new ArrayList<>();
+    public static List<House> servicesHouseList = new ArrayList<>();
+    public static List<Room> servicesRoomList = new ArrayList<>();
+    static {
+        servicesVillaList.add(new Villa("Villa 1","1","2","3","4","5","6","7","2"));
+        servicesVillaList.add(new Villa("Villa 2","1","2","3","4","5","6","7","2"));
+        servicesHouseList.add(new House("House 1","1","2","3","4","5","6",""));
+        servicesHouseList.add(new House("House 2","1","2","3","4","5","6","7"));
+        servicesRoomList.add(new Room("Room 2","1","2","3","4","5"));
+        servicesRoomList.add(new Room("Room 3","1","2","3","4","5"));
+    }
+
+    public static List<Villa> getServicesVillaList() {
+        return servicesVillaList;
+    }
+
+    public static List<House> getServicesHouseList() {
+        return servicesHouseList;
+    }
+
+    public static List<Room> getServicesRoomList() {
+        return servicesRoomList;
+    }
+
     public ServicesManager(){}
 
-    public ServicesManager(String nameServices, String areaServices, String costServices, String quantityIncluded, String rentalType) {
-        super(nameServices, areaServices, costServices, quantityIncluded, rentalType);
-    }
     public void addNewVilla(){
-        String nameServices = inputNameServices();
-        String areaServices = inputAreaServices();
-        String costServices = inputCostServices();
-        String quantityIncluded = inputQuantityIncluded();
-        String rentalType = inputRentalType();
-        String standardVilla = inputStandardVilla();
-        String comfortableDescriptionVilla = inputComfortableDescriptionVilla();
-        String floorVilla = inputFloorVilla();
-        String areaPoolVilla = inputAreaPoolVilla();
-        Villa villa = new Villa(nameServices,areaServices,costServices,quantityIncluded,rentalType,standardVilla,comfortableDescriptionVilla,floorVilla,areaPoolVilla);
+        Villa villa = new Villa(inputNameServices(),inputAreaServices(),inputCostServices(),inputQuantityIncluded(),inputRentalType(),inputStandardVilla(),inputComfortableDescriptionVilla(),inputFloorVilla(),inputAreaPoolVilla());
         servicesVillaList.add(villa);
     }
     public void addNewHouse(){
-        String nameServices = inputNameServices();
-        String areaServices = inputAreaServices();
-        String costServices = inputCostServices();
-        String quantityIncluded = inputQuantityIncluded();
-        String rentalType = inputRentalType();
-        String standardHouse = inputStandardHouse();
-        String comfortableDescriptionHouse = inputComfortableDescriptionHouse();
-        String floorHouse = inputFloorHouse();
-        House house = new House(nameServices,areaServices,costServices,quantityIncluded,rentalType,standardHouse,comfortableDescriptionHouse,floorHouse);
+        House house = new House(inputNameServices(),inputAreaServices(),inputCostServices(),inputQuantityIncluded(),inputRentalType(),inputStandardHouse(),inputComfortableDescriptionHouse(),inputFloorHouse());
         servicesHouseList.add(house);
     }
     public void addNewRoom(){
-        String nameServices = inputNameServices();
-        String areaServices = inputAreaServices();
-        String costServices = inputCostServices();
-        String quantityIncluded = inputQuantityIncluded();
-        String rentalType = inputRentalType();
-        String accompaniedService = "FREE";
-        Room room = new Room(nameServices,areaServices,costServices,quantityIncluded,rentalType,accompaniedService);
+        Room room = new Room(inputNameServices(),inputAreaServices(),inputCostServices(),inputQuantityIncluded(),inputRentalType(),"FREE");
         servicesRoomList.add(room);
     }
     private String inputNameServices() {
@@ -116,9 +111,5 @@ public class ServicesManager extends Services {
         for (Services room : servicesRoomList){
             System.out.println(room.showInfor());
         }
-    }
-    @Override
-    public String showInfor() {
-        return null;
     }
 }

@@ -41,6 +41,6 @@ public class Employee {
                 " Name Employee : " + nameEmployee + "\n" +
                 " Age Employee : " + ageEmployee + "\n" +
                 " Address Employee : " + addressEmployee + "\n"+
-                "-------------------------------------------------";
+                "--------------------------------------------------";
     }
 }
