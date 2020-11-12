@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eec775d9-6b18-468f-addb-ff6bcb9b18f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/bai_tap_them.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/QLNV.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/src/KiemChungVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/src/LapTrinhVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLNV/src/NhanVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QLSV.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/SortStudentByGPA.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/SortStudentByName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/StudentDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/vn/viettuts/StudentManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/SortStudentByGPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/SortStudentByName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/viettuts/StudentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/10_Mang/ThucHanh/ThucHanh_TimGiaTriLonNhatTrongMang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/10_Mang/ThucHanh/ThucHanh_TimGiaTriLonNhatTrongMang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/12. OOP/ThucHanh_XayDungLopHinhTron.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/12. OOP/ThucHanh_XayDungLopHinhTron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/8_If_Else/Bai_Tap/BaiTap_TinhChiSoCanNang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/8_If_Else/Bai_Tap/BaiTap_TinhChiSoCanNang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/9_Cau_Truc_Lap/Bai_Tap/BaiTap_LuyenTapVongLap2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/9_Cau_Truc_Lap/Bai_Tap/BaiTap_LuyenTapVongLap2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/CaseStudy/nhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/CaseStudy/nhap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/catchuoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/catchuoi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/cavashinhchunhat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/cavashinhchunhat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/fibonaci.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/fibonaci.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/timgiatrilonnhattrongmang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/HackerRank/HackerRank/timgiatrilonnhattrongmang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/thi/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/thi/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/thi/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/thi/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/thi/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/thi/3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/thi/4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/thi/4.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1k8YNHa175gZr6KwmZPlfZTKwvf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.viettuts.Main" />
+      <module name="QLSV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.viettuts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eec775d9-6b18-468f-addb-ff6bcb9b18f3" name="Default Changelist" comment="" />
+      <created>1605083643481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605083643481</updated>
+      <workItem from="1605083647460" duration="188000" />
+      <workItem from="1605084576322" duration="108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1340" height="98" key="GridCell.Tab.0.bottom" timestamp="1605084683505">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1340" height="98" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605084683505" />
+    <state width="1340" height="98" key="GridCell.Tab.0.center" timestamp="1605084683504">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1340" height="98" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605084683504" />
+    <state width="1340" height="98" key="GridCell.Tab.0.left" timestamp="1605084683504">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1340" height="98" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605084683504" />
+    <state width="1340" height="98" key="GridCell.Tab.0.right" timestamp="1605084683505">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1340" height="98" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605084683505" />
+  </component>
+</project>

@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="500" height="500" style="border: solid #bc2cff"></canvas>
+<script>
+    class Circle{
+        constructor(radius , color , x , y) {
+            this.radius = radius;
+            this.color=color;
+            this.x = x;
+            this.y = y;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getColor(){
+            return this.color;
+        }
+        getX(){
+            return this.x;
+        }
+        getY(){
+            return this.y;
+        }
+        renderCavas(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle="#000000";
+            ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            ctx.stroke()
+        }
+    }
+    let radius = parseInt(prompt("nhap ban kinh"));
+    let circle = new Circle(radius,"#000000",10,10);
+    circle.renderCavas()
+
+</script>
 </body>
 </html>

@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<h3>Viết hàm tryRemoveFromArray() nhận vào một mảng các số nguyên, và một số nguyên x. Hàm  trả về mảng ban đầu nếu không có số nguyên x trong mảng. Nếu tìm thấy số nguyên x trả về mảng sau khi xóa các số nguyên x đó.</h3>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("nhập số phần tử N"));
+
+    while (isNaN(n)){
+        n =parseInt(prompt("nhập lại N là số"))
+    }
+    let a = new Array(n);
+    for (let i =0; i<n ; i++ ){
+        a[i] = parseInt(prompt("thêm phần tử vào mảng"));
+    }
+    let x = parseInt(prompt("nhập vào số X"));
+    function tryRemoveFromArray(array,x) {
+        for (let j = 0; j < a.length ; j++){
+            if (array[j] === x){
+                array.splice(j,1); // splice ( vị trí phần tử muốn cắt ; số phần tử muốn cắt)
+            }
+        }console.log(array);
+    }
+    tryRemoveFromArray(a,x)
+</script>
 </body>
 </html>

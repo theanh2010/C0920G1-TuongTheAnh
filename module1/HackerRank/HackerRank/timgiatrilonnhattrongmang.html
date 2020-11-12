@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<h3>Viết hàm tryRemoveFromArray() nhận vào một mảng các số nguyên, và một số nguyên x. Hàm  trả về mảng ban đầu nếu không có số nguyên x trong mảng. Nếu tìm thấy số nguyên x trả về mảng sau khi xóa các số nguyên x đó</h3>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("nhập số phần tử N"));
+    let a = new Array(n);
+    for (let i =0; i<n ; i++ ){
+        a[i] = parseInt(prompt("thêm phần tử vào mảng"));
+    }
+    function findMax(a) {
+        let max = a[0];
+        for(let j = 0 ; j < a.length ; j ++){
+            if (max < a[j]) {
+                max = a[j];
+            }
+        }
+        alert("số lớn nhất là "+ max);
+    }
+    findMax(a)
+
+
+</script>
 </body>
 </html>

@@ -51,6 +51,7 @@ public class MainController {
                     break;
                 case "7":
                     System.out.println("existed !");
+                    System.exit(7);
                     isExit = true;
                     break;
                 default:

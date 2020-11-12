@@ -8,7 +8,7 @@
 <script>
 let weight = parseInt(prompt('Enter the weight here !!!'));
 let height = parseInt(prompt('Enter the height here'));
-let bmi = weight / (height ^2);
+let bmi = weight / Math.pow(height,2);
 if (bmi <18.5){
 alert('Underweight');
 }

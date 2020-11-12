@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("nhập số phần tử"));
+    let a =1;
+    let b = 1;
+    let c = 2;
+    let check = false;
+    function isFibonacci(n) {
+       if (n<1){
+           alert(n +"không thuộc dãy fibonacci. FALSE");
+           return check;
+       }
+        else if (n<4){
+           alert(n +"là số thuộc dãy số fibonacci.TRUE");
+           check = true;
+           return check;
+       }
+        while (c < n){
+            a = b;
+            b = c;
+            c = a + b ;
+        }
+        if (c === n){
+            check = true;
+            alert("là số thuộc dãy số fibonacci.FALSE");
+
+        }else {
+            alert("không thuộc dãy fibonacci.TRUE");
+        }
+        return check;
+    }
+    isFibonacci(n)
+</script>
 </body>
 </html>

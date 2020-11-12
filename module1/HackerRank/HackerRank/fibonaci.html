@@ -18,40 +18,65 @@
     //     b=c;
     //
     // }
-    let n= parseInt(prompt("nhập số phần tử"));
-    let a =1;
-    let b = 1;
-    let c = 2;
-    let check = false;
-    function isFibonacci() {
-       if (n<1){
-           alert(n +"không phải");
-           return check
-       }
-        else if (n<4){
-           alert(n +"là số thuộc dãy số fibonacci");
-           check = true;
-           return check;
-       }
-        while (c < n){
-            a = b;
-            b = c;
-            c = a + b ;
-        }
-        if (c === n){
-            check = true;
-            console.log(check);
-            alert("dung");
-            return check;
-        }else {
-            alert("sai");
-            return check;
-        }
 
-    }
-    isFibonacci(n)
-
-
+    // let n= parseInt(prompt("nhập số phần tử"));
+    // let a =1;
+    // let b = 1;
+    // let c = 2;
+    // let check = false;
+    // function isFibonacci(n) {
+    //    if (n<1){
+    //        alert(n +"không phải");
+    //        return check
+    //    }
+    //     else if (n<4){
+    //        alert(n +"là số thuộc dãy số fibonacci");
+    //        check = true;
+    //        return check;
+    //    }
+    //     while (c < n){
+    //         a = b;
+    //         b = c;
+    //         c = a + b ;
+    //     }
+    //     if (c === n){
+    //         check = true;
+    //         console.log(check);
+    //         alert("dung");
+    //         return check;
+    //     }else {
+    //         alert("sai");
+    //         return check;
+    //     }
+    //
+    // }
+    // isFibonacci(n)
+    // tông số n fibonacco daauft tiên
+let n = parseInt(prompt("nhập N số fibonacci đầu tiên"));
+let array = new Array(n);
+let a = 1;
+let b = 1;
+let c = 0;
+let result = 0 ;
+for (let i = 0 ; i < n ; i ++){
+    a = b;
+    b = c;
+    c = a + b ;
+    result += c;
+    array[i] = c;
+}alert(result);
+alert(array)
+//     n số fibonacci chia hết cho 5
+//     let a =0;
+//     let b = 1;
+//     let c ;
+//     while (c % 5 !== 0){
+//         c = a + b ;
+//     }if (c % 5 ===0){
+//         alert(c);
+//         a = b;
+//         b = c;
+//     }
 </script>
 </body>
 </html>
