@@ -5,6 +5,7 @@ import case_study.models.room.Room;
 import case_study.models.services.Services;
 import case_study.models.villa.Villa;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,6 +15,9 @@ public class ServicesManager  {
     public static List<Villa> servicesVillaList = new ArrayList<>();
     public static List<House> servicesHouseList = new ArrayList<>();
     public static List<Room> servicesRoomList = new ArrayList<>();
+    File file;
+    FileReader fileReader;
+    FileWriter fileWriter;
     static {
         servicesVillaList.add(new Villa("Villa 1","1","2","3","4","5","6","7","2"));
         servicesVillaList.add(new Villa("Villa 2","1","2","3","4","5","6","7","2"));
@@ -40,6 +44,17 @@ public class ServicesManager  {
     public void addNewVilla(){
         Villa villa = new Villa(inputNameServices(),inputAreaServices(),inputCostServices(),inputQuantityIncluded(),inputRentalType(),inputStandardVilla(),inputComfortableDescriptionVilla(),inputFloorVilla(),inputAreaPoolVilla());
         servicesVillaList.add(villa);
+        try {
+            fileWriter = new FileWriter("src/case_study/data/Villa.csv",true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Villa villas : servicesVillaList) {
+                bufferedWriter.write(villas.toString());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public void addNewHouse(){
         House house = new House(inputNameServices(),inputAreaServices(),inputCostServices(),inputQuantityIncluded(),inputRentalType(),inputStandardHouse(),inputComfortableDescriptionHouse(),inputFloorHouse());

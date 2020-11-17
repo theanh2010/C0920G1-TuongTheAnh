@@ -64,6 +64,7 @@ public class CustomerManager {
        customerList.add(customer);
        showInformationOfCustomer();
     }
+    
     private String inputNameCustomer() {
         System.out.println("Input name customer :  ");
         return input.nextLine();

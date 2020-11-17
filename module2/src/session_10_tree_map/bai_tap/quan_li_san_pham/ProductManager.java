@@ -67,17 +67,18 @@ public class ProductManager extends Product {
         }
     }
     public int inputId() {
-        System.out.print("Input product ID :");
+        System.out.print("Input product ID  :");
         while (true){
             try {
                 int id =  Integer.parseInt(input.nextLine());
                 return id;
-            }catch (NumberFormatException ex) {
+            }catch (NumberFormatException e) {
                 input.nextLine();
                 System.out.print("Please , Input product ID again :");
             }
         }
     }
+
     private String inputName(){
         input.nextLine();
         System.out.print("Input product name :  ");
