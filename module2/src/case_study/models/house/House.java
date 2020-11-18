@@ -21,7 +21,6 @@ public class House extends Services {
         this.floorHouse = floorHouse;
     }
 
-
     public String getStandardHouse() {
         return standardHouse;
     }

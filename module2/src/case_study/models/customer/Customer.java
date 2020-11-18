@@ -11,8 +11,7 @@ public class Customer  {
     String email;
     String typeCustomer;
     String address;
-    Services services;
-    public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress , Services services) {
+    public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress ) {
         this.id = id;
         this.nameCustomer = nameCustomer;
         this.birthday = birthday;
@@ -21,11 +20,11 @@ public class Customer  {
         this.email = email;
         this.typeCustomer = typeCustomer;
         this.address = adress;
-        this.services = services;
     }
 
     public Customer() {
     }
+
 
     public String getNameCustomer() {
         return nameCustomer;
@@ -105,7 +104,6 @@ public class Customer  {
                 " Email : " + email + '\n' +
                 " Type Customer : " + typeCustomer + '\n' +
                 " Address : " + address + "\n" +
-                " Services : " + services.getNameServices() + "\n"+
                 "--------------------------------------------------";
 
     }

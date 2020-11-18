@@ -12,6 +12,12 @@ public class MainController {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
+        ServicesManager servicesManager = new ServicesManager();
+        CustomerManager customerManager = new CustomerManager();
+        servicesManager.readDataVilla();
+        servicesManager.readDataHouse();
+        servicesManager.readDataRoom();
+        customerManager.readDataCustomer();
     showMenu();
     }
     public static void showMenu() {

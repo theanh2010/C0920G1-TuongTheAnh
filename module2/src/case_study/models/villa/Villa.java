@@ -16,7 +16,8 @@ public class Villa extends Services {
     }
     public Villa(){}
 
-    public Villa(String nameServices, String areaServices, String costServices, String quantityIncluded, String rentalType, String standardVilla, String comfortableDescriptionVilla, String floorVilla, String areaPoolVilla) {
+    public Villa(
+            String nameServices, String areaServices, String costServices, String quantityIncluded, String rentalType, String standardVilla, String comfortableDescriptionVilla, String floorVilla, String areaPoolVilla) {
         super(nameServices, areaServices, costServices, quantityIncluded, rentalType);
         this.standardVilla = standardVilla;
         this.comfortableDescriptionVilla = comfortableDescriptionVilla;
