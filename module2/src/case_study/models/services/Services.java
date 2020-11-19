@@ -1,18 +1,20 @@
 package case_study.models.services;
 
 public abstract class Services {
+
     String nameServices ;
-    String areaServices ;
-    String costServices ;
-    String quantityIncluded;
+    int areaServices ;
+    int costServices ;
+    int quantityIncluded;
     String rentalType;
     public Services(){}
-    public Services(String nameServices, String areaServices, String costServices, String quantityIncluded, String rentalType) {
+    public Services( String nameServices, int areaServices, int costServices, int quantityIncluded, String rentalType) {
         this.nameServices = nameServices;
         this.areaServices = areaServices;
         this.costServices = costServices;
         this.quantityIncluded = quantityIncluded;
         this.rentalType = rentalType;
+
     }
 
     public String getNameServices() {
@@ -23,27 +25,27 @@ public abstract class Services {
         this.nameServices = nameServices;
     }
 
-    public String getAreaServices() {
+    public int getAreaServices() {
         return areaServices;
     }
 
-    public void setAreaServices(String areaServices) {
+    public void setAreaServices(int areaServices) {
         this.areaServices = areaServices;
     }
 
-    public String getCostServices() {
+    public int getCostServices() {
         return costServices;
     }
 
-    public void setCostServices(String costServices) {
+    public void setCostServices(int costServices) {
         this.costServices = costServices;
     }
 
-    public String getQuantityIncluded() {
+    public int getQuantityIncluded() {
         return quantityIncluded;
     }
 
-    public void setQuantityIncluded(String quantityIncluded) {
+    public void setQuantityIncluded(int quantityIncluded) {
         this.quantityIncluded = quantityIncluded;
     }
 
@@ -54,6 +56,8 @@ public abstract class Services {
     public void setRentalType(String rentalType) {
         this.rentalType = rentalType;
     }
+
+
 
     public abstract String showInfor();
 

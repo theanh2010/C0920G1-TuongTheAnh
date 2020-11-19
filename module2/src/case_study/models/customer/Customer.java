@@ -4,6 +4,7 @@ import case_study.models.services.Services;
 
 public class Customer  {
     int id;
+    String idCard;
     String nameCustomer ;
     String birthday;
     String cmnd;

@@ -1,6 +1,8 @@
 package case_study.manager;
 
 
+import case_study.commons.validate_exeption.NameException;
+import case_study.commons.validate_exeption.Validate;
 import case_study.models.customer.Customer;
 import case_study.models.house.House;
 import case_study.models.room.Room;
@@ -19,7 +21,7 @@ public class CustomerManager {
     public static List<Room> roomList = ServicesManager.getServicesRoomList();
     public CustomerManager(){
     }
-    public void  addNewCustomer(){
+    public void  addNewCustomer() {
         List<Customer> oldListCustomer =readDataCustomer();
         System.out.println(oldListCustomer.size());
         int id = 1;
@@ -102,7 +104,14 @@ public class CustomerManager {
                 countLine = line.split(",");
 
                 Customer customers = new Customer(
-                        Integer.parseInt(countLine[0]),countLine[1],countLine[2],countLine[3],countLine[4],countLine[5],countLine[6],countLine[7]);
+                        Integer.parseInt(countLine[0]),
+                        countLine[1],
+                        countLine[2],
+                        countLine[3],
+                        countLine[4],
+                        countLine[5],
+                        countLine[6],
+                        countLine[7]);
                 customerList.add(customers);
             }
         } catch (IOException e) {
@@ -113,12 +122,31 @@ public class CustomerManager {
 
 
     private String inputNameCustomer() {
-        System.out.println("Input name customer :  ");
-        return input.nextLine();
+        String nameCustomer = null;
+        boolean check = false;
+        do {
+            try {
+
+                System.out.println("Input name customer : ");
+                nameCustomer = input.nextLine();
+                if (Validate.isNameCustomer(nameCustomer)){
+                    check = true;
+                }else {
+                    throw new NameException("You entered incorrectly.Please re-enter");
+                }
+            }catch (NameException e){
+                System.err.println(e.getMessage());
+            }
+        }while (!check);
+        return  nameCustomer;
     }
     private String inputBirthday(){
-        System.out.println("Input birthday customer :  ");
-        return input.nextLine();
+        String birthday;
+        do {
+            System.out.println("Input birthday customer :  ");
+            birthday = input.nextLine();
+        }while (!Validate.isBirthday(birthday));
+        return birthday;
     }
     private String inputCmnd(){
         System.out.println("Input cmnd :  ");
