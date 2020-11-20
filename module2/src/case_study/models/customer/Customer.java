@@ -6,16 +6,20 @@ public class Customer  {
     int id;
     String idCard;
     String nameCustomer ;
+    String gender;
     String birthday;
     String cmnd;
     String phoneNumber;
     String email;
     String typeCustomer;
     String address;
-    public Customer(int id , String nameCustomer, String birthday, String cmnd, String phoneNumber, String email, String typeCustomer, String adress ) {
+    public Customer(int id , String nameCustomer,String gender, String birthday,String idCard , String cmnd,
+                    String phoneNumber, String email, String typeCustomer, String adress ) {
         this.id = id;
         this.nameCustomer = nameCustomer;
+        this.gender = gender;
         this.birthday = birthday;
+        this.idCard =idCard;
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -87,6 +91,22 @@ public class Customer  {
         return address;
     }
 
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -99,6 +119,8 @@ public class Customer  {
         return
                 " Id : " + id + "\n" +
                 " Name Customer : " + nameCustomer + '\n' +
+                " Gender : " + gender + '\n' +
+                " ID card : " + idCard + '\n'+
                 " Birthday : " + birthday + '\n' +
                 " Cmnd : " + cmnd + '\n' +
                 " PhoneNumber : " + phoneNumber + '\n' +

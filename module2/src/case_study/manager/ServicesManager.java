@@ -240,7 +240,6 @@ public class ServicesManager  {
         do {
             System.out.println("Input area services :  ");
             areaServices = input.nextInt();
-            System.err.println("You entered incorrectly.Please re-enter");
         }while (areaServices < 30);
             return areaServices;
 
@@ -250,7 +249,6 @@ public class ServicesManager  {
         do {
             System.out.println("Input cost services :  ");
             costServices = input.nextInt();
-            System.err.println("You entered incorrectly.Please re-enter");
         }while (costServices < 0);
             return costServices;
     }
@@ -259,7 +257,6 @@ public class ServicesManager  {
         do {
             System.out.println("Input Quantity Included :  ");
             quantityIncluded = input.nextInt();
-            System.err.println("You entered incorrectly.Please re-enter");
         }while (quantityIncluded < 0  &&  quantityIncluded>20);
         return quantityIncluded;
     }
@@ -288,7 +285,6 @@ public class ServicesManager  {
         do {
             System.out.println("Input Floor Villa :  ");
             floorVilla = input.nextInt();
-            System.out.println("You entered incorrectly.Please re-enter");
         }while (floorVilla < 0);
         return floorVilla;
     }

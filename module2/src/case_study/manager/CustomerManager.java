@@ -1,8 +1,7 @@
 package case_study.manager;
 
 
-import case_study.commons.validate_exeption.NameException;
-import case_study.commons.validate_exeption.Validate;
+import case_study.commons.validate_exeption.*;
 import case_study.models.customer.Customer;
 import case_study.models.house.House;
 import case_study.models.room.Room;
@@ -31,6 +30,8 @@ public class CustomerManager {
         List<Customer> customerList = new ArrayList<>();
         System.out.println("Customer Id = " + id);
         String nameCustomer  = inputNameCustomer();
+        String gender = inputGender();
+        String idCard = inputIdCard();
         String birthday = inputBirthday();
         String cmnd = inputCmnd();
         String phoneNumber = inputPhoneNumber();
@@ -69,7 +70,7 @@ public class CustomerManager {
 //                typeServices = roomList.get(input.nextInt()-1);
 //                break;
 //        }
-       Customer customer = new Customer(id,nameCustomer,birthday,cmnd,phoneNumber,email,typeCustomer,address);
+       Customer customer = new Customer(id,nameCustomer,gender,birthday,idCard,cmnd,phoneNumber,email,typeCustomer,address);
        customerList.add(customer);
         try {
             FileWriter fileWriter = new FileWriter("src/case_study/data/Customer.csv", true);
@@ -77,11 +78,13 @@ public class CustomerManager {
             for (Customer customers: customerList) {
                 bufferedWriter.write(customers.getId()+","+
                         customers.getNameCustomer()+"," +
+                        customers.getGender()+"," +
                         customers.getBirthday()+"," +
+                        customers.getIdCard()+"," +
                         customers.getCmnd()+"," +
+                        customers.getPhoneNumber()+"," +
                         customers.getEmail()+"," +
                         customers.getTypeCustomer()+"," +
-                        customers.getNameCustomer()+"," +
                         customers.getAddress());
                 bufferedWriter.newLine();
             }
@@ -111,7 +114,9 @@ public class CustomerManager {
                         countLine[4],
                         countLine[5],
                         countLine[6],
-                        countLine[7]);
+                        countLine[7],
+                        countLine[8],
+                        countLine[9]);
                 customerList.add(customers);
             }
         } catch (IOException e) {
@@ -123,42 +128,84 @@ public class CustomerManager {
 
     private String inputNameCustomer() {
         String nameCustomer = null;
-        boolean check = false;
+        boolean isCheck = false;
         do {
             try {
 
                 System.out.println("Input name customer : ");
                 nameCustomer = input.nextLine();
-                if (Validate.isNameCustomer(nameCustomer)){
-                    check = true;
+                if (Validate.isNameCustomer(nameCustomer.trim())){
+                    isCheck = true;
                 }else {
-                    throw new NameException("You entered incorrectly.Please re-enter");
+                    throw new NameException("Customer name must capitalize the first letter in each word");
                 }
             }catch (NameException e){
                 System.err.println(e.getMessage());
             }
-        }while (!check);
+        }while (!isCheck);
         return  nameCustomer;
     }
     private String inputBirthday(){
-        String birthday;
+        String birthday = null;
+        boolean isCheck = false;
         do {
-            System.out.println("Input birthday customer :  ");
-            birthday = input.nextLine();
-        }while (!Validate.isBirthday(birthday));
+            try {
+                System.out.println("Input birthday customer : ");
+                birthday = input.nextLine();
+                if (Validate.isBirthday(birthday)){
+                    isCheck = true;
+                }else {
+                    throw new BirthdayException("The year of birth must be > 1900 and less than the current year 18 years, in the correct format dd / mm / yyyy");
+                }
+
+            } catch (BirthdayException e) {
+                System.err.println(e.getMessage());
+            }
+        }while (!isCheck);
         return birthday;
     }
-    private String inputCmnd(){
-        System.out.println("Input cmnd :  ");
-        return input.nextLine();
+
+    private String inputCmnd() {
+        String cmnd;
+        boolean isCheck = false;
+        do {
+            System.out.println("Input cmnd :  ");
+            cmnd = input.nextLine();
+            if (Validate.cmnd(cmnd)) {
+                isCheck = true;
+            }
+        } while (!isCheck);
+        return cmnd;
     }
     private String inputPhoneNumber(){
-        System.out.println("Input phone number :  ");
-        return input.nextLine();
+        String phoneNumber;
+        boolean isCheck = false;
+        do {
+            System.out.println("Input phone number : ");
+            phoneNumber = input.nextLine();
+            if (Validate.phoneNumber(phoneNumber)){
+                isCheck = true;
+            }
+        }while (!isCheck);
+        return phoneNumber;
     }
     private String inputEmail(){
-        System.out.println("Input email :  ");
-        return  input.nextLine();
+       String email = null;
+       boolean isCheck = false;
+       do {
+           try {
+               System.out.println("Input email customer");
+               email = input.nextLine();
+               if (Validate.emailCustomer(email)){
+                   isCheck = true;
+               }else {
+                   throw new EmailExeption("Email must be in the correct format abc@abc.abc");
+               }
+           }catch (EmailExeption e){
+               System.err.println(e.getMessage());
+           }
+       }while (!isCheck);
+       return email;
     }
     private String inputTypeCustomer(){
         System.out.println("Input type customer");
@@ -168,9 +215,52 @@ public class CustomerManager {
         System.out.println("Input address :  ");
         return input.nextLine();
     }
+    private String inputGender(){
+        String gender = null;
+        boolean isCheck = false;
+        do {
+            try {
+                System.out.println("Input gender customer : ");
+                gender = input.nextLine();
+                if (Validate.genderCustomer(gender)) {
+                    String[] str = (gender.toLowerCase()).split("");
+                    StringBuilder genders = new StringBuilder(str[0].toUpperCase());
+                    for (int i = 1; i < str.length; i++) {
+                        genders.append(str[i]);
+                    }
+                    gender = genders.toString();
+                    isCheck = true;
+                } else {
+                    throw new GenderException("You entered incorrectly.Please re-enter");
+                }
+
+            } catch (GenderException e) {
+                System.err.println(e.getMessage());
+            }
+        }while (!isCheck);
+        return gender;
+        }
+    private String inputIdCard(){
+        String idCard = null;
+        boolean isCheck = false;
+        do {
+            try {
+                System.out.println("Input Id card : ");
+                idCard = input.nextLine();
+                if (Validate.idCard(idCard)){
+                    isCheck = true;
+                }else {
+                    throw new IdCardException("Id Card must have 9 digits and be in format XXX XXX XXX");
+                }
+            } catch (IdCardException e) {
+                System.err.println(e.getMessage());
+            }
+        }while (!isCheck);
+        return idCard;
+    }
 
     public void showInformationOfCustomer(){
-        List<Customer> customerList = new ArrayList<>();
+        List<Customer> customerList = readDataCustomer();
         for (Customer customer : customerList){
             System.out.println(customer.showInfor());
         }
