@@ -1,6 +1,8 @@
 package case_study.manager;
 
+import case_study.commons.file_unit.FileUtils;
 import case_study.commons.validate_exeption.Validate;
+import case_study.controller.main_controller.MainController;
 import case_study.models.house.House;
 import case_study.models.room.Room;
 import case_study.models.services.Services;
@@ -11,6 +13,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ServicesManager  {
+    public static final String REGEX_AREA = "([3-9][0-9])|([1-9][0-9][0-9])([1-9][0-9][0-9])";
+    public static final String REGEX_COST = "^[1-9][0-9]|[0-9]+$";
+    public static final String REGEX_QUANTITYINCLUDED = "^[0][1-9]|[1][0-9]|[2][0]$";
+    public static final String REGEX_FLOOR = "^[0][1-9]|[1-9][0-9]|[1-9]+$";
+    public static final String REGEX_POOL = "^([1-9][0-9][0-9])|([3-9][0-9])|[.][0-9]+$";
+    public static String line = null;
+    public static final String COMMA = ",";
     public static Scanner input = new Scanner(System.in);
     public static List<Villa> servicesVillaList = new ArrayList<>();
     public static List<House> servicesHouseList = new ArrayList<>();
@@ -35,7 +44,8 @@ public class ServicesManager  {
         Villa villa = new Villa(
                 inputIdVilla(),
                 inputNameServices(),
-                inputAreaServices(),inputCostServices(),
+                inputAreaServices(),
+                inputCostServices(),
                 inputQuantityIncluded(),
                 inputRentalType(),
                 inputStandardVilla(),
@@ -43,26 +53,17 @@ public class ServicesManager  {
                 inputFloorVilla(),
                 inputAreaPoolVilla());
         servicesVillaList.add(villa);
-        try {
-            FileWriter fileWriter = new FileWriter("src/case_study/data/Villa.csv",true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Villa villas : servicesVillaList) {
-                bufferedWriter.write(villas.getIdVilla()+","+
-                        villas.getNameServices()+","+
-                        villas.getAreaServices()+ "," +
-                        villas.getCostServices()+ "," +
-                        villas.getQuantityIncluded()+ "," +
-                        villas.getRentalType()+ "," +
-                        villas.getStandardVilla()+ "," +
-                        villas.getComfortableDescriptionVilla()+ "," +
-                        villas.getFloorVilla()+ "," +
-                        villas.getAreaPoolVilla());
-                bufferedWriter.newLine();
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        line =  villa.getIdVilla() + COMMA +
+                villa.getNameServices() + COMMA +
+                villa.getAreaServices() + COMMA +
+                villa.getCostServices() + COMMA +
+                villa.getQuantityIncluded() + COMMA +
+                villa.getRentalType() + COMMA +
+                villa.getStandardVilla() + COMMA +
+                villa.getComfortableDescriptionVilla() + COMMA +
+                villa.getFloorVilla() + COMMA +
+                villa.getAreaPoolVilla();
+        FileUtils.fileWriter("src/case_study/data/Villa.csv",line,true);
     }
     public void readDataVilla(){
         File file;
@@ -104,25 +105,16 @@ public class ServicesManager  {
                 inputComfortableDescriptionHouse(),
                 inputFloorHouse());
         servicesHouseList.add(house);
-        try {
-            FileWriter fileWriter = new FileWriter("src/case_study/data/House.csv",true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (House houses : servicesHouseList) {
-                bufferedWriter.write(houses.getIdHouse()+","+
-                        houses.getNameServices()+","+
-                        houses.getAreaServices()+ "," +
-                        houses.getCostServices()+ "," +
-                        houses.getQuantityIncluded()+ "," +
-                        houses.getRentalType()+ "," +
-                        houses.getStandardHouse()+ "," +
-                        houses.getComfortableDescriptionHouse()+ "," +
-                        houses.getFloorHouse());
-                bufferedWriter.newLine();
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        line = house.getIdHouse() + COMMA +
+               house.getNameServices()+ COMMA +
+               house.getAreaServices()+ COMMA +
+               house.getCostServices()+ COMMA +
+               house.getQuantityIncluded()+ COMMA +
+               house.getRentalType()+ COMMA +
+               house.getStandardHouse()+ COMMA +
+               house.getComfortableDescriptionHouse()+ COMMA +
+               house.getFloorHouse();
+        FileUtils.fileWriter("src/case_study/data/House.csv",line,true);
     }
     public void  readDataHouse(){
         File file;
@@ -160,23 +152,14 @@ public class ServicesManager  {
                 inputRentalType(),
                 inputAccompaniedService());
         servicesRoomList.add(room);
-        try {
-            FileWriter fileWriter = new FileWriter("src/case_study/data/Room.csv",true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Room rooms : servicesRoomList) {
-                bufferedWriter.write(rooms.getIdRoom() +","+
-                        rooms.getNameServices()+","+
-                        rooms.getAreaServices()+ "," +
-                        rooms.getCostServices()+ "," +
-                        rooms.getQuantityIncluded()+ "," +
-                        rooms.getRentalType()+ "," +
-                        rooms.getAccompaniedService());
-                bufferedWriter.newLine();
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        line = room.getIdRoom() + COMMA +
+                room.getNameServices() + COMMA +
+                room.getAreaServices() + COMMA +
+                room.getCostServices() + COMMA +
+                room.getQuantityIncluded() + COMMA +
+                room.getRentalType() + COMMA +
+                room.getAccompaniedService();
+        FileUtils.fileWriter("src/case_study/data/Room.csv",line,true);
     }
     public void readDataRoom(){
         File file;
@@ -211,6 +194,7 @@ public class ServicesManager  {
         }while (!Validate.isIDVilla(idVilla));
         return idVilla;
     }
+
     private String inputIdRoom(){
         String idRoom;
         do {
@@ -219,6 +203,7 @@ public class ServicesManager  {
         }while (!Validate.isIDRoom(idRoom));
         return idRoom;
     }
+
     private String inputIdHouse(){
         String idHouse;
         do {
@@ -227,6 +212,7 @@ public class ServicesManager  {
         }while (!Validate.isIDHouse(idHouse));
         return idHouse;
     }
+
     private String inputNameServices() {
         String nameServices;
         do {
@@ -235,31 +221,22 @@ public class ServicesManager  {
         }while (!Validate.isNameServices(nameServices));
             return nameServices;
     }
-    private int inputAreaServices() {
-        int areaServices;
-        do {
-            System.out.println("Input area services :  ");
-            areaServices = input.nextInt();
-        }while (areaServices < 30);
-            return areaServices;
 
+    private int inputAreaServices() {
+        System.out.println("Input area services :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(),REGEX_AREA));
     }
+
     private int inputCostServices() {
-        int costServices;
-        do {
-            System.out.println("Input cost services :  ");
-            costServices = input.nextInt();
-        }while (costServices < 0);
-            return costServices;
+        System.out.println("Input cost services :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(), REGEX_COST));
     }
+
     private int inputQuantityIncluded() {
-        int quantityIncluded;
-        do {
-            System.out.println("Input Quantity Included :  ");
-            quantityIncluded = input.nextInt();
-        }while (quantityIncluded < 0  &&  quantityIncluded>20);
-        return quantityIncluded;
+        System.out.println("Input Quantity Included :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(),REGEX_QUANTITYINCLUDED));
     }
+
     private String inputRentalType() {
         String rentalType;
         do {
@@ -268,6 +245,7 @@ public class ServicesManager  {
         }while (!Validate.isRentalType(rentalType));
         return rentalType;
     }
+
     private String inputStandardVilla() {
         String standardVilla;
         do {
@@ -276,17 +254,14 @@ public class ServicesManager  {
         }while (!Validate.isStandardRoom(standardVilla));
         return standardVilla;
     }
+
     private String inputComfortableDescriptionVilla() {
         System.out.println("Input Comfortable Description Villa :  ");
         return input.nextLine();
     }
     private int inputFloorVilla() {
-        int floorVilla;
-        do {
-            System.out.println("Input Floor Villa :  ");
-            floorVilla = input.nextInt();
-        }while (floorVilla < 0);
-        return floorVilla;
+        System.out.println("Input Floor Villa :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(),REGEX_FLOOR));
     }
     private String inputStandardHouse() {
         String standardHouse;
@@ -301,24 +276,12 @@ public class ServicesManager  {
         return input.nextLine();
     }
     private int inputFloorHouse() {
-        int floorHouse;
-        do {
-            System.out.println("Input Floor House :  ");
-            floorHouse = input.nextInt();
-            System.out.println("You entered incorrectly.Please re-enter");
-
-        }while (floorHouse < 0);
-        return floorHouse;
+        System.out.println("Input Floor House :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(),REGEX_FLOOR));
     }
     private int inputAreaPoolVilla() {
-        int areaPoolVilla;
-        do {
-            System.out.println("Input pool villa :  ");
-           areaPoolVilla = input.nextInt();
-            System.out.println("You entered incorrectly.Please re-enter");
-        }while (areaPoolVilla <30);
-            return areaPoolVilla;
-
+        System.out.println("Input pool villa :  ");
+        return Integer.parseInt(Validate.regexStr(MainController.input.nextLine(),REGEX_POOL));
     }
     private String inputAccompaniedService(){
         String accompaniedService;

@@ -1,6 +1,8 @@
 package case_study.manager;
 
 
+import case_study.commons.comparator.SortNameCustomer;
+import case_study.commons.file_unit.FileUtils;
 import case_study.commons.validate_exeption.*;
 import case_study.models.customer.Customer;
 import case_study.models.house.House;
@@ -10,26 +12,31 @@ import case_study.models.villa.Villa;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerManager {
+    public static String line = null;
+    public static final String COMMA = ",";
     public static Scanner input = new Scanner(System.in);
     public static List<Villa> villaList = ServicesManager.getServicesVillaList();
     public static List<House> houseList = ServicesManager.getServicesHouseList();
     public static List<Room> roomList = ServicesManager.getServicesRoomList();
-    public CustomerManager(){
+
+    public CustomerManager() {
     }
-    public void  addNewCustomer() {
-        List<Customer> oldListCustomer =readDataCustomer();
+
+    public void addNewCustomer() {
+        List<Customer> oldListCustomer = readDataCustomer();
         System.out.println(oldListCustomer.size());
         int id = 1;
-        if (oldListCustomer.size() != 0){
-           id = oldListCustomer.get(oldListCustomer.size()-1).getId()+1;
+        if (oldListCustomer.size() != 0) {
+            id = oldListCustomer.get(oldListCustomer.size() - 1).getId() + 1;
         }
         List<Customer> customerList = new ArrayList<>();
         System.out.println("Customer Id = " + id);
-        String nameCustomer  = inputNameCustomer();
+        String nameCustomer = inputNameCustomer();
         String gender = inputGender();
         String idCard = inputIdCard();
         String birthday = inputBirthday();
@@ -70,39 +77,33 @@ public class CustomerManager {
 //                typeServices = roomList.get(input.nextInt()-1);
 //                break;
 //        }
-       Customer customer = new Customer(id,nameCustomer,gender,birthday,idCard,cmnd,phoneNumber,email,typeCustomer,address);
-       customerList.add(customer);
-        try {
-            FileWriter fileWriter = new FileWriter("src/case_study/data/Customer.csv", true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Customer customers: customerList) {
-                bufferedWriter.write(customers.getId()+","+
-                        customers.getNameCustomer()+"," +
-                        customers.getGender()+"," +
-                        customers.getBirthday()+"," +
-                        customers.getIdCard()+"," +
-                        customers.getCmnd()+"," +
-                        customers.getPhoneNumber()+"," +
-                        customers.getEmail()+"," +
-                        customers.getTypeCustomer()+"," +
-                        customers.getAddress());
-                bufferedWriter.newLine();
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        FileUtils.writeFile(FILE_CUSTOMER, line, true);
+
+        Customer customer = new Customer(id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address);
+        customerList.add(customer);
+        line = id + COMMA +
+                nameCustomer + COMMA +
+                gender + COMMA +
+                birthday + COMMA +
+                idCard + COMMA +
+                cmnd + COMMA +
+                phoneNumber + COMMA +
+                email + COMMA +
+                typeCustomer + COMMA +
+                address;
+        FileUtils.fileWriter("src/case_study/data/Customer.csv",line,true);
+
     }
 
     public List<Customer> readDataCustomer() {
-        List<Customer> customerList=  new ArrayList<>();
+        List<Customer> customerList = new ArrayList<>();
         File file;
         file = new File("src/case_study/data/Customer.csv");
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line ;
-            while ((line = bufferedReader.readLine()) != null){
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
                 String[] countLine;
                 countLine = line.split(",");
 
@@ -134,34 +135,35 @@ public class CustomerManager {
 
                 System.out.println("Input name customer : ");
                 nameCustomer = input.nextLine();
-                if (Validate.isNameCustomer(nameCustomer.trim())){
+                if (Validate.isNameCustomer(nameCustomer.trim())) {
                     isCheck = true;
-                }else {
+                } else {
                     throw new NameException("Customer name must capitalize the first letter in each word");
                 }
-            }catch (NameException e){
+            } catch (NameException e) {
                 System.err.println(e.getMessage());
             }
-        }while (!isCheck);
-        return  nameCustomer;
+        } while (!isCheck);
+        return nameCustomer;
     }
-    private String inputBirthday(){
+
+    private String inputBirthday() {
         String birthday = null;
         boolean isCheck = false;
         do {
             try {
                 System.out.println("Input birthday customer : ");
                 birthday = input.nextLine();
-                if (Validate.isBirthday(birthday)){
+                if (Validate.isBirthday(birthday)) {
                     isCheck = true;
-                }else {
+                } else {
                     throw new BirthdayException("The year of birth must be > 1900 and less than the current year 18 years, in the correct format dd / mm / yyyy");
                 }
 
             } catch (BirthdayException e) {
                 System.err.println(e.getMessage());
             }
-        }while (!isCheck);
+        } while (!isCheck);
         return birthday;
     }
 
@@ -177,45 +179,50 @@ public class CustomerManager {
         } while (!isCheck);
         return cmnd;
     }
-    private String inputPhoneNumber(){
+
+    private String inputPhoneNumber() {
         String phoneNumber;
         boolean isCheck = false;
         do {
             System.out.println("Input phone number : ");
             phoneNumber = input.nextLine();
-            if (Validate.phoneNumber(phoneNumber)){
+            if (Validate.phoneNumber(phoneNumber)) {
                 isCheck = true;
             }
-        }while (!isCheck);
+        } while (!isCheck);
         return phoneNumber;
     }
-    private String inputEmail(){
-       String email = null;
-       boolean isCheck = false;
-       do {
-           try {
-               System.out.println("Input email customer");
-               email = input.nextLine();
-               if (Validate.emailCustomer(email)){
-                   isCheck = true;
-               }else {
-                   throw new EmailExeption("Email must be in the correct format abc@abc.abc");
-               }
-           }catch (EmailExeption e){
-               System.err.println(e.getMessage());
-           }
-       }while (!isCheck);
-       return email;
+
+    private String inputEmail() {
+        String email = null;
+        boolean isCheck = false;
+        do {
+            try {
+                System.out.println("Input email customer");
+                email = input.nextLine();
+                if (Validate.emailCustomer(email)) {
+                    isCheck = true;
+                } else {
+                    throw new EmailExeption("Email must be in the correct format abc@abc.abc");
+                }
+            } catch (EmailExeption e) {
+                System.err.println(e.getMessage());
+            }
+        } while (!isCheck);
+        return email;
     }
-    private String inputTypeCustomer(){
+
+    private String inputTypeCustomer() {
         System.out.println("Input type customer");
-        return  input.nextLine();
+        return input.nextLine();
     }
-    private String inputAddress(){
+
+    private String inputAddress() {
         System.out.println("Input address :  ");
         return input.nextLine();
     }
-    private String inputGender(){
+
+    private String inputGender() {
         String gender = null;
         boolean isCheck = false;
         do {
@@ -237,31 +244,33 @@ public class CustomerManager {
             } catch (GenderException e) {
                 System.err.println(e.getMessage());
             }
-        }while (!isCheck);
+        } while (!isCheck);
         return gender;
-        }
-    private String inputIdCard(){
+    }
+
+    private String inputIdCard() {
         String idCard = null;
         boolean isCheck = false;
         do {
             try {
                 System.out.println("Input Id card : ");
                 idCard = input.nextLine();
-                if (Validate.idCard(idCard)){
+                if (Validate.idCard(idCard)) {
                     isCheck = true;
-                }else {
+                } else {
                     throw new IdCardException("Id Card must have 9 digits and be in format XXX XXX XXX");
                 }
             } catch (IdCardException e) {
                 System.err.println(e.getMessage());
             }
-        }while (!isCheck);
+        } while (!isCheck);
         return idCard;
     }
 
-    public void showInformationOfCustomer(){
+    public void showInformationOfCustomer() {
         List<Customer> customerList = readDataCustomer();
-        for (Customer customer : customerList){
+        Collections.sort(customerList,new SortNameCustomer());
+        for (Customer customer : customerList) {
             System.out.println(customer.showInfor());
         }
     }

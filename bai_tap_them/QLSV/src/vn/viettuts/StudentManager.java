@@ -22,7 +22,7 @@ public class StudentManager {
     /**
      * add student to studentList
      * 
-     * @param student
+     * @param
      */
     public void add() {
         int id = (studentList.size() > 0) ? (studentList.size() + 1) : 1;
@@ -51,6 +51,7 @@ public class StudentManager {
                 studentList.get(i).setAge(inputAge());
                 studentList.get(i).setAddress(inputAddress());
                 studentList.get(i).setGpa(inputGpa());
+                studentList.get(i+1).setGpa(inputGpa());
                 break;
             }
         }

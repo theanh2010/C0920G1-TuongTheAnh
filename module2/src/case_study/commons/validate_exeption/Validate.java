@@ -1,5 +1,7 @@
 package case_study.commons.validate_exeption;
 
+import case_study.controller.main_controller.MainController;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -128,5 +130,17 @@ public class Validate {
         pattern = Pattern.compile(ID_CARD);
         matcher = pattern.matcher(idCard);
         return matcher.matches();
+    }
+    public static String regexStr(String str, String regex){
+        boolean check = false;
+        do {
+        if (str.matches(regex)){
+            check = true;
+        } else {
+            System.err.println(note);
+            str = MainController.input.nextLine();
+        }
+        } while (!check);
+        return str;
     }
 }
