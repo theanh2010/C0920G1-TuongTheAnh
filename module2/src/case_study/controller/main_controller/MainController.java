@@ -1,22 +1,18 @@
 package case_study.controller.main_controller;
 
 
+import case_study.commons.file_unit.FileUtils;
 import case_study.manager.CustomerManager;
 import case_study.manager.EmployeeManager;
 import case_study.manager.ServicesManager;
 
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MainController {
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        ServicesManager servicesManager = new ServicesManager();
-        CustomerManager customerManager = new CustomerManager();
-        servicesManager.readDataVilla();
-        servicesManager.readDataHouse();
-        servicesManager.readDataRoom();
-        customerManager.readDataCustomer();
     showMenu();
     }
     public static void showMenu() {
@@ -49,7 +45,7 @@ public class MainController {
                     customerManager.showInformationOfCustomer();
                     break;
                 case "5":
-//                    addNewBooking();
+//                    customerManager.addNewBooking();
                     break;
                 case "6":
                     EmployeeManager.showInformationOfEmployee();
@@ -131,11 +127,11 @@ public class MainController {
                     servicesManager.showAllRoom();
                     break;
                 case "4":
-//                showAllNameVillaNotDuplicate();
-//            case 5 :
-//                showAllNameHouseNotDuplicate();
-//            case 6 :
-//                showAllNameRoomNotDuplicate();
+                    servicesManager.showAllNameVillaNotDuplicate();
+                case "5" :
+                    servicesManager.showAllNameHouseNotDuplicate();
+                case "6" :
+                    servicesManager.showAllNameRoomNotDuplicate();
                 case "7":
                     showMenu();
                     break;
@@ -150,6 +146,4 @@ public class MainController {
             showServices();
         }
     }
-
-
 }

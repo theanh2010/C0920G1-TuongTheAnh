@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3489276d-04f2-48b9-b6ab-09a6174ab3e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/src/Product/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/src/Product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/src/Product/ProductManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/src/Product/SanPhamNhapKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/src/Product/SanPhamXuatKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai_tap_them/QLSV/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap_them/QLSV/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1kczm4CKIcw1LAUvhuWGYPHUWle" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3489276d-04f2-48b9-b6ab-09a6174ab3e7" name="Default Changelist" comment="" />
+      <created>1606014822854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606014822854</updated>
+      <workItem from="1606014824659" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

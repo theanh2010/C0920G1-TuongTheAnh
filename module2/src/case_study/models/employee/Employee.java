@@ -11,6 +11,10 @@ public class Employee {
         this.addressEmployee = addressEmployee;
     }
 
+    public Employee(String nameEmployee, String s, String addressEmployee) {
+
+    }
+
     public String getNameEmployee() {
         return nameEmployee;
     }

@@ -2,34 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eec775d9-6b18-468f-addb-ff6bcb9b18f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study/commons/comparator/SortNameCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study/commons/file_unit/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study/manager/CRODCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case Study/.idea/Case Study.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case Study/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case Study/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case Study/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case Study/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/META-INF/QLSV.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/FileUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/MainController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/ProductManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/SanPhamNhapKhau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/SanPhamNhapKhau.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/SanPhamXuatKhau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Product/SanPhamXuatKhau.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/.idea/Product.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/ProductManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/SanPhamNhapKhau.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/SanPhamNhapKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/SanPhamXuatKhau.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/SanPhamXuatKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/.idea/task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/NameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/ProductExport.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/ProductExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/ProductImport.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/ProductImport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/Validate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/viettuts/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/viettuts/StudentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/commons/validate_exeption/Validate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/commons/validate_exeption/Validate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Customer.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/CustomerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/CustomerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/ServicesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/ServicesManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/commons/validate_exeption/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/commons/validate_exeption/Validate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/controller/main_controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/controller/main_controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/data/Customer.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/data/Villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/data/Villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/manager/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/manager/CustomerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/manager/ServicesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/manager/ServicesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/vn/viettuts/StudentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vn/viettuts/StudentManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1k8YNHa175gZr6KwmZPlfZTKwvf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,9 +77,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../module2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Product" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainController">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.viettuts.Main" />
       <module name="QLSV" />
@@ -56,8 +98,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Product.MainController" />
+      <module name="QLSV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Product.Test" />
+      <module name="QLSV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainController" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -80,6 +150,9 @@
       <workItem from="1605614260606" duration="1031000" />
       <workItem from="1605662599563" duration="1223000" />
       <workItem from="1605861149963" duration="4664000" />
+      <workItem from="1606012849826" duration="2011000" />
+      <workItem from="1606014923301" duration="4463000" />
+      <workItem from="1606094311200" duration="2442000" />
     </task>
     <servers />
   </component>
@@ -87,21 +160,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1340" height="527" key="GridCell.Tab.0.bottom" timestamp="1605608177149">
+    <state x="573" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1606015585951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1340" height="527" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605608177149" />
-    <state width="1340" height="527" key="GridCell.Tab.0.center" timestamp="1605608177149">
+    <state x="573" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606015585951" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1606096751713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1340" height="527" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605608177149" />
-    <state width="1340" height="527" key="GridCell.Tab.0.left" timestamp="1605608177149">
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606096751713" />
+    <state width="1491" height="344" key="GridCell.Tab.0.bottom" timestamp="1606096754118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1340" height="527" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605608177149" />
-    <state width="1340" height="527" key="GridCell.Tab.0.right" timestamp="1605608177149">
+    <state width="1491" height="344" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606096754118" />
+    <state width="1491" height="344" key="GridCell.Tab.0.center" timestamp="1606096754118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1340" height="527" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605608177149" />
+    <state width="1491" height="344" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606096754118" />
+    <state width="1491" height="344" key="GridCell.Tab.0.left" timestamp="1606096754118">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="344" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606096754118" />
+    <state width="1491" height="344" key="GridCell.Tab.0.right" timestamp="1606096754118">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="344" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606096754118" />
   </component>
 </project>

@@ -13,8 +13,9 @@ public class Customer  {
     String email;
     String typeCustomer;
     String address;
+    String typeServices;
     public Customer(int id , String nameCustomer,String gender, String birthday,String idCard , String cmnd,
-                    String phoneNumber, String email, String typeCustomer, String adress ) {
+                    String phoneNumber, String email, String typeCustomer, String adress ,String  typeServices) {
         this.id = id;
         this.nameCustomer = nameCustomer;
         this.gender = gender;
@@ -25,11 +26,11 @@ public class Customer  {
         this.email = email;
         this.typeCustomer = typeCustomer;
         this.address = adress;
+        this.typeServices = typeServices;
     }
 
     public Customer() {
     }
-
 
     public String getNameCustomer() {
         return nameCustomer;
@@ -107,6 +108,14 @@ public class Customer  {
         this.gender = gender;
     }
 
+    public String getTypeServices() {
+        return typeServices;
+    }
+
+    public void setTypeServices(String typeServices) {
+        this.typeServices = typeServices;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -127,6 +136,7 @@ public class Customer  {
                 " Email : " + email + '\n' +
                 " Type Customer : " + typeCustomer + '\n' +
                 " Address : " + address + "\n" +
+                " Type Services : " + typeServices + '\n' +
                 "--------------------------------------------------";
 
     }
