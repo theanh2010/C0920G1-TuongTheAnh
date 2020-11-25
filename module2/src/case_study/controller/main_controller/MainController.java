@@ -45,7 +45,7 @@ public class MainController {
                     customerManager.showInformationOfCustomer();
                     break;
                 case "5":
-//                    customerManager.addNewBooking();
+                    customerManager.deleteCustomer();
                     break;
                 case "6":
                     EmployeeManager.showInformationOfEmployee();
@@ -139,11 +139,12 @@ public class MainController {
                     System.out.println("existed !");
                     isExist = true;
                     break;
-            }if (!isExist){
+            }if (isExist){
                 break;
             }
             System.out.println("--------------------------------------------------");
             showServices();
         }
     }
+
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09f197c2-465d-4ce0-8bdb-cf86a5b59b10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../QLSV/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_test/.idea/product_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/MainControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/ManagerProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/ProductExport.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/ProductExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/ProductImport.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/luyen_tap/ProductImport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module2/src/test/ChuNhat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/controller/main_controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/controller/main_controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/data/Villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/CustomerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/manager/CustomerManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/models/employee/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/case_study/models/employee/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/controller/main_controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/controller/main_controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/data/Customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/data/Villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/data/Villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/manager/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/manager/CustomerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study/models/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study/models/employee/Employee.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1klNv796cFeL4LYTOD5wvcck1yM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09f197c2-465d-4ce0-8bdb-cf86a5b59b10" name="Default Changelist" comment="" />
+      <created>1606271445111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606271445111</updated>
+      <workItem from="1606271446364" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="617" y="289" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1606271492033">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="617" y="289" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1606271492033" />
+    <state x="548" y="155" key="FileChooserDialogImpl" timestamp="1606271501281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606271501281" />
+  </component>
+</project>

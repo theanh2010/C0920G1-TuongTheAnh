@@ -45,21 +45,21 @@ public class CustomerManager {
         String typeCustomer = inputTypeCustomer();
         String address = inputAddress();
         int choose = 0;
-        System.out.println("Choose Services"+
-                "\n 1.Villa "+
+        System.out.println("Choose Services" +
+                "\n 1.Villa " +
                 "\n 2.House" +
                 "\n 3.Room" +
                 "\n 4.Cinema Ticket");
-        switch (MainController.input.nextInt()){
-            case 1 :
+        switch (MainController.input.nextInt()) {
+            case 1:
                 System.out.println("Choose Villa : ");
-                for (int i = 0 ; i < villaList.size(); i++){
-                    System.out.println((i+1) + " " +villaList.get(i).getIdVilla());
+                for (int i = 0; i < villaList.size(); i++) {
+                    System.out.println((i + 1) + " " + villaList.get(i).getIdVilla());
                 }
-                choose = MainController.input.nextInt()-1;
+                choose = MainController.input.nextInt() - 1;
                 System.out.println(villaList.get(choose).getIdVilla());
                 Customer customer = new Customer(id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber,
-                        email, typeCustomer, address,villaList.get(choose).getIdVilla());
+                        email, typeCustomer, address, villaList.get(choose).getIdVilla());
                 customerList.add(customer);
                 line = id + COMMA +
                         nameCustomer + COMMA +
@@ -71,18 +71,18 @@ public class CustomerManager {
                         email + COMMA +
                         typeCustomer + COMMA +
                         address + COMMA + villaList.get(choose).getIdVilla();
-                FileUtils.fileWriter("src/case_study/data/Customer.csv",line,true);
+                FileUtils.fileWriter("src/case_study/data/Customer.csv", line, true);
                 showInformationOfCustomer();
                 break;
-            case 2 :
+            case 2:
                 System.out.println("Choose House : ");
-                for (int i = 0 ; i < houseList.size(); i++){
-                    System.out.println((i+1) + " " +houseList.get(i).getIdHouse());
+                for (int i = 0; i < houseList.size(); i++) {
+                    System.out.println((i + 1) + " " + houseList.get(i).getIdHouse());
                 }
-                choose = MainController.input.nextInt()-1;
+                choose = MainController.input.nextInt() - 1;
                 houseList.get(choose);
                 Customer customer1 = new Customer(
-                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address,houseList.get(choose).getIdHouse());
+                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address, houseList.get(choose).getIdHouse());
                 customerList.add(customer1);
                 line = id + COMMA +
                         nameCustomer + COMMA +
@@ -93,18 +93,18 @@ public class CustomerManager {
                         phoneNumber + COMMA +
                         email + COMMA +
                         typeCustomer + COMMA +
-                        address + COMMA + houseList.get(choose).getIdHouse() ;
-                FileUtils.fileWriter("src/case_study/data/Customer.csv",line,true);
+                        address + COMMA + houseList.get(choose).getIdHouse();
+                FileUtils.fileWriter("src/case_study/data/Customer.csv", line, true);
                 showInformationOfCustomer();
-            case 3 :
+            case 3:
                 System.out.println("Choose room : ");
-                for (int i = 0 ; i < roomList.size(); i++){
-                    System.out.println((i+1) + " " +roomList.get(i).getIdRoom());
+                for (int i = 0; i < roomList.size(); i++) {
+                    System.out.println((i + 1) + " " + roomList.get(i).getIdRoom());
                 }
-                choose = MainController.input.nextInt()-1;
+                choose = MainController.input.nextInt() - 1;
                 roomList.get(choose);
                 Customer customer2 = new Customer(
-                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address,houseList.get(choose).getIdHouse());
+                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address, houseList.get(choose).getIdHouse());
                 customerList.add(customer2);
                 line = id + COMMA +
                         nameCustomer + COMMA +
@@ -115,13 +115,13 @@ public class CustomerManager {
                         phoneNumber + COMMA +
                         email + COMMA +
                         typeCustomer + COMMA +
-                        address + COMMA + roomList.get(choose).getIdRoom() ;
-                FileUtils.fileWriter("src/case_study/data/Customer.csv",line,true);
+                        address + COMMA + roomList.get(choose).getIdRoom();
+                FileUtils.fileWriter("src/case_study/data/Customer.csv", line, true);
                 showInformationOfCustomer();
                 break;
-            case 4 :
+            case 4:
                 String temp = "vé số " + count;
-                if (count <= 2){
+                if (count <= 2) {
                     System.out.println("Bạn đã mua vé xem phim, vé số " + count);
                 } else {
                     System.out.println("Đã bán hết vé.");
@@ -131,7 +131,7 @@ public class CustomerManager {
                 }
                 count++;
                 Customer customer4 = new Customer(
-                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address,temp);
+                        id, nameCustomer, gender, birthday, idCard, cmnd, phoneNumber, email, typeCustomer, address, temp);
                 listTicket.add(customer4);
                 customerList.add(customer4);
                 line = id + COMMA +
@@ -143,8 +143,8 @@ public class CustomerManager {
                         phoneNumber + COMMA +
                         email + COMMA +
                         typeCustomer + COMMA +
-                        address + COMMA + temp ;
-                FileUtils.fileWriter("src/case_study/data/Customer.csv",line,true);
+                        address + COMMA + temp;
+                FileUtils.fileWriter("src/case_study/data/Customer.csv", line, true);
                 break;
         }
     }
@@ -292,17 +292,82 @@ public class CustomerManager {
     public void showInformationOfCustomer() {
         List<Customer> customerList = FileUtils.readDataCustomer();
 
-        Collections.sort(customerList,new SortNameCustomer());
+        Collections.sort(customerList, new SortNameCustomer());
         for (Customer customer : customerList) {
             System.out.println(customer.showInfor());
         }
     }
-    public void showTicket(){
-        for (Customer customers : listTicket){
+
+    public void showTicket() {
+        for (Customer customers : listTicket) {
             System.out.println(customers.getId() + "\n"
                     + customers.getNameCustomer() +
                     "\n" + customers.getTypeServices() +
                     "\n ----------------");
+        }
+    }
+
+    public void searchCustomer() {
+        List<Customer> customerList = FileUtils.readDataCustomer();
+        if (customerList.isEmpty()) {
+            System.out.println("Không có thông tin khách hàng");
+        } else {
+            System.out.println("nhập tên khách hàng bạn muốn tìm");
+            String search = input.nextLine();
+            boolean isCheck = true;
+            for (Customer customer : customerList) {
+                if (customer.getNameCustomer().contains(search)) {
+                    isCheck = false;
+                    System.out.println(customer);
+                }
+            }
+            if (isCheck) {
+                System.out.println("Vui lòng nhập lại");
+            }
+        }
+    }
+
+    public void deleteCustomer() {
+        List<Customer> customerList = FileUtils.readDataCustomer();
+        if (customerList.isEmpty()) {
+            System.out.println("không có thông tin khách hàng");
+        } else {
+            Customer customer = new Customer();
+            System.out.println("nhập tên khách hàng muốn xóa");
+            String delete = input.nextLine();
+            int j = 0;
+            for (int i  = 0 ; i <customerList.size(); i++){
+                if (delete ==(customerList.get(i).getNameCustomer())){
+                    customer = customerList.get(i);
+                   break;
+                }
+            }
+            if (customer != null){
+                    System.out.println("bạn có thực sự muốn xóa không");
+                    System.out.println("1.Yes" + "\n"+ "2.No");
+                    String choose = input.nextLine();
+                    switch (choose){
+                        case "1" :
+                            customerList.remove(customer);
+                            line = customer.getId() + COMMA +
+                                    customer.getNameCustomer() + COMMA +
+                                    customer.getGender() + COMMA +
+                                    customer.getBirthday() + COMMA +
+                                    customer.getIdCard() + COMMA +
+                                    customer.getCmnd() + COMMA +
+                                    customer.getPhoneNumber() + COMMA +
+                                    customer.getEmail() + COMMA +
+                                    customer.getTypeCustomer() + COMMA +
+                                    customer.getAddress() + COMMA + customer.getTypeServices();
+                            FileUtils.fileWriter("src/case_study/data/Customer.csv",line,false);
+                            System.out.println("đã xóa thành công");
+                            break;
+                        case "2":
+                            MainController.showMenu();
+                            break;
+                    }
+            }
+
         }
     }
 }
