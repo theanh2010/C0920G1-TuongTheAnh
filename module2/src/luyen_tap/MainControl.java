@@ -52,7 +52,6 @@ public class MainControl {
         System.out.println("1. them xuất khẩu");
         System.out.println("2. thêm nhập khẩu");
         System.out.println("3. exit");
-        ManagerProduct productManager = new ManagerProduct();
         String choose = input.nextLine();
         boolean exit = false;
         while (true) {

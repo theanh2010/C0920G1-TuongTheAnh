@@ -30,15 +30,17 @@ public class ProductExport extends Product {
     public void setPriceExport(String priceExport) {
         this.priceExport = priceExport;
     }
-    public String showInfo(){
+
+    public String showInfo() {
         return this.toString();
     }
 
     @Override
     public String toString() {
-        return super.toString()+ "ProductExport{" +
+        return super.toString() + "ProductExport{" +
                 "countryExport='" + countryExport + '\'' +
                 ", tax='" + priceExport + '\'' +
                 '}';
     }
+
 }
