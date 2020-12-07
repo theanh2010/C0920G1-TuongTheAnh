@@ -1,172 +1,291 @@
 drop database if exists case_study;
 create database case_study;
 use case_study;
-create table ViTri(
-IDViTri int primary key auto_increment,
-TenViTri varchar(45));
-insert into vitri(IDViTri, TenViTri)
-values (1,'Giám Đốc'),(2,'Trưởng Phòng'),(3,'Nhân viên');
 
-create table TrinhDo(
-IDTrinhDo int primary key auto_increment,
-TrinhDo varchar(45));
-insert into trinhdo (IDTrinhDo, TrinhDo)
-values (IDTrinhDo,'Đại Học'),
-(IDTrinhDo,'Cao Đẳng'), 
-(IDTrinhDo,'Trung Cấp');
-
-create table BoPhan(
-IDBoPhan int primary key auto_increment,
-TenBoPhan varchar(45));
-
-insert into bophan (IDBoPhan, TenBoPhan)
-values (IDBoPhan,'Điều Hành'),(IDBoPhan,'Lễ Tân'),(IDBoPhan,'Lao Công');
-
-create table NhanVien(
-IDNhanVien int primary key auto_increment,
-HoTen varchar(45),
-IDViTri int,
-IDTrinhDo int,
-IDBoPhan int,
-NgaySinh date,
-SoCMND varchar(45),
-Luong varchar(45),
-SDT varchar(45),
-Email varchar(45),
-DiaChi varchar(45),
-FOREIGN	KEY (IDViTri) REFERENCES ViTri(IDViTri),
-FOREIGN	KEY (IDTrinhDo) REFERENCES TrinhDo(IDTrinhDo),
-FOREIGN	KEY (IDBoPhan) REFERENCES BoPhan(IDBoPhan)
+create table loai_khach(
+	id_loai_khach int primary key auto_increment,
+    ten_loai_khach varchar(50)
 );
-INSERT INTO nhanvien (IDNhanVien, HoTen, IDvitri, IDTrinhDo, IDBoPhan, NgaySinh, SoCMND, Luong, SDT, Email, DiaChi)
-VALUES (IDNhanVien,'Tưởng Thế Anh',1,1,1,'1997-12-12','111111111',500,'0966950741','abc@abc','Đà Nẵng'),
- (IDNhanVien,'Mai Nam Khánh',1,1,1,'2008-9-2','222222222',500,'0966950741','abc@abc','Đà Nẵng'),
- (IDNhanVien,'Phúc Khang',1,1,1,'1997-1-1','333333333',500,'0966950741','abc@abc','Quảng Nam'),
- (IDNhanVien,'Minh Chiến',1,1,1,'1998-5-5','444444444',500,'0966950741','abc@abc','Quảng Nam'),
- (IDNhanVien,'Đình phúc',1,1,1,'1945-6-6','5555555',500,'0966950741','abc@abc','Đà Nẵng');
+
+create table khach_hang(
+	id_khach_hang int primary key auto_increment,
+    id_loai_khach int,
+    ten_khach_hang varchar(50),
+    ngay_sinh date,
+    cmnd varchar(20),
+    sdt varchar(50),
+    email varchar(50),
+    dia_chi varchar(50),
+    foreign key (id_loai_khach) references loai_khach(id_loai_khach)
+);
+
+create table kieu_thue(
+	id_kieu_thue int primary key auto_increment,
+    ten_kieu_thue varchar(50),
+    gia int
+);
+
+create table loai_dich_vu(
+	id_loai_dich_vu int primary key auto_increment,
+    ten_loai_dich_vu varchar(50)
+);
+
+create table dich_vu(
+	id_dich_vu int primary key auto_increment,
+    ten_dich_vu varchar(50),
+    dien_tich varchar(50),
+    so_tang int,
+    so_nguoi_toi_da varchar(50),
+    chi_phi_thue varchar(50),
+    trang_thai varchar(50),
+    id_kieu_thue int,
+    id_loai_dich_vu int,
+    foreign key (id_kieu_thue) references kieu_thue(id_kieu_thue),
+    foreign key (id_loai_dich_vu) references loai_dich_vu(id_loai_dich_vu)
+);
+
+create table vi_tri(
+	id_vi_tri int primary key auto_increment,
+    ten_vi_tri varchar(50)
+);
+
+create table trinh_do(
+	id_trinh_do int primary key auto_increment,
+    trinh_do varchar(50)
+);
+
+create table bo_phan(
+	id_bo_phan int primary key auto_increment,
+    ten_bo_phan varchar(50)
+);
+
+create table nhan_vien(
+	id_nhan_vien int primary key auto_increment,
+    ten_nhan_vien varchar(50),
+    ngay_sinh date,
+    cmnd varchar(50),
+    luong varchar(50),
+    sdt varchar(50),
+    email varchar(50),
+    dia_chi varchar(50),
+    id_vi_tri int,
+    id_trinh_do int,
+    id_bo_phan int,
+    foreign key (id_vi_tri) references vi_tri(id_vi_tri),
+    foreign key (id_trinh_do) references trinh_do(id_trinh_do),
+    foreign key (id_bo_phan) references bo_phan(id_bo_phan)
+);
+
+create table dich_vu_di_kem(
+	id_dich_vu_di_kem int primary key auto_increment,
+    ten_dich_vu_di_kem varchar(50),
+    gia int,
+    don_vi varchar(50),
+    trang_thai varchar(50)
+);
+
+
+
+create table hop_dong(
+	id_hop_dong int primary key auto_increment,
+    ngay_lam_hop_dong date,
+    ngay_ket_thuc date,
+    tien_dat_coc int,
+    tong_tien int,
+    id_nhan_vien int,
+    id_khach_hang int,
+    id_dich_vu int,
+    foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
+    foreign key (id_khach_hang) references khach_hang(id_khach_hang),
+    foreign key (id_dich_vu) references dich_vu(id_dich_vu)
+);
+
+create table hop_dong_chi_tiet(
+	id_hop_dong_chi_tiet int primary key auto_increment,
+    id_hop_dong int,
+    id_dich_vu_di_kem int,
+    so_luong int,
+    foreign key (id_hop_dong) references hop_dong(id_hop_dong),
+    foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
+    
+);
+
+
+insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'vip');
+insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'vip_pro');
+insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'dang_cap');
+insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'v_vip');
+
+insert into khach_hang()
+values (id_khach_hang, 1, 'Han Minh Chien', '1995-01-10', '123321', '0987654321', 'chien@gmail.com', 'Quang Binh'),
+(id_khach_hang, 1, 'Tuong The Anh', '1993-01-10', '123321', '0982354321', 'the@gmail.com', 'Quang Tri'),
+(id_khach_hang, 3, 'Koc Anh', '2000-01-10', '123321', '043554321', 'anh@gmail.com', 'Da Nang'),
+(id_khach_hang, 1, 'Le Nguyen Dinh Phuc', '1992-01-10', '123321', '0982344321', 'phuc@gmail.com', 'Hue');
+
+insert into kieu_thue() values (id_kieu_thue, 'Dai han', 1000);
+insert into kieu_thue() values (id_kieu_thue, 'Ngan han', 500);
+insert into kieu_thue() values (id_kieu_thue, 'Khong thoi han', 0);
+insert into kieu_thue() values (id_kieu_thue, '1 Ngay', 100);
+
+insert into loai_dich_vu() values (id_loai_dich_vu, 'Villa 1');
+insert into loai_dich_vu() values (id_loai_dich_vu, 'House 1');
+insert into loai_dich_vu() values (id_loai_dich_vu, 'Room 1');
+
+insert into dich_vu() values (id_dich_vu, 'Villa', '200m2', 3, '10 nguoi', '1 trieu', 'Sach se',1,1);
+insert into dich_vu() values (id_dich_vu, 'House', '100m2', 2, '5 nguoi', '5 tram', 'Sach se', 2,2);
+insert into dich_vu() values (id_dich_vu, 'Room', '50m2', 1, '2 nguoi', '1 tram', 'Sach se',3,3);
+
+insert into vi_tri() values (id_vi_tri, 'Le tan');
+insert into vi_tri() values (id_vi_tri, 'Phuc vu');
+insert into vi_tri() values (id_vi_tri, 'Bao ve');
+
+insert into trinh_do() values (id_trinh_do, 'Dai hoc');
+insert into trinh_do() values (id_trinh_do, 'Cao dang');
+insert into trinh_do() values (id_trinh_do, 'thpt');
+
+insert into bo_phan() values (id_bo_phan, 'marketing');
+insert into bo_phan() values (id_bo_phan, 'an ninh');
+insert into bo_phan() values (id_bo_phan, 'sale');
+
+insert into nhan_vien() 
+values (id_nhan_vien, 'Tran Van A', '1995-01-10' ,'123456789', '10 trieu', '09128445', 'A@abc.com', 'Quang Nam',1,1,1),
+ (id_nhan_vien, 'Tran Van B', '1998-01-11','123456789', '1 trieu', '09128445', 'A@abc.com', 'Quang Ngai',1,2,3),
+ (id_nhan_vien, 'Tran Van C', '2002-11-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,2,3 ),
+ (id_nhan_vien, 'Han Van C', '2000-11-12' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',1,3,2 ),
+ (id_nhan_vien, 'Mran Van C', '1995-01-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,3,3 );
+
+
+insert into dich_vu_di_kem() values (id_dich_vu_di_kem, 'massage', 1000, 'USD', 'ngon'),
+(id_dich_vu_di_kem, 'karakole', 100, 'USD', 'oke'),
+(id_dich_vu_di_kem, 'nhau', 500, 'USD', 'vip'),
+(id_dich_vu_di_kem, 'buffet', 300, 'USD', 'tot')
+;
+
+
+
+insert into hop_dong() 
+values (id_hop_dong, '1995-05-05', '2000-05-05', 200, 1000, 1,1,1),
+(id_hop_dong, '2018-02-05', '2018-05-05', 500, 2000, 1,2,2),
+(id_hop_dong, '2019-05-05', '2021-05-15', 700, 1500,2,2,1),
+(id_hop_dong, '1995-05-05', '2019-10-05', 200, 1000, 1,1,3),
+(id_hop_dong, '2018-02-05', '2019-02-05', 500, 2000, 1,2,2),
+(id_hop_dong, '2019-05-05', '2021-05-15', 700, 1500,2,4,1);
+
+insert into hop_dong_chi_tiet() values (id_hop_dong_chi_tiet,1,2, 10),
+(id_hop_dong_chi_tiet,2,2, 20),
+(id_hop_dong_chi_tiet,4,2, 30),
+(id_hop_dong_chi_tiet,3,1, 50),
+(id_hop_dong_chi_tiet,5,2, 30),
+(id_hop_dong_chi_tiet,6,1, 50);
+
+
+-- task2-- 
+select * from nhan_vien
+ where (ten_nhan_vien like 'H%' or ten_nhan_vien like 'T%' ) 
+ and length(ten_nhan_vien) < 15; 
+
+-- task 3 
+select * from nhan_vien 
+where year(curdate()) - year(ngay_sinh) > 18 
+and year(curdate()) - year(ngay_sinh) < 50 
+and dia_chi in ('Da Nang', 'Quang Nam'); 
+
+-- task 4 
+select khach_hang.id_khach_hang,
+khach_hang.ten_khach_hang,hop_dong.id_hop_dong, khach_hang.id_loai_khach, count(khach_hang.id_khach_hang) as so_lan
+from khach_hang 
+join hop_dong
+on hop_dong.id_khach_hang = khach_hang.id_khach_hang
+group by khach_hang.id_khach_hang
+order by so_lan asc;
+
+-- task 5
+select khach_hang.id_khach_hang, khach_hang.ten_khach_hang,
+hop_dong.id_hop_dong,hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc,
+dich_vu.id_dich_vu, dich_vu.ten_dich_vu, dich_vu_di_kem.gia,hop_dong_chi_tiet.so_luong,
+dich_vu.chi_phi_thue, (dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong) as tongtien 
+from khach_hang
+left join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang
+left join dich_vu on hop_dong.id_dich_vu = dich_vu.id_dich_vu 
+left join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong 
+left join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem;
+
+-- task 6
+select dich_vu.id_dich_vu, dich_vu.ten_dich_vu, dich_vu.chi_phi_thue,
+loai_dich_vu.ten_loai_dich_vu,hop_dong.ngay_lam_hop_dong ,hop_dong.ngay_ket_thuc from hop_dong
+join dich_vu
+on dich_vu.id_dich_vu = hop_dong.id_dich_vu
+join loai_dich_vu
+on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
+where not ((year(hop_dong.ngay_ket_thuc) = 2019 
+and month(hop_dong.ngay_ket_thuc) < 4)  or (year(hop_dong.ngay_ket_thuc) < 2019));
+
+-- task 7
+ select dich_vu.id_dich_vu, dich_vu.ten_dich_vu,dich_vu.dien_tich,dich_vu.so_nguoi_toi_da,
+ dich_vu.chi_phi_thue, loai_dich_vu.ten_loai_dich_vu, hop_dong.ngay_lam_hop_dong 
+ from dich_vu 
+ join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
+ join hop_dong on hop_dong.id_dich_vu = dich_vu.id_dich_vu
+ where year(hop_dong.ngay_lam_hop_dong) = 2018 and dich_vu.id_dich_vu 
+ not in (select dich_vu.id_dich_vu from dich_vu
+ where year(hop_dong.ngay_lam_hop_dong) = 2019 );
  
-create table LoaiKhach(
-IDLoaiKhach int primary key auto_increment,
-TenLoaiKhach varchar(45));
-insert into loaikhach (IDLoaiKhach, TenLoaiKhach)
-values (1,'Sliver'),(2,'Gold'),(3,'Diamond');
-
-create table KhachHang(
-IDKhachHang int primary key auto_increment,
-IDLoaiKhach int,
-HoTen varchar(45),
-NgaySinh date,
-SoCMND varchar(45),
-SDT varchar(45),
-Email varchar(45),
-DiaChi varchar(45),
-FOREIGN	KEY (IDLoaiKhach) REFERENCES LoaiKhach(IDLoaiKhach)
-);
-insert into khachhang(IDKhachHang, IDLoaiKhach, HoTen, NgaySinh, SoCMND, SDT, Email, DiaChi)
-values (IDKhachHang,1,'Tưởng Thế Anh','1997-10-20','123456789','0977555444','anh@gmail.com','Đà Nẵng'),
- (IDKhachHang,2,'Nguyễn Minh Chiến','1997-11-11','123456789','0977666444','chien@gmail.com','Quảng Bình'),
- (IDKhachHang,3,'Nguyễn Đình Phúc','1997-8-8','123456789','0977335444','anh@gmail.com','Đà Nẵng');
-
-create table KieuThue(
-IDKieuThue int primary key auto_increment,
-TenKieuThue varchar(45),
-Gia int
-);
-insert into kieuthue(IDKieuThue, TenKieuThue, Gia)
-values (IDKieuThue,'giờ',50),
-(IDKieuThue,'ngày',300),
-(IDKieuThue,'tháng',1000);
-
-create table LoaiDichVu(
-IDLoaiDichVu int primary key auto_increment,
-TenLoaiDichVu varchar(45)
-);
-insert into loaidichvu(IDLoaiDichVu, TenLoaiDichVu)
-values (1,'Villa'),(2,'Room'),(3,'House');
-
-create table DichVu(
-IDDichVu int primary key auto_increment,
-TenDichVu varchar(45),
-DienTich int,
-SoTang int,
-SoNguoiToiDa varchar(45),
-IDKieuThue int,
-IDLoaiDichVu int,
-TrangThai varchar(45),
-FOREIGN	KEY (IDKieuThue) REFERENCES KieuThue(IDKieuThue),
-FOREIGN	KEY (IDLoaiDichVu) REFERENCES LoaiDichVu(IDLoaiDichVu)
-);
-
-insert into dichvu (IDDichVu, TenDichVu, DienTich, SoTang, SoNguoiToiDa, IDKieuThue, IDLoaiDichVu, TrangThai)
-values (IDDichVu,'Villa',300,4,12,IDKieuThue,IDLoaiDichVu,"ok"),
-		(IDDichVu,'House',100,2,3,IDKieuThue,IDLoaiDichVu,'ok'),
-        (IDDichVu,'Room',50,1,2,IDKieuThue,IDLoaiDichVu,'ok');
-
-create table HopDong(
-IDHopDong int primary key auto_increment,
-IDNhanVien int,
-IDKhachHang int,
-IDDichVu int,
-NgayLamHopDong date,
-NgayKetThucHopDong date,
-TienDatCoc int,
-TongTien int,
-FOREIGN	KEY (IDNhanVien) REFERENCES NhanVien(IDNhanVien),
-FOREIGN	KEY (IDKhachHang) REFERENCES KhachHang(IDKhachHang),
-FOREIGN	KEY (IDDichVu) REFERENCES DichVu(IDDichVu)
- );
- 
- insert into hopdong(IDHopDong, IDNhanVien, IDKhachHang, IDDichVu, NgayLamHopDong, NgayKetThucHopDong, TienDatCoc)
-values(IDHopDong,1,1,1,'2020-08-03','2020-12-3',200),
-(IDHopDong,2,2,2,'2020-12-12','2020-12-24',500),
-(IDHopDong,3,3,3,'2020-12-7','2020-12-27',1000);
-
-
-create table DichVuDiKem(
-IDDichVuDiKem int primary key auto_increment,
-TenDichVuDiKem varchar(45),
-Gia int,
-DonVi int,
-TrangThaiKhaDung varchar(45));
-insert into dichvudikem(IDDichVuDiKem, TenDichVuDiKem, Gia, DonVi, TrangThaiKhaDung)
-values(IDDichVuDiKem,'karaoke',300,12,'chục em chân dài'),
-(IDDichVuDiKem,'massage',100,2,'chục em tiếp viên'),
-(IDDichVuDiKem,'hồ bơi',1000,10,'hồ cao 1m2');
-
-create table HopDongChiTiet(
-IDHopDongChiTiet int primary key auto_increment,
-IDHopDong int,
-IDDichVuDiKem int,
-so_luong int,
-FOREIGN	KEY (IDHopDong) REFERENCES HopDong(IDHopDong),
-FOREIGN	KEY (IDDichVuDiKem) REFERENCES DichVuDiKem(IDDichVuDiKem)
-);
-
-insert into hopdongchitiet(IDHopDongChiTiet, IDHopDong, IDDichVuDiKem, so_luong)
-values(IDHopDongChiTiet,1,1,10),
-(IDHopDongChiTiet,2,2,11),
-(IDHopDongChiTiet,3,3,12);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-select * from nhanvien
-where (HoTen like '%H%' or HoTen like '%T%')
-and length(HoTen) < 15;
-
-select * from nhanvien
-where year(curdate()) - year(NgaySinh) > 18 
-and year(curdate()) - year(NgaySinh) < 50 
-and DiaChi in ('Đà Nẵng', 'Quảng Nam');
+ -- task 8
+	-- cach 1.
+    select distinct khach_hang.ten_khach_hang from khach_hang;
+    -- cach 2.
+    select khach_hang.ten_khach_hang 
+    from khach_hang group by ten_khach_hang;
+    -- cach 3.
+    SELECT khach_hang.ten_khach_hang 
+	from khach_hang
+	UNION
+	SELECT khach_hang.ten_khach_hang 
+	from khach_hang;
+    
+    -- task 9.
+    SELECT month(hop_dong.ngay_lam_hop_dong) as 'thang' ,
+    count(month(hop_dong.ngay_lam_hop_dong)) as 'soHopDong' 
+	FROM hop_dong
+	WHERE year(hop_dong.ngay_lam_hop_dong)=2019
+	GROUP BY ngay_lam_Hop_Dong
+	ORDER BY hop_dong.ngay_lam_hop_dong;
+    
+    -- task 10.
+    SELECT hop_dong.id_hop_dong,hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc, 
+    hop_dong.tien_dat_coc, count(hop_dong_chi_tiet.id_hop_dong_chi_tiet) as 'so_luong_dv_di_kem'
+	FROM hop_dong
+	INNER JOIN hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+	GROUP BY hop_dong.id_hop_dong;
+    
+    -- task 11.
+    SELECT dich_vu_di_kem.id_dich_vu_di_kem,
+	 dich_vu_di_kem.ten_dich_vu_di_kem,
+	 dich_vu_di_kem.gia, dich_vu_di_kem.don_vi, 
+	 dich_vu_di_kem.trang_thai,
+	 loai_khach.ten_loai_khach, 
+	 khach_hang.dia_chi, 
+	 khach_hang.ten_khach_hang
+	FROM dich_vu_di_kem
+	INNER JOIN hop_dong_chi_tiet  on dich_vu_di_kem.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem
+	INNER JOIN hop_dong  on hop_dong_chi_tiet.id_hop_dong = hop_dong.id_hop_dong
+	INNER JOIN khach_hang  on hop_dong.id_khach_hang = khach_hang.id_khach_hang
+	INNER JOIN loai_khach  on khach_hang.id_loai_khach = loai_khach.id_loai_khach
+	WHERE loai_khach.ten_loai_khach = 'Vip' 
+	AND (khach_hang.dia_chi = 'Da Nang' or khach_hang.dia_chi = 'Quang Binh');
+    
+    -- task 12.
+	SELECT hop_dong.id_hop_dong,
+	 nhan_vien.ten_nhan_vien,
+	 khach_hang.ten_khach_hang,
+	 khach_hang.sdt,
+	 dich_vu.ten_dich_vu,
+	 count(hop_dong_chi_tiet.id_hop_dong_chi_tiet) as 'SoLuongDichVuDikem ',
+	 hop_dong.tien_dat_coc
+	FROM hop_dong 
+	INNER JOIN nhan_vien  on nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+	INNER JOIN khach_hang  on khach_hang.id_khach_hang = hop_dong.id_khach_hang
+	INNER JOIN dich_vu  on dich_vu.id_dich_vu = hop_dong.id_dich_vu
+	INNER JOIN hop_dong_chi_tiet  on hop_dong_chi_tiet.id_hop_dong= hop_dong.id_hop_dong
+	WHERE (month(hop_dong.ngay_lam_hop_dong)>9 and year(hop_dong.ngay_lam_hop_dong)=2019)
+	and hop_dong.id_hop_dong NOT IN (month(hop_dong.ngay_lam_hop_dong) < 7 AND year(hop_dong.ngay_lam_hop_dong) = 2019);
