@@ -1,0 +1,24 @@
+h1{
+    color: red ;
+    font-family:'Oswald', sans-serif;
+    margin-left: 42% ;
+}
+table{
+    border: solid 2px;
+    border-collapse: collapse;
+    margin-left: 28%;
+    width: 500px;
+    height: 10px;
+
+}
+img {
+    margin-left: 40%
+}
+th{
+    border: solid 2px;
+    background-color: sandybrown;
+}
+td{
+    border: solid 2px;
+    background-color: gray;
+}
