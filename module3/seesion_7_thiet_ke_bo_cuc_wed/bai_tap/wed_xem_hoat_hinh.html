@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fb88.com</title>
+    <link href="wed_xem_hoat_hinh.css" rel="stylesheet" type="text/css">
+    <style>
+        .mySlides {
+            display: none;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="head">
+        <div style="width: 50%"><img src="1200px-Man_Utd_FC_.svg.png" width="100" height="100"></div>
+        <div class="title">
+            <h1>MAN NGU SI ĐẦN</h1>
+        </div>
+    </div>
+    <div id="head-link">
+        <ul>
+            <li><a href="#">Fb88.c0m</a>
+                <ul>
+                    <li><a href="#">Tài xỉu</a></li>
+                    <li><a href="#">Bầu cua</a></li>
+                    <li><a href="#">Xóc đĩa</a></li>
+                    <li><a href="#">Bắn cá</a></li>
+                    <li><a href="#">E-sport</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sem 2 </a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sem 3</a></li>
+            <li><a href="#">Sem 4</a></li>
+        </ul>
+    </div>
+    <div id="left">
+    </div>
+    <div id="content">
+        <div class="w3-content w3-display-container">
+            <img class="mySlides" src="8-4-1583340170-865-width1920height1080.jpg" height="1080" width="1920"/>
+            <img class="mySlides" src="paul-pogba-manchester-united-2020-21_11xi5eoail1rg1a9kmcbfsnfn7.jpg"
+                 height="1080" width="1920"/>
+            <img class="mySlides" src="marcus-rashford-manchester-united-2019-20_qmear814ups61eizgn4flkgxe.jpg"
+                 height="1080" width="1920"/>
+            <img class="mySlides" src="1200px-Man_Utd_FC_.svg.png" height="1216" width="1200"/></div>
+    </div>
+    <div id="right">
+    </div>
+    <div id="footer">
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showDivs(slideIndex);
+    myFunction();
+
+    function myFunction() {
+        setTimeout(function () {
+            showDivs(slideIndex += 1);
+            myFunction();
+        }, 1500);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+</body>
+</html>
