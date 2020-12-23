@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="quan_li_customer:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="519bed2c-4dcf-43d9-a422-73bf314b4c5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module1/ád.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/src/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/src/model/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/im04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/thuc_hanh/web/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/tu_dien/web/dictionary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/seesion_8_bootrap/baitap__1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/DiscountServlet/src/DiscountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/login/src/simple_login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/simple_dictionary/src/TranslationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/ung_dung_chuyen_doi_tien_te/src/chuyen_doi_tien_te.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/LongTermBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/LongTermBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ManagerSavingBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ManagerSavingBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBooking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBooking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ShortTermBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ShortTermBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/test/ChuNhat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/test/ChuNhat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/thi_module2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/thi_module2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/CustomerBank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/CustomerBank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/LongTermBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/LongTermBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/ManagerSavingBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/ManagerSavingBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBooking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBooking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/ShortTermBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/ShortTermBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/test/ChuNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/test/ChuNhat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/thi_module2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/thi_module2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/task_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/task_1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/bai_tap/wed_xem_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/bai_tap/wed_xem_hoat_hinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/templated-fullmotion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/templated-fullmotion/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\C0920G1\module3\seesion_11_MVC\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1libIZrek3UnyHpjhwlX11XiV1X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0920G1\module3\seesion_11_MVC\web\customer" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="quan_li_customer:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_41_quan_li_customer" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64913" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="quan_li_customer:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="519bed2c-4dcf-43d9-a422-73bf314b4c5f" name="Default Changelist" comment="" />
+      <created>1608082779238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608082779238</updated>
+      <workItem from="1608082783776" duration="5321000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="222" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608084371372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="222" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608084371372" />
+    <state x="573" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1608082933433">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608082933433" />
+    <state x="522" y="115" key="DetectedRootsChooserDialog" timestamp="1608084739906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="522" y="115" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1608084739906" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1608088004432">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608088004432" />
+    <state width="1023" height="401" key="GridCell.Tab.0.bottom" timestamp="1608085679326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608085679326" />
+    <state width="1023" height="401" key="GridCell.Tab.0.center" timestamp="1608085679326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608085679326" />
+    <state width="1023" height="401" key="GridCell.Tab.0.left" timestamp="1608085679325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608085679325" />
+    <state width="1023" height="401" key="GridCell.Tab.0.right" timestamp="1608085679326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608085679326" />
+    <state width="1023" height="401" key="GridCell.Tab.1.bottom" timestamp="1608085679327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608085679327" />
+    <state width="1023" height="401" key="GridCell.Tab.1.center" timestamp="1608085679326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608085679326" />
+    <state width="1023" height="401" key="GridCell.Tab.1.left" timestamp="1608085679326">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608085679326" />
+    <state width="1023" height="401" key="GridCell.Tab.1.right" timestamp="1608085679327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608085679327" />
+    <state width="1023" height="401" key="GridCell.Tab.2.bottom" timestamp="1608085679328">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608085679328" />
+    <state width="1023" height="401" key="GridCell.Tab.2.center" timestamp="1608085679327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1608085679327" />
+    <state width="1023" height="401" key="GridCell.Tab.2.left" timestamp="1608085679327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1608085679327" />
+    <state width="1023" height="401" key="GridCell.Tab.2.right" timestamp="1608085679328">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1023" height="401" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1608085679328" />
+    <state x="248" y="0" key="SettingsEditor" timestamp="1608084774307">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="248" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608084774307" />
+    <state x="208" y="0" key="new project wizard" timestamp="1608088010111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="208" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1608088010111" />
+  </component>
+</project>
