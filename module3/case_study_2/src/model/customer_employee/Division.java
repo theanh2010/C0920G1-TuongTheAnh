@@ -1,30 +1,30 @@
-package models.customer_employee;
+package model.customer_employee;
 
 public class Division {
-    private int idDivision;
-    private String nameDivision;
+    private int division_id;
+    private String division_name;
 
     public Division() {
     }
 
-    public Division(int idDivision, String nameDivision) {
-        this.idDivision = idDivision;
-        this.nameDivision = nameDivision;
+    public Division(int division_id, String division_name) {
+        this.division_id = division_id;
+        this.division_name = division_name;
     }
 
-    public int getIdDivision() {
-        return idDivision;
+    public int getDivision_id() {
+        return division_id;
     }
 
-    public void setIdDivision(int idDivision) {
-        this.idDivision = idDivision;
+    public void setDivision_id(int division_id) {
+        this.division_id = division_id;
     }
 
-    public String getNameDivision() {
-        return nameDivision;
+    public String getDivision_name() {
+        return division_name;
     }
 
-    public void setNameDivision(String nameDivision) {
-        this.nameDivision = nameDivision;
+    public void setDivision_name(String division_name) {
+        this.division_name = division_name;
     }
 }

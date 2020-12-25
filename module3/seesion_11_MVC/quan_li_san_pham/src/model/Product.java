@@ -1,17 +1,19 @@
+package model;
+
 public class Product {
     private int id;
-    private String nameProduct;
-    private String priceProduct;
-    private String amountProduct;
+    private String name;
+    private String price;
+    private String amount;
 
     public Product() {
     }
 
-    public Product(int id, String nameProduct, String priceProduct, String amountProduct) {
+    public Product(int id, String name, String price, String amount) {
         this.id = id;
-        this.nameProduct = nameProduct;
-        this.priceProduct = priceProduct;
-        this.amountProduct = amountProduct;
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
     }
 
     public int getId() {
@@ -22,27 +24,27 @@ public class Product {
         this.id = id;
     }
 
-    public String getNameProduct() {
-        return nameProduct;
+    public String getName() {
+        return name;
     }
 
-    public void setNameProduct(String nameProduct) {
-        this.nameProduct = nameProduct;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPriceProduct() {
-        return priceProduct;
+    public String getPrice() {
+        return price;
     }
 
-    public void setPriceProduct(String priceProduct) {
-        this.priceProduct = priceProduct;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getAmountProduct() {
-        return amountProduct;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setAmountProduct(String amountProduct) {
-        this.amountProduct = amountProduct;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 }

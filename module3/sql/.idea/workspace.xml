@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="526b03c9-3338-49da-9916-804ccdf6c3b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module1/ád.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/src/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/src/model/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/im04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/hien_thi_danh_sach_khach_hang/web/img/img03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/thuc_hanh/web/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_10_JSP_JSTL/tu_dien/web/dictionary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/src/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/src/dao/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/src/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/src/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/Error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/WEB-INF/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/WEB-INF/lib/servlet-api-2.5-6.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_JDBC&amp;CRUD/thuc_hanh/web/user/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/src/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/src/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/src/product/ProductManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/src/product/ProductManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/product/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/product/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/product/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/product/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_11_MVC/quan_li_san_pham/web/product/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/seesion_8_bootrap/baitap__1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/DiscountServlet/src/DiscountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/login/src/simple_login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/simple_dictionary/src/TranslationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss9_tong_quan_ung_dung_web/bai_tap/ung_dung_chuyen_doi_tien_te/src/chuyen_doi_tien_te.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/LongTermBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/LongTermBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ManagerSavingBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ManagerSavingBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBooking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/SavingBooking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ShortTermBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/slaray_book/ShortTermBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/test/ChuNhat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/test/ChuNhat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/out/production/module2/thi_module2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/module2/thi_module2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/CustomerBank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/CustomerBank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/LongTermBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/LongTermBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/ManagerSavingBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/ManagerSavingBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBooking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/SavingBooking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/slaray_book/ShortTermBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/slaray_book/ShortTermBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/test/ChuNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/test/ChuNhat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module2/src/thi_module2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/thi_module2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/task_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/task_1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/bai_tap/wed_xem_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/bai_tap/wed_xem_hoat_hinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/templated-fullmotion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../seesion_7_thiet_ke_bo_cuc_wed/templated-fullmotion/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1lmGXmV0ThvhJo7PIiu3HZrCC2A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="526b03c9-3338-49da-9916-804ccdf6c3b5" name="Default Changelist" comment="" />
+      <created>1608194895053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608194895053</updated>
+      <workItem from="1608194896351" duration="148000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1608195024786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608195024786" />
+    <state x="208" y="0" key="new project wizard" timestamp="1608195039352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="208" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1608195039352" />
+  </component>
+</project>

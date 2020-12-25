@@ -1,30 +1,30 @@
-package models.customer_employee;
+package model.customer_employee;
 
 public class EducationDegree {
-    private int idEducatonDegree;
-    private String nameEducationDegree;
+    private int education_degree_id;
+    private String education_degree_name;
 
     public EducationDegree() {
     }
 
-    public EducationDegree(int idEducatonDegree, String nameEducationDegree) {
-        this.idEducatonDegree = idEducatonDegree;
-        this.nameEducationDegree = nameEducationDegree;
+    public EducationDegree(int education_degree_id, String education_degree_name) {
+        this.education_degree_id = education_degree_id;
+        this.education_degree_name = education_degree_name;
     }
 
-    public int getIdEducatonDegree() {
-        return idEducatonDegree;
+    public int getEducation_degree_id() {
+        return education_degree_id;
     }
 
-    public void setIdEducatonDegree(int idEducatonDegree) {
-        this.idEducatonDegree = idEducatonDegree;
+    public void setEducation_degree_id(int education_degree_id) {
+        this.education_degree_id = education_degree_id;
     }
 
-    public String getNameEducationDegree() {
-        return nameEducationDegree;
+    public String getEducation_degree_name() {
+        return education_degree_name;
     }
 
-    public void setNameEducationDegree(String nameEducationDegree) {
-        this.nameEducationDegree = nameEducationDegree;
+    public void setEducation_degree_name(String education_degree_name) {
+        this.education_degree_name = education_degree_name;
     }
 }

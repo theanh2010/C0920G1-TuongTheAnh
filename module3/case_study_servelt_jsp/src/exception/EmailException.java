@@ -1,4 +1,7 @@
 package exception;
 
-public class EmailExceptiom {
+public class EmailException extends Exception {
+    public EmailException(String message) {
+        super(message);
+    }
 }

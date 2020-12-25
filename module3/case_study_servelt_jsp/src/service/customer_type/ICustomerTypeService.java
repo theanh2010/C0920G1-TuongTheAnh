@@ -1,4 +1,9 @@
 package service.customer_type;
 
-public interface ICustomerService {
+import model.CustomerType;
+
+import java.util.List;
+
+public interface ICustomerTypeService {
+    List<CustomerType> selectAllCustomerType();
 }

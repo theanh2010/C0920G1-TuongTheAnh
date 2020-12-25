@@ -2,9 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+<style>
+    body{
+        font-family: Arial, Tahoma;
+        font-size: 12px;
+    }
+    #main{
+        width: 100%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #head{
+        width: 100%;
+        height: 100px;
+        background-color: #F5F5F5;
+        margin-bottom:5px;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #head-link{
+        background-color: #F5F5F5;
+        margin-bottom:5px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        top: 95px;
+        height: 50px;
+    }
+    #content-left{
+        width: 30%;
+        height: 700px;
+        float:left;
+        background-color:  #b3b3ff;
+        margin-bottom: 5px;
+    }
+    #content-right{
+        width: 70%;
+        height: 700px;
+        float:right;
+        background-color:  #ffffe6;
+        margin-bottom: 5px;
+    }
+    #content{
+        width: 100%;
+        height: 900px;
+        position: relative;
+        top: 100px;
+        /*float:left;*/
+        /*margin-left: 5px;*/
+        /*margin-right: 5px;*/
+        /*margin-bottom: 5px;*/
+    }
+    #right{
+        width: 234px;
+        height: 400px;
+        margin-bottom: 5px;
+        float: left;
+    }
+    #footer{
+        height: 50px;
+        clear: both;
+        background-color: #F8F8FF;
+        position: relative;
+        top: -100px;
+        width: 100% ;
+        display: flex;
+        justify-content: center;
+    }
+    .img1{
+        width: 100px;
+        height: 100px;
+    }
+    .title{
+        margin-right: 45px;
+    }
+    .img2{
+        width: 200px;
+        height: 100px;
+    }
+
+</style>
 </head>
 <body>
-$END$
+<div id="main">
+    <div id="head">
+        <div style="flex-grow: 0.1"><img class="img1" src="https://yt3.ggpht.com/ytc/AAUvwnggKV40oVjF4SGADNHPfCtb2z2AQcGA4zXR6hI=s900-c-k-c0x00ffffff-no-rj" alt="" >
+        </div>
+        <div style="flex-grow: 9.8" ><img class="img2" src="https://lh3.googleusercontent.com/proxy/Xu1ObFjruNul5-LGUypIM8UBrRvfR_M1rR4pJg3WpXFw0LZj8SgTN0cb_nCtqVyiZIzDsw2FmlEJjw2k9-KdeKKt6c8432g5l_eNEBxxiFesB3I5rgobdbxsezU" alt=""></div>
+        <div class="title" style="flex-grow: 0.1"> <h2>Tưởng Thế Anh C0920G1</h2></div>
+    </div>
+    <div id="head-link">
+    </div>
+    <div id="content">
+        <div id="content-left">
+    </div>
+        <div id="content-right">
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</div>
 </body>
 </html>

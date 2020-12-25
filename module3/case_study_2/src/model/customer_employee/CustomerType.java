@@ -1,30 +1,30 @@
-package models.customer_employee;
+package model.customer_employee;
 
 public class CustomerType {
-    private int idCustomerType;
-    private String nameCustomerType;
+    private int customer_type_id;
+    private String customer_type_name;
 
     public CustomerType() {
     }
 
-    public CustomerType(int idCustomerType, String nameCustomerType) {
-        this.idCustomerType = idCustomerType;
-        this.nameCustomerType = nameCustomerType;
+    public CustomerType(int customer_type_id, String customer_type_name) {
+        this.customer_type_id = customer_type_id;
+        this.customer_type_name = customer_type_name;
     }
 
-    public int getIdCustomerType() {
-        return idCustomerType;
+    public int getCustomer_type_id() {
+        return customer_type_id;
     }
 
-    public void setIdCustomerType(int idCustomerType) {
-        this.idCustomerType = idCustomerType;
+    public void setCustomer_type_id(int customer_type_id) {
+        this.customer_type_id = customer_type_id;
     }
 
-    public String getNameCustomerType() {
-        return nameCustomerType;
+    public String getCustomer_type_name() {
+        return customer_type_name;
     }
 
-    public void setNameCustomerType(String nameCustomerType) {
-        this.nameCustomerType = nameCustomerType;
+    public void setCustomer_type_name(String customer_type_name) {
+        this.customer_type_name = customer_type_name;
     }
 }

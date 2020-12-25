@@ -1,101 +1,48 @@
 package model.customer_employee;
 
-public class Employee {
-    protected int employee_id;
-    protected String employee_name;
-    protected String employee_birthday;
-    protected String employee_id_card;
-    protected double employee_salary;
-    protected String employee_phone;
-    protected String employee_email;
-    protected String employee_address;
-    protected int position_id;
-    protected int education_degree_id;
-    protected int division_id;
-    protected String username;
+public class Employee extends Customer_Employee {
+    private double salary;
+    private int position_id;
+    private int education_degree_id;
+    private int division_id;
+    private String userName;
 
-    public Employee() {
+    public Employee(){
+
     }
 
-    public Employee(int employee_id, String employee_name, String employee_birthday, String employee_id_card,
-                    double employee_salary, String employee_phone, String employee_email, String employee_address,
-                    int position_id, int education_degree_id, int division_id, String username) {
-        this.employee_id = employee_id;
-        this.employee_name = employee_name;
-        this.employee_birthday = employee_birthday;
-        this.employee_id_card = employee_id_card;
-        this.employee_salary = employee_salary;
-        this.employee_phone = employee_phone;
-        this.employee_email = employee_email;
-        this.employee_address = employee_address;
+    public Employee(double salary, int position_id, int education_degree_id, int division_id, String userName) {
+        this.salary = salary;
         this.position_id = position_id;
         this.education_degree_id = education_degree_id;
         this.division_id = division_id;
-        this.username = username;
+        this.userName = userName;
     }
 
-    public int getEmployee_id() {
-        return employee_id;
+    public Employee(int id, String name, String birthday, String id_card, String phone, String email, String address, double salary, int position_id, int education_degree_id, int division_id, String userName) {
+        super(id, name, birthday, id_card, phone, email, address);
+        this.salary = salary;
+        this.position_id = position_id;
+        this.education_degree_id = education_degree_id;
+        this.division_id = division_id;
+        this.userName = userName;
     }
 
-    public void setEmployee_id(int employee_id) {
-        this.employee_id = employee_id;
+    public Employee(String name, String birthday, String id_card, String phone, String email, String address, double salary, int position_id, int education_degree_id, int division_id, String userName) {
+        super(name, birthday, id_card, phone, email, address);
+        this.salary = salary;
+        this.position_id = position_id;
+        this.education_degree_id = education_degree_id;
+        this.division_id = division_id;
+        this.userName = userName;
     }
 
-    public String getEmployee_name() {
-        return employee_name;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setEmployee_name(String employee) {
-        this.employee_name = employee;
-    }
-
-    public String getEmployee_birthday() {
-        return employee_birthday;
-    }
-
-    public void setEmployee_birthday(String employee_birthday) {
-        this.employee_birthday = employee_birthday;
-    }
-
-    public String getEmployee_id_card() {
-        return employee_id_card;
-    }
-
-    public void setEmployee_id_card(String employee_id_card) {
-        this.employee_id_card = employee_id_card;
-    }
-
-    public double getEmployee_salary() {
-        return employee_salary;
-    }
-
-    public void setEmployee_salary(double employee_salary) {
-        this.employee_salary = employee_salary;
-    }
-
-    public String getEmployee_phone() {
-        return employee_phone;
-    }
-
-    public void setEmployee_phone(String employee_phone) {
-        this.employee_phone = employee_phone;
-    }
-
-    public String getEmployee_email() {
-        return employee_email;
-    }
-
-    public void setEmployee_email(String employee_email) {
-        this.employee_email = employee_email;
-    }
-
-    public String getEmployee_address() {
-        return employee_address;
-    }
-
-    public void setEmployee_address(String employee_address) {
-        this.employee_address = employee_address;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     public int getPosition_id() {
@@ -122,12 +69,11 @@ public class Employee {
         this.division_id = division_id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String user_name) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
-
 }

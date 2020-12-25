@@ -117,15 +117,15 @@ insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'dan
 insert into loai_khach(id_loai_khach,ten_loai_khach) values (id_loai_khach, 'v_vip');
 
 insert into khach_hang()
-values (id_khach_hang, 1, 'Han Minh Chien', '1995-01-10', '123321', '0987654321', 'chien@gmail.com', 'Quang Binh'),
-(id_khach_hang, 1, 'Tuong The Anh', '1993-01-10', '123321', '0982354321', 'the@gmail.com', 'Quang Tri'),
-(id_khach_hang, 3, 'Koc Anh', '2000-01-10', '123321', '043554321', 'anh@gmail.com', 'Da Nang'),
-(id_khach_hang, 1, 'Le Nguyen Dinh Phuc', '1992-01-10', '123321', '0982344321', 'phuc@gmail.com', 'Hue');
+values (id_khach_hang, 1, 'Trần Minh Chiến', '1995-01-10', '123321', '0987654321', 'chien@gmail.com', 'Quảng Bình'),
+(id_khach_hang, 1, 'Tưởng Thế Anh', '1993-01-10', '123321', '0982354321', 'the@gmail.com', 'Quang Trị'),
+(id_khach_hang, 3, 'Lê Thị Ngọc Anh', '2000-01-10', '123321', '043554321', 'anh@gmail.com', 'Đà Nẵng'),
+(id_khach_hang, 1, 'Lê Nguyễn Đình Phúc', '1992-01-10', '123321', '0982344321', 'phuc@gmail.com', 'Huế');
 
-insert into kieu_thue() values (id_kieu_thue, 'Dai han', 1000);
-insert into kieu_thue() values (id_kieu_thue, 'Ngan han', 500);
-insert into kieu_thue() values (id_kieu_thue, 'Khong thoi han', 0);
-insert into kieu_thue() values (id_kieu_thue, '1 Ngay', 100);
+insert into kieu_thue() values (id_kieu_thue, 'Dài hạn', 1000);
+insert into kieu_thue() values (id_kieu_thue, 'Ngắn hạn', 500);
+insert into kieu_thue() values (id_kieu_thue, 'Không thời hạn', 0);
+insert into kieu_thue() values (id_kieu_thue, '1 Ngày', 100);
 
 insert into loai_dich_vu() values (id_loai_dich_vu, 'Villa 1');
 insert into loai_dich_vu() values (id_loai_dich_vu, 'House 1');
@@ -148,11 +148,11 @@ insert into bo_phan() values (id_bo_phan, 'an ninh');
 insert into bo_phan() values (id_bo_phan, 'sale');
 
 insert into nhan_vien() 
-values (id_nhan_vien, 'Tran Van A', '1995-01-10' ,'123456789', '10 trieu', '09128445', 'A@abc.com', 'Quang Nam',1,1,1),
- (id_nhan_vien, 'Tran Van B', '1998-01-11','123456789', '1 trieu', '09128445', 'A@abc.com', 'Quang Ngai',1,2,3),
- (id_nhan_vien, 'Tran Van C', '2002-11-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,2,3 ),
- (id_nhan_vien, 'Han Van C', '2000-11-12' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',1,3,2 ),
- (id_nhan_vien, 'Mran Van C', '1995-01-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,3,3 );
+values (id_nhan_vien, 'Trần Văn A', '1995-01-10' ,'123456789', '10 trieu', '09128445', 'A@abc.com', 'Quang Nam',1,1,1),
+ (id_nhan_vien, 'Trần Văn B', '1998-01-11','123456789', '1 trieu', '09128445', 'A@abc.com', 'Quang Ngai',1,2,3),
+ (id_nhan_vien, 'Trần Văn C', '2002-11-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,2,3 ),
+ (id_nhan_vien, 'Han Văn C', '2000-11-12' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',1,3,2 ),
+ (id_nhan_vien, 'Mran Văn C', '1995-01-10' ,'123456789', '5 trieu', '09128445', 'A@abc.com', 'Da Nang',2,3,3 );
 
 
 insert into dich_vu_di_kem() values (id_dich_vu_di_kem, 'massage', 1000, 'USD', 'ngon'),
@@ -219,7 +219,6 @@ join loai_dich_vu
 on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
 where not ((year(hop_dong.ngay_ket_thuc) = 2019 
 and month(hop_dong.ngay_ket_thuc) < 4)  or (year(hop_dong.ngay_ket_thuc) < 2019));
-
 -- task 7
  select dich_vu.id_dich_vu, dich_vu.ten_dich_vu,dich_vu.dien_tich,dich_vu.so_nguoi_toi_da,
  dich_vu.chi_phi_thue, loai_dich_vu.ten_loai_dich_vu, hop_dong.ngay_lam_hop_dong 
@@ -289,3 +288,85 @@ and month(hop_dong.ngay_ket_thuc) < 4)  or (year(hop_dong.ngay_ket_thuc) < 2019)
 	INNER JOIN hop_dong_chi_tiet  on hop_dong_chi_tiet.id_hop_dong= hop_dong.id_hop_dong
 	WHERE (month(hop_dong.ngay_lam_hop_dong)>9 and year(hop_dong.ngay_lam_hop_dong)=2019)
 	and hop_dong.id_hop_dong NOT IN (month(hop_dong.ngay_lam_hop_dong) < 7 AND year(hop_dong.ngay_lam_hop_dong) = 2019);
+
+-- task 13
+    select dich_vu_di_kem.id_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem,count(hop_dong_chi_tiet.id_dich_vu_di_kem) as count
+    from hop_dong_chi_tiet 
+    join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
+    group by hop_dong_chi_tiet.id_dich_vu_di_kem 
+    having count = 
+    (select count(hop_dong_chi_tiet.id_dich_vu_di_kem) as count 
+    from hop_dong_chi_tiet
+    join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
+    group by hop_dong_chi_tiet.id_dich_vu_di_kem  
+    order by count desc
+    limit 1);
+    
+    -- task 14
+  select dich_vu_di_kem.id_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem,count(hop_dong_chi_tiet.id_dich_vu_di_kem) as so_lan
+    from khach_hang 
+    join hop_dong on khach_hang.id_khach_hang = hop_dong.id_khach_hang
+    join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+    join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem 
+    group by id_dich_vu_di_kem having so_lan = 1
+    ;  
+    
+    -- task 15
+    select nhan_vien.id_nhan_vien, nhan_vien.ten_nhan_vien, 
+    trinh_do.trinh_do, bo_phan.ten_bo_phan, nhan_vien.sdt, nhan_vien.dia_chi, count(hop_dong.id_nhan_vien) as so_hop_dong
+    from nhan_vien
+    join trinh_do on nhan_vien.id_trinh_do = trinh_do.id_trinh_do
+    join bo_phan on nhan_vien.id_bo_phan = bo_phan.id_bo_phan
+    join hop_dong on hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
+    where year(hop_dong.ngay_lam_hop_dong) > 2017 and year(hop_dong.ngay_lam_hop_dong) < 2020
+    group by id_nhan_vien having so_hop_dong < 4;
+    
+    -- task 16
+    SET SQL_SAFE_UPDATES = 0;
+    delete
+	 FROM nhan_vien 
+	 WHERE nhan_vien.id_nhan_vien 
+	  not IN (
+	 SELECT hop_dong.id_nhan_vien 
+	 FROM hop_dong 
+	 WHERE year(hop_dong.ngay_lam_hop_dong) BETWEEN 2017 and 2019
+	 );
+    
+    -- task 17 
+	UPDATE khach_hang
+	set khach_hang.id_loai_khach = 1
+	WHERE khach_hang.id_loai_khach = 2 and  khach_hang.id_khach_hang IN (
+	 SELECT hop_dong.id_khach_hang FROM hop_dong WHERE hop_dong.tong_tien>= 1500 and year(hop_dong.ngay_lam_hop_dong) = 2019
+	 );
+     
+     -- task 18	
+      DELETE 
+	  FROM khach_hang 
+	  WHERE khach_hang.id_khach_hang in (
+	  SELECT hop_dong.id_khach_hang 
+	  FROM hop_dong 
+	  WHERE year(hop_dong.ngay_lam_hop_dong) < 2016
+	  );
+ 
+ -- task 19
+	update dich_vu_di_kem 
+	set dich_vu_di_kem.gia = dich_vu_di_kem.gia *2
+	WHERE  dich_vu_di_kem.id_dich_vu_di_kem in ( 
+	SELECT hop_dong_chi_tiet.id_dich_vu_di_kem 
+	FROM hop_dong_chi_tiet  
+	JOIN hop_dong  ON hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+	WHERE year(hop_dong.ngay_lam_hop_dong)=2019
+	GROUP BY hop_dong_chi_tiet.id_dich_vu_di_kem
+	HAVING count(hop_dong_chi_tiet.id_dich_vu_di_kem) >=3
+	);
+    
+    -- task 20
+    CREATE VIEW khach_hang_view as 
+	SELECT khach_hang.id_khach_hang, khach_hang.ten_khach_hang,khach_hang.email, khach_hang.sdt, khach_hang.ngay_sinh, khach_hang.dia_chi
+	FROM khach_hang;
+	SELECT * FROM khach_hang_view;
+    
+	CREATE VIEW nhanvien_view as
+	SELECT nhan_vien.id_nhan_vien,nhan_vien.ten_nhan_vien,nhan_vien.email,nhan_vien.sdt,nhan_vien.ngay_sinh,nhan_vien.dia_chi
+	FROM nhan_vien;
+	SELECT * FROM nhan_vien_view;

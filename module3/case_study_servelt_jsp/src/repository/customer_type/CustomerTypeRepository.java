@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerTypeReponsitory implements ICustomerTypeReponsitory {
+public class CustomerTypeRepository implements ICustomerTypeRepository {
     private static final String SELECT_ALL_CUSTOMER_TYPE = "SELECT * FROM customer_type";
     @Override
     public List<CustomerType> selectAllCustomerType() {

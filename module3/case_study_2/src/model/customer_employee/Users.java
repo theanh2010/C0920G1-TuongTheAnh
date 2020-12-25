@@ -1,4 +1,4 @@
-package models.customer_employee;
+package model.customer_employee;
 
 public class Users {
     private String userName;

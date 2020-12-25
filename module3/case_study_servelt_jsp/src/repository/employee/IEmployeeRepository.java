@@ -4,7 +4,7 @@ import model.Employee;
 
 import java.util.List;
 
-public interface IEmployeeReponsitory {
+public interface IEmployeeRepository {
     List<Employee> selectAllEmployee();
 
     Employee selectEmployeeById();

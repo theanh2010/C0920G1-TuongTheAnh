@@ -5,7 +5,7 @@ import model.Service;
 
 import java.util.List;
 
-public interface IServiceReponsitory {
+public interface IServiceRepository {
 
     List<Service> selectAllService();
 

@@ -4,6 +4,6 @@ import model.CustomerType;
 
 import java.util.List;
 
-public interface ICustomerTypeReponsitory {
+public interface ICustomerTypeRepository {
     List<CustomerType> selectAllCustomerType();
 }
