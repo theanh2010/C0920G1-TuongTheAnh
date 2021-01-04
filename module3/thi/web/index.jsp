@@ -167,7 +167,7 @@
                     class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Customer</a>
+            <a class="nav-link" href="/customers"> Customer</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#">Service</a>
