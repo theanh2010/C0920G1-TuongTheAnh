@@ -2,80 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6388319d-2faf-43bf-be54-911cac0aaca6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/controller/BenhAnServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/controller/BenhNhanServelet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/DateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/EmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/IdCardException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/IdException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/NumberPhoneException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/exception/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhAn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhNhan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/BenhAnRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/IBenhAnRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/BenhNhanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/IBenhNhanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/BanhAnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/IBenhAnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/BenhNhanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/IBenhNhanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/module4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/SpringMVC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/SpringMVC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/modules/SpringMVC.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/artifacts/chuyen_doi_tien_te_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/libraries/Spring_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/libraries/Spring_MVC_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/chuyen_doi_tien_te.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/com/codegym/controller/ConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/com/codegym/services/ConvertServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/com/codegym/services/IConvertServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/web/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/web/WEB-INF/views/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/controllers/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/web/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/modules/dictionary.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/java/vn/codegym/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/src/main/java/vn/codegym/controller/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/src/main/webapp/WEB-INF/views/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/src/main/webapp/WEB-INF/views/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tu_dien/src/main/webapp/WEB-INF/views/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../session_02/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../session_02/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/.idea/SpringController.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/modules/SpringController.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/modules/SpringMVC.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/SpringController/SpringController/src/main/java/vn/codegym/services/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../session_02/thuc_hanh_1/.idea/modules/thuc_hanh_validate_email.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../bai_tap_them/demo/src/simple_login.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../bai_tap_them/demo/web/CSS/case_study_2.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../bai_tap_them/demo/web/bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap-grid.css" beforeDir="false" />
@@ -125,7 +68,45 @@
       <change beforePath="$PROJECT_DIR$/../../../module3/case_study_servelt_jsp/web/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/case_study_servelt_jsp/web/customer/create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module3/thi/.idea/artifacts/thi_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/.idea/artifacts/thi_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module3/thi/out/artifacts/thi_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/out/artifacts/thi_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/controller/BenhAnServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/controller/BenhAnServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhAn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhAn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhNhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/model/BenhNhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/BenhAnRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/BenhAnRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/IBenhAnRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_an/IBenhAnRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/BenhNhanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/BenhNhanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/IBenhNhanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/reponsitory/benh_nhan/IBenhNhanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/BanhAnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/BanhAnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/IBenhAnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_an/IBenhAnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/BenhNhanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/BenhNhanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/IBenhNhanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/src/serivice/benh_nhan/IBenhNhanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module3/thi/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/thi/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/5.2.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../session_02/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +140,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609404570733</updated>
       <workItem from="1609404571983" duration="24000" />
-      <workItem from="1609728537036" duration="486000" />
+      <workItem from="1609728537036" duration="1395000" />
+      <workItem from="1609733387311" duration="1480000" />
     </task>
     <servers />
   </component>
