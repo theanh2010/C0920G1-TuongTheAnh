@@ -1,6 +1,11 @@
 package com.codegym.model;
 
-public class Product {
+@Entity
+@Table
+
+public class Product implements Cloneable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String price;
@@ -56,5 +61,15 @@ public class Product {
 
     public void setQuantiy(int quantiy) {
         this.quantiy = quantiy;
+    }
+
+    @Override
+    public Product clone() {
+        Product product = new Product();
+        product.setId(id);
+        product.setName(name);
+        product.setPrice(price);
+        product.setImg(img);
+        return product;
     }
 }
