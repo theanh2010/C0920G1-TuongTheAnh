@@ -1,5 +1,7 @@
 package com.codegym.model;
 
+import javax.persistence.*;
+
 @Entity
 @Table
 
