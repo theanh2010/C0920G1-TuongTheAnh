@@ -1,6 +1,7 @@
 package com.codegym.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -12,8 +13,8 @@ public class Province  {
     private long id;
     private String name;
 
-    @OneToMany(mappedBy = "province", cascade = {CascadeType.ALL})
-    private Set<Customer> customers;
+    @OneToMany(mappedBy = "province" , fetch = FetchType.LAZY)
+    private List<Customer> customers;
     public Province() {
     }
 
@@ -37,11 +38,11 @@ public class Province  {
         this.name = name;
     }
 
-    public Set<Customer> getCustomers() {
+    public List<Customer> getCustomers() {
         return customers;
     }
 
-    public void setCustomers(Set<Customer> customers) {
+    public void setCustomers(List<Customer> customers) {
         this.customers = customers;
     }
 }

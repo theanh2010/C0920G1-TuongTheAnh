@@ -38,7 +38,6 @@ public class ProvinceController {
     @PostMapping("/create-province")
     public ModelAndView saveProvince(@ModelAttribute("province") Province province){
         provinceService.save(province);
-
         ModelAndView modelAndView = new ModelAndView("/customer/province/create");
         modelAndView.addObject("province", new Province());
         modelAndView.addObject("message", "New province created successfully");

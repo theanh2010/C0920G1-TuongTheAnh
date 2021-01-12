@@ -26,7 +26,7 @@
         <tr>
             <td>Province:</td>
             <td>
-                <select th:field="*{province}">
+                <select th:field="*{province.id}">
                     <option th:each="i : ${provinces}" th:value="${i.id}" th:text="${i.name}"></option>
                 </select>
             </td>
