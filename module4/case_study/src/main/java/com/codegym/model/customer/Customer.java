@@ -1,14 +1,58 @@
 package com.codegym.model.customer;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import com.codegym.model.Person;
+import com.codegym.model.contract.Contract;
+import com.codegym.model.user.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-@Table
-public class Customer{
-    private int customer_id;
+@Table(name = "customer")
+public class Customer extends Person {
+
     @ManyToOne
-    @JoinColumn(name = "customer_type_id")
+    @JoinColumn(name = "customer_type_id",
+                referencedColumnName = "id",
+                nullable = false,
+                columnDefinition = "BIGINT DEFAULT 1")
+    private CustomerType customerType;
+
+    @OneToOne
+    @JsonManagedReference
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private Set<Contract> contractSet;
+
+    public Customer() {
+    }
+
+    public CustomerType getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<Contract> getContractSet() {
+        return contractSet;
+    }
+
+    public void setContractSet(Set<Contract> contractSet) {
+        this.contractSet = contractSet;
+    }
 }
