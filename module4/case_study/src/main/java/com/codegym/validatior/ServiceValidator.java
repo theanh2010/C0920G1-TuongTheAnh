@@ -6,6 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import java.util.regex.Pattern;
+
 @Component
 public class ServiceValidator implements Validator {
 
@@ -23,21 +24,21 @@ public class ServiceValidator implements Validator {
 
         // Check name
         if (!Pattern.compile("^DV-[0-9]{4}$").matcher(service.getName()).find()) {
-            errors.rejectValue("name","service.name.format");
+            errors.rejectValue("name", "service.name.format");
         }
 
 
         // Check Area
         try {
-        Double.parseDouble(service.getArea());
+            Double.parseDouble(service.getArea());
         } catch (NumberFormatException e) {
             flag = false;
         }
 
         if (!flag) {
-            errors.rejectValue("area","service.area.format");
+            errors.rejectValue("area", "service.area.format");
         } else if (Double.parseDouble(service.getArea()) <= 40) {
-            errors.rejectValue("area","service.area.value");
+            errors.rejectValue("area", "service.area.value");
         }
 
         flag = true;
@@ -51,9 +52,9 @@ public class ServiceValidator implements Validator {
         }
 
         if (!flag) {
-            errors.rejectValue("cost","service.cost.format");
+            errors.rejectValue("cost", "service.cost.format");
         } else if (Double.parseDouble(service.getCost()) <= 0) {
-            errors.rejectValue("cost","service.cost.value");
+            errors.rejectValue("cost", "service.cost.value");
         }
 
         flag = true;
@@ -84,7 +85,7 @@ public class ServiceValidator implements Validator {
 
             if (!flag) {
                 errors.rejectValue("numberOfFloor", "service.numberOfFloor.format");
-            } else if (Integer.parseInt(service.getNumberOfFloor()) <= 0 ) {
+            } else if (Integer.parseInt(service.getNumberOfFloor()) <= 0) {
                 errors.rejectValue("numberOfFloor", "service.numberOfFloor.value");
             }
 
@@ -99,15 +100,14 @@ public class ServiceValidator implements Validator {
             }
 
             if (!flag) {
-                errors.rejectValue("poolArea","service.poolArea.format");
+                errors.rejectValue("poolArea", "service.poolArea.format");
             } else if (Double.parseDouble(service.getPoolArea()) <= 20) {
-                errors.rejectValue("poolArea","service.poolArea.value");
+                errors.rejectValue("poolArea", "service.poolArea.value");
             }
         } else {
             service.setNumberOfFloor(null);
             service.setPoolArea(null);
         }
-
 
 
     }

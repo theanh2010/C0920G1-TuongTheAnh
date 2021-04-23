@@ -1,0 +1,37 @@
+<div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Deleted</strong> Successfull ! ☺.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<table class="table table-hover">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Date Of Birth</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Id Card</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Customer Type</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of collection;  index as i">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.dateOfBirth}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.idcard}}</td>
+    <td>{{customer.phoneNumber}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.customerType}}</td>
+    <td><a routerLink="/update/{{customer.id}}">Update</a>&nbsp; &nbsp;
+      <a (click)="deleteCustomer(customer, i)" class="fa fa-trash-o" style="font-size:30px;color:red; cursor: pointer;">Delete</a></td>
+  </tr>
+  </tbody>
+</table>

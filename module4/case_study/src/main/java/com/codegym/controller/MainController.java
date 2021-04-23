@@ -49,7 +49,7 @@ public class MainController {
     }
 
 
-    @GetMapping(value = {"/","/home"})
+    @GetMapping(value = {"/", "/home"})
     public String goHome() {
         return "view/home";
     }
@@ -98,8 +98,6 @@ public class MainController {
 //
 //        SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
 //    }
-
-
 
 
     @GetMapping("/403")

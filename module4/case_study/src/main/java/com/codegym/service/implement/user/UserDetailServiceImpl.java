@@ -36,7 +36,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
         List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
         if (userRoleList != null) {
-            for (UserRole userRole: userRoleList) {
+            for (UserRole userRole : userRoleList) {
                 GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(userRole.getRole().getName());
                 grantedAuthorityList.add(grantedAuthority);
             }

@@ -43,17 +43,17 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/home","/sign-in","/sign-up","/logout","/service/list").permitAll();
+        http.authorizeRequests().antMatchers("/home", "/sign-in", "/sign-up", "/logout", "/service/list").permitAll();
 
-        http.authorizeRequests().antMatchers("/customer/detail","/service/booking/*","/service/booking", "/employee/detail","/customer/save","/employee/save","/service/history").access("hasAnyRole('ROLE_GUEST','ROLE_EMPLOYEE','ROLE_MANAGE','ROLE_ADMIN','ROLE_POSTER')");
+        http.authorizeRequests().antMatchers("/customer/detail", "/service/booking/*", "/service/booking", "/employee/detail", "/customer/save", "/employee/save", "/service/history").access("hasAnyRole('ROLE_GUEST','ROLE_EMPLOYEE','ROLE_MANAGE','ROLE_ADMIN','ROLE_POSTER')");
 
         http.authorizeRequests().antMatchers("/service/save", "/service/register", "service/history", "/service/my-service").access("hasAnyRole('ROLE_EMPLOYEE','ROLE_MANAGE','ROLE_ADMIN','ROLE_POSTER')");
 
         http.authorizeRequests().antMatchers("/manage/service/delete/*").access("hasAnyRole('ROLE_POSTER','ROLE_ADMIN','ROLE_MANAGE')");
 
-        http.authorizeRequests().antMatchers("/manage/service/list","/manage/customer/list","/manage/contract/list","/manage/contract/payment/*","/manage/attach-service/list","/manage/user/list","/manage/user/update-role","/manage/contract/update","/manage/customer/update").access("hasAnyRole('ROLE_EMPLOYEE','ROLE_MANAGE','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/manage/service/list", "/manage/customer/list", "/manage/contract/list", "/manage/contract/payment/*", "/manage/attach-service/list", "/manage/user/list", "/manage/user/update-role", "/manage/contract/update", "/manage/customer/update").access("hasAnyRole('ROLE_EMPLOYEE','ROLE_MANAGE','ROLE_ADMIN')");
 
-        http.authorizeRequests().antMatchers("/manage/user/*","/manage/employee/list","/manage/employee/update","/manage/employee/delete/*").access("hasAnyRole('ROLE_MANAGE','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/manage/user/*", "/manage/employee/list", "/manage/employee/update", "/manage/employee/delete/*").access("hasAnyRole('ROLE_MANAGE','ROLE_ADMIN')");
 
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 

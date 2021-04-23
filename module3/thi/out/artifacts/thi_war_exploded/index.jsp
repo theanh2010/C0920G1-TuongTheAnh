@@ -6,230 +6,144 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-  <title>KIỂM TRA MODULE 3</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
   <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/bootstrap/datatables/css/dataTables.bootstrap4.min.css">
-  <style>
-    body {
-      font-family: Arial, Tahoma;
-      font-size: 12px;
-    }
-    #main {
-      width: 100%;
-      padding: 0;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #head {
-      width: 100%;
-      height: 100px;
-      background-color: #F5F5F5;
-      margin-bottom: 5px;
-      position: fixed;
-      z-index: 9;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    #head-link {
-      background-color: #F5F5F5;
-      margin-bottom: 5px;
-      position: relative;
-      top: 100px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    #content-left {
-      width: 20%;
-      height: 900px;
-      float: left;
-      /*background-color: #b3b3ff;*/
-      background: honeydew;
-      margin-bottom: 5px;
-    }
-    #content-right {
-      width: 80%;
-      height: 900px;
-      float: right;
-      background-color: #ffffe6;
-      margin-bottom: 5px;
-    }
-    #content {
-      width: 100%;
-      height: 900px;
-      position: relative;
-      top: 95px;
-    }
-    #footer {
-      height: 50px;
-      clear: both;
-      background-color: #F8F8FF;
-      position: relative;
-      width: 100%;
-      margin-top: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-    #font{
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-    .img {
-      width: 50px;
-      height: 50px;
-      margin-left: 45px;
-      border-radius: 5px;
-    }
-    .word {
-      font-family: 'Courier New', Courier, monospace;
-      margin-right: 63px;
-    }
-    .search {
-      width: 100%;
-    }
-    .img1 {
-      width: 100%;
-      height: 100%;
-    }
-    .carousel-inner {
-      height: 100%;
-    }
-    .font1{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-    }
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-  </style>
 </head>
 <body>
-<div id="main">
-  <div id="head">
-    <div><a href="https://danang.codegym.vn/" target="_blank">
-      <img class="img"
-           src="https://yt3.ggpht.com/ytc/AAUvwnggKV40oVjF4SGADNHPfCtb2z2AQcGA4zXR6hI=s900-c-k-c0x00ffffff-no-rj"
-           alt="1"></a></div>
-    <div><h1 class="font1">Module test 3</h1></div>
-    <div><h4 class="word">Tưởng Thế Anh</h4></div>
+<div class="container-fluid" >
+  <h1 class="text-center mt-4 mb-5">List Customer</h1>
+  <div class="row">
+    <div class="col-4">
+      <a href="/" class="btn btn-warning">Home</a>
+    </div>
+
+    <div class="form-group col-8">
+      <form class="row" action="/benhan" method="get">
+        <button style="margin-left: 350px" type="submit" class="btn btn-primary col-2" name="action"
+                value="find">Search
+        </button>
+        <input type="text" class="form-control col-5" placeholder="Name" name="name">
+      </form>
+    </div>
   </div>
-  <div id="head-link" class="page-header">
-    <nav style="width: 100%" class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"> Employee<span
-                    class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"> Customer</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#">Service</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <a><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></a>
+  <table id="customer_table" class="table table-striped">
+    <thead>
+    <tr>
+      <th>Ma benh an</th>
+      <th>Ma benh nhan</th>
+      <th>ngay nhap vien</th>
+      <th>ngay ra vien</th>
+      <th>bac si dieu tri</th>
+      <th>ly do</th>
+      <th>ten benh nhan</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${benhAnList}" var="benhAn">
+      <tr>
+        <td>${benhAn.id_benh_an}</td>
+        <td>${benhAn.id_benh_nhan}</td>
+        <td>${benhAn.ngay_nhap_vien}</td>
+        <td>${benhAn.ngay_ra_vien}</td>
+        <td>${benhAn.bac_si_dieu_tri}</td>
+        <td>${benhAn.ly_do}</td>
+        <td>${benhAn.ten_benh_nhan}</td>
+        <td><a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modalUpdate"
+               onclick="onUpdate('${benhAn.id_benh_an}','${benhAn.id_benh_nhan}','${benhAn.ngay_nhap_vien}','${benhAn.ngay_ra_vien}','${benhAn.bac_si_dieu_tri}'
+                       ,'${benhAn.ly_do}')">Update</a>
+        </td>
+        <td><a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete"
+               onclick="onDelete('${benhAn.id_benh_an}')">Delete</a></td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+  <%--    <ul class="pagination">--%>
+  <%--        <c:forEach begin="1" end="${totalPage}" var="i">--%>
+  <%--            <li class="page-item"><a id="${i}" class="page-link active" href="customers?page=${i}">${i}</a></li>--%>
+  <%--        </c:forEach>--%>
+  <%--    </ul>--%>
+</div>
+
+<%--UPDATE--%>
+<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal update</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/benhan" method="post">
+          <input type="hidden" name="id_benh_an" id="updateIdBenhAn">
+          <input type="hidden" name="id_benh_nhan" id="updateIdBenhNhan">
+          <div class="form-group row">
+            <label class="col-4">ngay Nhap vien </label>
+            <input class="form-control col-8" type="date" name="ngay_nhap_vien" id="ngay_nhap_vien">
+          </div>
+          <div class="form-group row">
+            <label class="col-4"> ngay ra vien</label>
+            <input class="form-control col-8" type="date" name="ngay_ra_vien" id="ngay_ra_vien">
+          </div>
+          <div class="form-group row">
+            <label class="col-4">bac si dieu tri </label>
+            <input class="form-control col-8" type="text" name="bac_si_dieu_tri" id="bac_si_dieu_tri">
+          </div>
+          <div class="form-group row">
+            <label class="col-4">ly do </label>
+            <input class="form-control col-8" type="text" name="ly_do" id="ly_do">
+          </div>
+          <div class="form-group row">
+            <label class="col-4">Ten benh nhan</label>
+            <select class="col-8 form-control" name="name_benh_nhan" id="updatebenhNhan">
+              <c:forEach var="benhNhan" items="${benhNhanList}" >
+                <option value="${benhNhan.id_benh_nhan}" >${benhNhan.ten_benh_nhan}</option>
+              </c:forEach>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" name="action" value="update">Save</button>
+          </div>
         </form>
       </div>
-    </nav>
-  </div>
-  <div id="content">
-    <div id="content-left">
-      <iframe width="99%" height="34%" src="https://www.youtube.com/embed/FOqZH-vDY-A" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-      <iframe width="99%" height="34%" src="https://www.youtube.com/embed/VLYvmrCHPgk" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-      <iframe width="99%" height="34%" src="https://www.youtube.com/embed/KfGKLavpSVE" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+
     </div>
-    <div id="content-right">
-      <div id="demo" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://img1.kienthucvui.vn/uploads/2019/10/10/anh-chibi-naruto_110701874.jpg"
-                 alt="Los Angeles" width="100%" height="100%">
-          </div>
-          <div class="carousel-item">
-            <img src="https://img2.thuthuatphanmem.vn/uploads/2018/12/12/anh-naruto-be-bong-dep_104804081.jpg"
-                 alt="Chicago" width="100%" height="100%">
-          </div>
-          <div class="carousel-item">
-            <img src="https://img2.thuthuatphanmem.vn/uploads/2018/12/12/naruto-chibi_104811914.jpg"
-                 alt="New York" width="100%" height="100%">
-          </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
+  </div>
+</div>
+<%--DELETE--%>
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete customer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <h2>Are you sure ?</h2>
+        <form action="/benhan" method="post">
+          <input type="hidden" name="id_benh_an" id="deleteId">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-danger" name="action" value="delete">Delete</button>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
-  <div id="footer">
-    <p id="font" style="font-weight: bold">@Tưởng Thế Anh C0920G1 Module3</p>
-  </div>
 </div>
-</div>
+
 <script src="../assets/bootstrap/jquery/jquery-3.5.1.min.js"></script>
 <script src="../assets/bootstrap/js/popper.min.js"></script>
 <script src="../assets/bootstrap/datatables/js/jquery.dataTables.min.js"></script>
@@ -237,5 +151,49 @@
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
 
+<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/bootstrap/datatables/css/dataTables.bootstrap4.min.css">
+
+<script>
+  $(document).ready(function () {
+    $('#customer_table').dataTable({
+      "dom" : 'lrtip',
+      "lengthChange": false,
+      "pageLength": 5
+    });
+  });
+</script>
 </body>
+<%--('${benhAn.id_benh_an}','${benhAn.id_benh_nhan}','${benhAn.ngay_nhap_vien}','${benhAn.ngay_ra_vien}','${benhAn.bac_si_dieu_tri}'--%>
+<%--,'${benhAn.ly_do}')">Update</a>--%>
+<script>
+  function onUpdate(updateIdBenhAn, updateIdBenhNhan, ngay_nhap_vien, ngay_ra_vien, bac_si_dieu_tri, li_do, updatebenhNhan) {
+    document.getElementById("updateIdBenhAn").value = updateIdBenhAn;
+    document.getElementById("updateIdBenhNhan").value = updateIdBenhNhan;
+    document.getElementById("ngay_nhap_vien").value = ngay_nhap_vien;
+    document.getElementById("ngay_ra_vien").value = ngay_ra_vien;
+    document.getElementById("bac_si_dieu_tri").value = bac_si_dieu_tri;
+    document.getElementById("li_do").value = li_do;
+    switch (updatebenhNhan) {
+      case "Chien":
+        updatebenhNhan = 1;
+        break;
+      case "Phuc":
+        updatebenhNhan = 2;
+        break;
+      case "Ngoc Anh":
+        updatebenhNhan = 3;
+        break;
+      case "Thuy Trang":
+        updatebenhNhan = 4;
+        break;
+    }
+    document.getElementById("updatebenhNhan").value = updatebenhNhan;
+  }
+
+  function onDelete(id) {
+    document.getElementById("deleteId").value = id;
+  }
+
+</script>
 </html>

@@ -11,6 +11,8 @@ import java.util.Set;
 @Table(name = "customer_type")
 public class CustomerType extends TypeCommon {
 
+
+
     @OneToMany(mappedBy = "customerType", cascade = CascadeType.ALL)
     @JsonBackReference
     Set<Customer> customerSet;

@@ -23,6 +23,6 @@ public class ServiceRestController {
     public ResponseEntity<Service> returnService(@PathVariable Long id) {
         Service service = serviceDao.findById(id);
 
-        return new ResponseEntity<>(service,HttpStatus.OK);
+        return new ResponseEntity<>(service, HttpStatus.OK);
     }
 }

@@ -44,7 +44,7 @@ public class EmployeeController {
 
             String code;
             do {
-                code = String.valueOf(new Random().nextInt(9999-1000)+1000);
+                code = String.valueOf(new Random().nextInt(9999 - 1000) + 1000);
             } while (employeeService.findByCode(code) != null);
 
             employee.setUser(mainUser);

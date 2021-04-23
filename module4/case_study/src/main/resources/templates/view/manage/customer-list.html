@@ -39,7 +39,8 @@
                 <select class="form-control ml-5" id="selectCustomerType">
                     <option value="">Customer type</option>
                     <option value="">All</option>
-                    <option th:each="customerType : ${customerTypeList}" th:value="${customerType.id}" th:text="${customerType.name}"></option>
+                    <option th:each="customerType : ${customerTypeList}" th:value="${customerType.id}"
+                            th:text="${customerType.name}"></option>
                 </select>
             </a>
         </div>
@@ -57,7 +58,7 @@
                 <th>Id card</th>
                 <th>Customer type</th>
                 <th>Use user</th>
-                <th  sec:authorize="hasRole('MANAGE')">Update</th>
+                <th sec:authorize="hasRole('MANAGE')">Update</th>
             </tr>
             </thead>
             <tbody>
@@ -77,8 +78,10 @@
                 <td th:text="${customer.idCard}"></td>
                 <td th:text="${customer.customerType.name}"></td>
                 <td th:text="${customer.user.username}"></td>
-                <td sec:authorize="hasRole('MANAGE')"><a th:onclick="'onUpdate('+${customer.id}+')'" class="btn btn-outline-primary"
-                                                         data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-edit"></i></a></td>
+                <td sec:authorize="hasRole('MANAGE')"><a th:onclick="'onUpdate('+${customer.id}+')'"
+                                                         class="btn btn-outline-primary"
+                                                         data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                        class="fa fa-edit"></i></a></td>
             </tr>
             </tbody>
         </table>
@@ -86,12 +89,15 @@
         <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center">
                 <li class="page-item" th:if="${customerList.hasPrevious()}">
-                    <a class="page-link" th:href="@{/manage/customer/list(page=0,nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}" aria-label="Previous">
+                    <a class="page-link"
+                       th:href="@{/manage/customer/list(page=0,nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
+                       aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
                 <li class="page-item" th:if="${customerList.hasPrevious()}">
-                    <a class="page-link" th:href="@{/manage/customer/list(page=${customerList.number - 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
+                    <a class="page-link"
+                       th:href="@{/manage/customer/list(page=${customerList.number - 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
                        aria-label="Previous">
                         <span aria-hidden="true">&lsaquo;</span>
                     </a>
@@ -112,13 +118,15 @@
 
 
                 <li class="page-item" th:if="${customerList.hasNext()}">
-                    <a class="page-link" th:href="@{/manage/customer/list(page=${customerList.number + 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
+                    <a class="page-link"
+                       th:href="@{/manage/customer/list(page=${customerList.number + 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
                        aria-label="Next">
                         <span aria-hidden="true">&rsaquo;</span>
                     </a>
                 </li>
                 <li class="page-item" th:if="${customerList.hasNext()}">
-                    <a class="page-link" th:href="@{/manage/customer/list(page=${customerList.totalPages - 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
+                    <a class="page-link"
+                       th:href="@{/manage/customer/list(page=${customerList.totalPages - 1},nameCustomer=${nameCustomer},idCustomerType=${idCustomerType})}"
                        aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
@@ -172,7 +180,7 @@
 
     $(document).ready(function () {
         $('#selectCustomerType').change(function () {
-            $('#select').attr('href', '/manage/customer/list?idCustomerType='+$(this).val());
+            $('#select').attr('href', '/manage/customer/list?idCustomerType=' + $(this).val());
         })
     })
 </script>

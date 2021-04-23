@@ -1,0 +1,60 @@
+<div class="row d-flex justify-content-center"><h3>Edit nhân viên</h3></div>
+
+
+
+<form class = "w-25 mx-auto mt-3" [formGroup]="formEditEmployee">
+  <div class="form-group">
+    <p>Mã số xổ</p>
+    <input class="form-control " type="text" formControlName="id" >
+  </div>
+  <div>
+    <div class="form-group">
+      <p>Họ và tên</p>
+      <input class="form-control" type="text" formControlName="name">
+      <p *ngIf="formEditEmployee.controls.name.errors?.required && formEditEmployee.controls.name.touched" class="text-danger">Vui lòng nhập lại</p>
+      <p *ngIf="formEditEmployee.controls.name.errors?.pattern && formEditEmployee.controls.name.touched" class="text-danger">Vui lòng nhập đúng định dạng</p>
+    </div>
+    <div class="form-group">
+      <p>Ngày sinh</p>
+      <input class="form-control" type="text" formControlName="birthday">
+      <p *ngIf="formEditEmployee.controls.phone.errors?.required && formEditEmployee.controls.phone.touched" class="text-danger">Vui lòng nhập lại</p>
+      <p *ngIf="formEditEmployee.controls.phone.errors?.pattern && formEditEmployee.controls.phone.touched" class="text-danger">Vui lòng nhập đúng định dạng</p>
+    </div>
+    <div class="form-group">
+      <p>Gender</p>
+      <select style="width: 350px"  class="form-control mr-sm-3" formControlName="gender">
+        <option value="nam">Nam</option>
+        <option value="nữ">nữ</option>
+        <option value="bê đê">bê đê</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>Số cmnd</p>
+      <input class="form-control" type="text" formControlName="idCard">
+      <p *ngIf="formEditEmployee.controls.address.errors?.required && formEditEmployee.controls.address.touched" class="text-danger">Vui lòng nhập lại</p>
+    </div>
+    <div class="form-group">
+      <p>Số Đt</p>
+      <input class="form-control" type="text" formControlName="phone">
+      <p *ngIf="formEditEmployee.controls.address.errors?.required && formEditEmployee.controls.address.touched" class="text-danger">Vui lòng nhập lại</p>
+    </div>
+    <div class="form-group">
+      <p>Địa chỉ</p>
+      <input class="form-control" type="text" formControlName="address">
+      <p *ngIf="formEditEmployee.controls.address.errors?.required && formEditEmployee.controls.address.touched" class="text-danger">Vui lòng nhập lại</p>
+    </div>
+    <div class="form-group">
+      <p>Loại nv</p>
+      <select style="width: 350px"  class="form-control mr-sm-3" formControlName="employeeType">
+        <option
+          [selected]="employeeTypes.name == formEditEmployee.controls.employeeType.value.name"
+          *ngFor="let employeeTypes of employeeType" [ngValue]="employeeTypes"> {{employeeTypes.name}}
+        </option>
+      </select>
+    </div>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-3">
+<!--  <button class="btn btn-success mr-3" (click)="editEmployee()">Chỉnh sửa</button>-->
+  <button class="btn btn-danger mr-3" [routerLink]="['/employee-list']">Thoát</button>
+</div>

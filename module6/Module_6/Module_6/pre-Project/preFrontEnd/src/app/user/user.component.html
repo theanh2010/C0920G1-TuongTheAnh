@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <h3>User List</h3>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <th scope="col">Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Img</th>
+        <th scope="col">User Type</th>
+        <th scope="col">Action</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+<!--          <td><img src="{{user.imgUrl}}"></td>-->
+          <td>{{user.imgUrl}}</td>
+          <td>{{user.userType.name}}</td>
+          <td>
+<!--            <a routerLink="/update/{{user.id}}">-->
+            <a (click)="openDialog(user.id)" class="btn btn-outline-info" style="font-size:30px;color:red; cursor: pointer;"> Xóa</a>
+            <a (click)="openDialogUpdate(user.id)" class="btn btn-outline-info" style="font-size:30px;color:rgb(10, 2, 116); cursor: pointer;">Update</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <hr>
+      <ul class="nav nav-pills">
+        <li class="nav-item" *ngFor="let p of pages; let i = index">
+          <a class="btn btn-outline-info" (click)="setPage(i, $event)">{{i}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

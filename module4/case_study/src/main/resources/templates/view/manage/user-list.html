@@ -18,7 +18,7 @@
             color: white;
         }
 
-        .pagination .active a{
+        .pagination .active a {
             border: #3b3b3b;
             background-color: #3b3b3b !important;
         }
@@ -56,7 +56,8 @@
                 </th:block>
                 <td th:text="${user.userRoleSet}"></td>
                 <td>
-                    <a id="btn" th:onclick="'update('+${user.id}+')'" class="btn btn-outline-light " data-bs-toggle="modal"
+                    <a id="btn" th:onclick="'update('+${user.id}+')'" class="btn btn-outline-light "
+                       data-bs-toggle="modal"
                        data-bs-target="#exampleModal">Update
                     </a>
                 </td>
@@ -64,43 +65,43 @@
             </tbody>
         </table>
 
-<!--        <nav  aria-label="Page navigation example ">-->
-<!--            <ul class="pagination justify-content-center">-->
-<!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
-<!--                    <a class="page-link" href="/manage/user/list?page=0" aria-label="Previous">-->
-<!--                        <span aria-hidden="true">&laquo;</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
-<!--                    <a class="page-link" th:href="@{/manage/user/list(page=${userList.number - 1})}" aria-label="Previous">-->
-<!--                        <span aria-hidden="true">&lsaquo;</span>-->
-<!--                    </a>-->
-<!--                </li>-->
+        <!--        <nav  aria-label="Page navigation example ">-->
+        <!--            <ul class="pagination justify-content-center">-->
+        <!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
+        <!--                    <a class="page-link" href="/manage/user/list?page=0" aria-label="Previous">-->
+        <!--                        <span aria-hidden="true">&laquo;</span>-->
+        <!--                    </a>-->
+        <!--                </li>-->
+        <!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
+        <!--                    <a class="page-link" th:href="@{/manage/user/list(page=${userList.number - 1})}" aria-label="Previous">-->
+        <!--                        <span aria-hidden="true">&lsaquo;</span>-->
+        <!--                    </a>-->
+        <!--                </li>-->
 
 
-<!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
-<!--                    <a class="page-link"  th:text="${userList.number}"  th:href="@{/manage/user/list(page=${userList.number - 1})}" ></a>-->
-<!--                </li>-->
-<!--                <li class="page-item active">-->
-<!--                    <a class="page-link" href="#" th:text="${userList.number +1}"></a>-->
-<!--                </li>-->
-<!--                <li class="page-item" th:if="${userList.hasNext()}">-->
-<!--                    <a class="page-link"  th:text="${userList.number +2}"  th:href="@{/manage/user/list(page=${userList.number + 1})}" ></a>-->
-<!--                </li>-->
+        <!--                <li class="page-item" th:if="${userList.hasPrevious()}">-->
+        <!--                    <a class="page-link"  th:text="${userList.number}"  th:href="@{/manage/user/list(page=${userList.number - 1})}" ></a>-->
+        <!--                </li>-->
+        <!--                <li class="page-item active">-->
+        <!--                    <a class="page-link" href="#" th:text="${userList.number +1}"></a>-->
+        <!--                </li>-->
+        <!--                <li class="page-item" th:if="${userList.hasNext()}">-->
+        <!--                    <a class="page-link"  th:text="${userList.number +2}"  th:href="@{/manage/user/list(page=${userList.number + 1})}" ></a>-->
+        <!--                </li>-->
 
 
-<!--                <li class="page-item" th:if="${userList.hasNext()}">-->
-<!--                    <a class="page-link"  th:href="@{/manage/user/list(page=${userList.number + 1})}"  aria-label="Next">-->
-<!--                        <span aria-hidden="true">&rsaquo;</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="page-item" th:if="${userList.hasNext()}">-->
-<!--                    <a class="page-link" th:href="@{/manage/user/list(page=${userList.totalPages - 1})}" aria-label="Next">-->
-<!--                        <span aria-hidden="true">&raquo;</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </nav>-->
+        <!--                <li class="page-item" th:if="${userList.hasNext()}">-->
+        <!--                    <a class="page-link"  th:href="@{/manage/user/list(page=${userList.number + 1})}"  aria-label="Next">-->
+        <!--                        <span aria-hidden="true">&rsaquo;</span>-->
+        <!--                    </a>-->
+        <!--                </li>-->
+        <!--                <li class="page-item" th:if="${userList.hasNext()}">-->
+        <!--                    <a class="page-link" th:href="@{/manage/user/list(page=${userList.totalPages - 1})}" aria-label="Next">-->
+        <!--                        <span aria-hidden="true">&raquo;</span>-->
+        <!--                    </a>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </nav>-->
     </div>
 </div>
 
@@ -121,7 +122,7 @@
                     <div class="container">
                         <div class="form-group">
                             <div class="row">
-                                <label  class="col-form-label col-4">Role</label>
+                                <label class="col-form-label col-4">Role</label>
                                 <input type="hidden" id="userId" name="userId">
                                 <select name="roleId" class="form-control col-6">
                                     <option disabled>Select</option>

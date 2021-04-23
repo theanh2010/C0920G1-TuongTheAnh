@@ -67,16 +67,16 @@ public class ContractController {
 
             String code;
             do {
-                code = String.valueOf(new Random().nextInt(9999-1000)+1000);
+                code = String.valueOf(new Random().nextInt(9999 - 1000) + 1000);
             } while (contractService.findByCode(code) != null);
 
             contract.setCode(code);
             contract.setStartDate(LocalDate.now().toString());
             model.addAttribute("contract", contract);
-            model.addAttribute("attachServiceList",attachServiceDao.findAll());
+            model.addAttribute("attachServiceList", attachServiceDao.findAll());
 
-            double result1 =0;
-            double result2 =0;
+            double result1 = 0;
+            double result2 = 0;
             session.setAttribute("resultSession1", result1);
             session.setAttribute("resultSession2", result2);
 
@@ -96,19 +96,19 @@ public class ContractController {
         contractValidator.validate(contract, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            model.addAttribute("attachServiceList",attachServiceDao.findAll());
+            model.addAttribute("attachServiceList", attachServiceDao.findAll());
             return "view/contract/booking-service";
 //            return "redirect:/service/booking/"+contract.getService().getId();
         }
 
         HashMap<Long, AttachService> attachServiceHashMap = (HashMap<Long, AttachService>) session.getAttribute("attachServiceSession");
-        User user = (User) ((Authentication ) principal) .getPrincipal();
+        User user = (User) ((Authentication) principal).getPrincipal();
 
         contract.setCustomer(userService.findByUsername(user.getUsername()).getCustomer());
 
         Set<ContractDetail> contractDetailSet = new HashSet<>();
 
-        for (Long key: attachServiceHashMap.keySet()) {
+        for (Long key : attachServiceHashMap.keySet()) {
             ContractDetail contractDetail = new ContractDetail();
             contractDetail.setAttachService(attachServiceHashMap.get(key));
             contractDetail.setQuantity(attachServiceHashMap.get(key).getAmount());

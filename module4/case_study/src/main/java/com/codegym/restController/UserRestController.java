@@ -19,9 +19,9 @@ public class UserRestController {
     UserService userService;
 
     @PostMapping("/change-password/{idUser}/{newPassword}")
-    public ResponseEntity<User> changePassword (@PathVariable Long idUser,
-                                          @PathVariable String newPassword,
-                                          Principal principal) {
+    public ResponseEntity<User> changePassword(@PathVariable Long idUser,
+                                               @PathVariable String newPassword,
+                                               Principal principal) {
         User user = userService.findById(idUser);
 
         user.setPassword(new BCryptPasswordEncoder().encode(newPassword));

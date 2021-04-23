@@ -10,11 +10,13 @@ import org.springframework.validation.Validator;
 
 import java.time.LocalDate;
 import java.util.regex.Pattern;
+
 @Component
 public class EmployeeValidator implements Validator {
 
     @Autowired
     EmployeeService employeeService;
+
     @Override
     public boolean supports(Class<?> clazz) {
         return false;
@@ -61,31 +63,31 @@ public class EmployeeValidator implements Validator {
             }
         }
         // Check Name
-        if (!Pattern.compile("^(([A-Z][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+)(| ))+$").matcher(employee.getName()).find()) {
-            errors.rejectValue("name","employee.name.format");
+        if (!Pattern.compile("^([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}$").matcher(employee.getName()).find()) {
+            errors.rejectValue("name", "employee.name.format");
         }
 
 
         // Check Age
         if (LocalDate.now().getYear() - dateOfBirth.getYear() < 18) {
-            errors.rejectValue("dateOfBirth","employee.dateOfBirth.age");
+            errors.rejectValue("dateOfBirth", "employee.dateOfBirth.age");
         }
 
 
         // Check Address
         if (employee.getAddress().equals("")) {
-            errors.rejectValue("address","employee.address.format");
+            errors.rejectValue("address", "employee.address.format");
         }
 
 
         // Check Email
 
         if (!Pattern.compile("^\\w{5,}.?\\w+(@\\w{3,8})(.\\w{3,8})+$").matcher(employee.getEmail()).find()) {
-            errors.rejectValue("email","employee.email.format");
+            errors.rejectValue("email", "employee.email.format");
         }
 
         if (employee.getEmail().length() < 6 || employee.getEmail().length() > 32) {
-            errors.rejectValue("email","employee.email.size");
+            errors.rejectValue("email", "employee.email.size");
         }
 
 
@@ -93,7 +95,7 @@ public class EmployeeValidator implements Validator {
 
 
         if (!Pattern.compile("^\\d{12}$").matcher(employee.getIdCard()).find()) {
-            errors.rejectValue("idCard","employee.idCard.format");
+            errors.rejectValue("idCard", "employee.idCard.format");
         }
 
 
@@ -101,7 +103,7 @@ public class EmployeeValidator implements Validator {
 
 
         if (!Pattern.compile("^0\\d{9}$").matcher(employee.getPhone()).find()) {
-            errors.rejectValue("phone","employee.phone.format");
+            errors.rejectValue("phone", "employee.phone.format");
         }
 
     }

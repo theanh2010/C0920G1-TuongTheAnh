@@ -5,14 +5,14 @@ public class SavingBook {
     private String name;
     private String startRentDate;
     private String endRentDate;
-    private long rentTime;
+    private String rentTime;
     private int amount;
     private double moneyDeposits;
 
     public SavingBook() {
     }
 
-    public SavingBook(String id, String name, String startRentDate, String endRentDate, long rentTime, int amount,
+    public SavingBook(String id, String name, String startRentDate, String endRentDate, String rentTime, int amount,
                       double moneyDeposits) {
         this.id = id;
         this.name = name;
@@ -47,11 +47,11 @@ public class SavingBook {
         this.startRentDate = startRentDate;
     }
 
-    public long getRentTime() {
+    public String getRentTime() {
         return rentTime;
     }
 
-    public void setRentTime(long rentTime) {
+    public void setRentTime(String rentTime) {
         this.rentTime = rentTime;
     }
 

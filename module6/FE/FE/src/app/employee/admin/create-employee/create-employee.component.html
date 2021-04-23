@@ -1,0 +1,240 @@
+<div class="content row">
+  <div class="col-2 menu-left-admin">
+    <div class="row">
+      <ul class="col-12">
+        <li class="pl-4 pt-2 pb-2 menu-var">
+          <a><i class="fas fa-user-friends mr-2"></i>Nhân viên</a>
+        </li>
+        <li class="pl-4 pt-2 pb-2 menu-var">
+          <a><i class="fas fa-female mr-2"></i>Khách hàng</a>
+        </li>
+        <li class="pl-4 pt-2 pb-2 menu-var">
+          <a><i class="fas fa-file-signature mr-2"></i>Hợp đồng</a>
+        </li>
+        <li class="pl-4 pt-2 pb-2 menu-var">
+          <a><i class="fas fa-user-friends mr-2"></i>Đền bù</a>
+        </li>
+        <li class="pl-4 pt-2 pb-2 menu-var">
+          <a><i class="fas fa-user-friends mr-2"></i>Sản phẩm</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-10 content-center">
+    <h3 align="center" class="mt-2">
+      Màn Hình Thêm Mới Nhân Viên
+    </h3>
+    <form class="mt-4" [formGroup]="formCreateEmployee" (ngSubmit)="addNewEmployee(formCreateEmployee.value)">
+<!--      Họ và tên-->
+      <div class="form-group">
+        <label class="col-2 float-left" for="name">
+          Họ Tên (<span class="text-danger">*</span>):
+        </label>
+        <input name="name" id="name" class="col-9 form-control float-left" type="text"
+        formControlName="name">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('name').hasError('required') && formCreateEmployee.get('name').touched"
+            class="text-danger">Please input first name</p>
+      </div>
+<!--      Ngày sinh-->
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="birthDay" >
+          Ngày Sinh (<span class="text-danger">*</span>):
+        </label>
+        <input id="birthDay" class="col-9 form-control float-left" type="date" max="2021-03-15"
+        formControlName="dateOfBirth">
+      </div>
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('dateOfBirth').hasError('required') && formCreateEmployee.get('dateOfBirth').touched"
+           class="text-danger">Please input birth day</p>
+      </div>
+
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+          Giới tính (<span class="text-danger">*</span>):
+        </label>
+        <input ng-control="gender" value="1" type="radio" formControlName="gender"/>&nbsp;Nam &nbsp;
+        <input ng-control="gender" value="0" type="radio" formControlName="gender"/>&nbsp;Nữ &nbsp;
+        <input ng-control="gender" value="2" type="radio" formControlName="gender"/> Others
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="idCard">
+          CMND (<span class="text-danger">*</span>):
+        </label>
+        <input id="idCard" class="col-9 form-control float-left" type="number" formControlName="idCard">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('idCard').hasError('required') && formCreateEmployee.get('idCard').touched"
+           class="text-danger">Please input id card</p>
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="phone">
+          Điện thoại (<span class="text-danger">*</span>):
+        </label>
+        <input id="phone" class="col-9 form-control float-left" type="number" formControlName="phone">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('phone').hasError('required') && formCreateEmployee.get('phone').touched"
+           class="text-danger">Please input phone number</p>
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="email">
+          Email (<span class="text-danger">*</span>):
+        </label>
+        <input id="email" class="col-9 form-control float-left" type="text" formControlName="email">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('email').hasError('required') && formCreateEmployee.get('email').touched"
+           class="text-danger">Please input mail</p>
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="address">
+          Địa Chỉ (<span class="text-danger">*</span>):
+        </label>
+        <input id="address" class="col-9 form-control float-left" type="text" formControlName="address">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('address').hasError('required') && formCreateEmployee.get('address').touched"
+           class="text-danger">Please input address</p>
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left" for="city">
+          Thành phố (<span class="text-danger">*</span>):
+        </label>
+        <input id="city" class="col-9 form-control float-left" type="text" formControlName="city">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('city').hasError('required') && formCreateEmployee.get('city').touched"
+           class="text-danger">Please input city</p>
+      </div>
+
+      <div class="form-group mt-0" style="clear: both">
+        <label class="col-2 float-left " for="account">
+          Tài khoản (<span class="text-danger">*</span>):
+        </label>
+        <input id="account" class="col-9 form-control float-left" type="text" formControlName="users">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('users').hasError('required') && formCreateEmployee.get('users').touched"
+           class="text-danger">Please input account</p>
+        <p *ngIf="formCreateEmployee.hasError('userExist',['users']) && formCreateEmployee.get('users').touched"
+           class="text-danger">Tài khoản đã tồn tại</p>
+      </div>
+
+      <div formGroupName="password">
+        <div class="form-group mt-0">
+          <label class="col-2 float-left" for="password">
+            Mật khẩu (<span class="text-danger">*</span>):
+          </label>
+          <input id="password" type="password" class="col-9 form-control float-left" formControlName="newPassword">
+        </div>
+
+        <div class="form-group" style="clear: both">
+          <label class="col-2 float-left">
+          </label>
+          <p *ngIf="formCreateEmployee.get('password').get('newPassword').hasError('required') && formCreateEmployee.get('password').get('newPassword').touched"
+             class="text-danger">Vui lòng nhập mật khẩu</p>
+        </div>
+
+        <div>
+          <label class="col-2 float-left" for="newPassword">
+            Xác nhận (<span class="text-danger">*</span>):
+          </label>
+          <input class="col-9 form-control float-left" id="newPassword" type="password"  formControlName="confirmPassword">
+        </div>
+
+        <div class="form-group" style="clear: both">
+          <label class="col-2 float-left">
+          </label>
+          <p *ngIf="formCreateEmployee.hasError('passwordnotmatch',['password']) && formCreateEmployee.get('password').touched"
+             class="text-danger">Mật khẩu không khớp</p>
+        </div>
+      </div>
+
+<!--      <div class="form-group" style="clear: both">-->
+<!--        <mat-form-field appearance="fill">-->
+<!--          <mat-label>Vị trí</mat-label>-->
+<!--          <mat-select formControlName="position" required>-->
+<!--            <mat-option>&#45;&#45;Chọn vị trí&#45;&#45;</mat-option>-->
+<!--            <mat-option *ngFor="let p of positions" [value]="p">-->
+<!--              {{p.name}}-->
+<!--            </mat-option>-->
+<!--          </mat-select>-->
+<!--          <mat-error *ngIf="formCreateEmployee.get('position').hasError('required')">Chọn kì hạn</mat-error>-->
+<!--        </mat-form-field>-->
+<!--      </div>-->
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+          Vị trí (<span class="text-danger">*</span>):
+        </label>
+        <select  class="col-9 form-control" formControlName="position">
+          <option [selected]="position.name == formCreateEmployee.controls.position.value.name"
+                  *ngFor="let position of positions"
+                  [ngValue]="position"> {{position.name}} </option>
+        </select>
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <p *ngIf="formCreateEmployee.get('position').hasError('required') && formCreateEmployee.get('position').touched"
+           class="text-danger">Please input position</p>
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left">
+        </label>
+        <img [src]="imgSrc" width="100px" height="100px" (click) = "fileUploader.click()">
+      </div>
+
+      <div class="form-group" style="clear: both">
+        <label class="col-2 float-left" for="image">
+          Ảnh Cá Nhân :
+        </label>
+        <input class="col-9 form-control float-left" type="file" accept="image/*" #fileUploader
+               id="image" formControlName="img" (change)="showPreview($event)">
+      </div>
+
+      <div class="form-group btn-submit" style="clear: both">
+        <label class="mt-3">
+          <button type="submit" [disabled]="formCreateEmployee.invalid" class="btn btn-warning float-left">Lưu</button>
+        </label>
+        <label class="mt-3 ml-4">
+          <button type="reset" class="btn btn-dark float-left">Hủy</button>
+        </label>
+      </div>
+
+    </form>
+  </div>
+</div>

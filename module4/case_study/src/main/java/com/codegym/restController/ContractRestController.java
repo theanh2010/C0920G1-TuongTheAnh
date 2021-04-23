@@ -26,17 +26,16 @@ public class ContractRestController {
     AttachServiceDao attachServiceDao;
 
 
-
     @GetMapping("/booking/{idService}/{startDate}/{endDate}")
     public ResponseEntity<Double> calTotalMoneyByDay(@PathVariable Long idService,
-                                                   @PathVariable String startDate,
-                                                   @PathVariable String endDate,
-                                                   @ModelAttribute Contract contract,
-                                                   HttpSession session) {
+                                                     @PathVariable String startDate,
+                                                     @PathVariable String endDate,
+                                                     @ModelAttribute Contract contract,
+                                                     HttpSession session) {
         double result2 = (double) session.getAttribute("resultSession2");
 
 
-        int date = (LocalDate.parse(endDate).getDayOfYear() - LocalDate.parse(startDate).getDayOfYear()) ;
+        int date = (LocalDate.parse(endDate).getDayOfYear() - LocalDate.parse(startDate).getDayOfYear());
 
         double result1 = date * Double.parseDouble(serviceDao.findById(idService).getCost());
 
@@ -47,8 +46,8 @@ public class ContractRestController {
 
     @GetMapping("/booking/{idAttachService}/{amount}")
     public ResponseEntity<Double> calTotalMoneyByAttachService(@PathVariable Long idAttachService,
-                                                                @PathVariable String amount,
-                                                                HttpSession session){
+                                                               @PathVariable String amount,
+                                                               HttpSession session) {
         HashMap<Long, AttachService> attachServiceHashMap = (HashMap<Long, AttachService>) session.getAttribute("attachServiceSession");
 
         double result1 = (double) session.getAttribute("resultSession1");
@@ -72,9 +71,8 @@ public class ContractRestController {
         session.setAttribute("attachServiceSession", attachServiceHashMap);
         session.setAttribute("resultSession2", result2);
 
-        return new ResponseEntity<>(result1+ result2,HttpStatus.OK);
+        return new ResponseEntity<>(result1 + result2, HttpStatus.OK);
     }
-
 
 
 }

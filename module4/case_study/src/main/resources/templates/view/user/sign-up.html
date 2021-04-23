@@ -59,12 +59,12 @@
             border-radius: 2rem;
         }
 
-        .form-label-group>input,
-        .form-label-group>label {
+        .form-label-group > input,
+        .form-label-group > label {
             padding: var(--input-padding-y) var(--input-padding-x);
         }
 
-        .form-label-group>label {
+        .form-label-group > label {
             position: absolute;
             top: 0;
             left: 0;
@@ -104,7 +104,7 @@
             padding-bottom: calc(var(--input-padding-y) / 3);
         }
 
-        .form-label-group input:not(:placeholder-shown)~label {
+        .form-label-group input:not(:placeholder-shown) ~ label {
             padding-top: calc(var(--input-padding-y) / 3);
             padding-bottom: calc(var(--input-padding-y) / 3);
             font-size: 12px;
@@ -125,9 +125,10 @@
         -------------------------------------------------- */
 
         @supports (-ms-ime-align: auto) {
-            .form-label-group>label {
+            .form-label-group > label {
                 display: none;
             }
+
             .form-label-group input::-ms-input-placeholder {
                 color: #777;
             }
@@ -138,9 +139,10 @@
 
         @media all and (-ms-high-contrast: none),
         (-ms-high-contrast: active) {
-            .form-label-group>label {
+            .form-label-group > label {
                 display: none;
             }
+
             .form-label-group input:-ms-input-placeholder {
                 color: #777;
             }
@@ -159,31 +161,38 @@
                         <h5 class="card-title text-center">Sign Up</h5>
                         <form class="form-signin" th:object="${user}" action="/sign-up" method="post">
                             <div class="form-label-group">
-                                <input th:field="*{username}" type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <input th:field="*{username}" type="text" id="inputEmail" class="form-control"
+                                       placeholder="Email address" required autofocus>
                                 <label for="inputEmail">Email address</label>
                                 <p style="color: red" class="text-center" th:errors="*{username}"></p>
                             </div>
 
                             <div class="form-label-group">
-                                <input th:field="*{password}" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <input th:field="*{password}" type="password" id="inputPassword" class="form-control"
+                                       placeholder="Password" required>
                                 <label for="inputPassword">Password</label>
                                 <p style="color: red" class="text-center" th:errors="*{password}"></p>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="repeatPassword" type="password" id="repeatPassword" class="form-control" placeholder="Repeat Password" required>
+                                <input name="repeatPassword" type="password" id="repeatPassword" class="form-control"
+                                       placeholder="Repeat Password" required>
                                 <label for="repeatPassword">Repeat Password</label>
-                                <p class="text-center"  id="errorPassword" style="display: none; color: red">Repeat password not correct</p>
+                                <p class="text-center" id="errorPassword" style="display: none; color: red">Repeat
+                                    password not correct</p>
                             </div>
 
                             <div class="custom-control custom-checkbox mb-3">
                                 <input name="checkbox" type="checkbox" class="custom-control-input" id="customCheck1">
                                 <label class="custom-control-label" for="customCheck1">You are not robot</label>
                             </div>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign up</button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign up
+                            </button>
                             <hr class="my-4">
-                            <a class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</a>
-                            <a href="http://www.facebook.com" class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</a>
+                            <a class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                    class="fab fa-google mr-2"></i> Sign in with Google</a>
+                            <a href="http://www.facebook.com" class="btn btn-lg btn-facebook btn-block text-uppercase"
+                               type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</a>
                         </form>
                     </div>
                 </div>

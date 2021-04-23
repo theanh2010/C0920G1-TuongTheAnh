@@ -1,0 +1,116 @@
+<!--thế anh-->
+<div class="menu">
+  <div class=".logo col-2 text-center float-left">
+    <h4 class="pt-3">logo</h4>
+  </div>
+  <div class="col-2 float-right mt-3">
+    <a class="float-left">Logout</a>
+  </div>
+</div>
+<div class="col-2 float-left menu-left-admin">
+  <div class="row">
+    <ul class="col-12">
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2 col-1"></i>Nhân viên</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-female mr-2 col-1"></i>Khách hàng</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-file-signature mr-2 col-1"></i>Hợp đồng</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2 col-1"></i>Đền bù</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2 col-1"></i>Sản phẩm</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3>Danh sách khách hàng</h3>
+  <div class="col-12">
+    <div class="d-flex col-4 form-inline">
+      <a class="btn btn-outline-primary mr-2" role="button" >Tìm kiếm</a>
+      <input class="form-control mr-1" type = text style="width: 250px;" placeholder="tìm kiếm">
+    </div>
+    <div class="d-flex col-4 form-inline">
+      <a class="btn btn-outline-primary mr-5 mt-3 " role="button" [routerLink]="['/customer-create']" >Thêm mới</a>
+    </div>
+  </div>
+
+  <div class="row mt-3 px-3">
+    <table class="table mt-3 table-striped" style="font-size: 12px;">
+      <thead class="bg-primary" style="color: white">
+      <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Giới tính</th>
+        <th>Ngày Sinh</th>
+        <th>Số cmnd</th>
+        <th>Số điện thoại</th>
+        <th>Email</th>
+        <th>Địa chỉ</th>
+        <th>Thành phố</th>
+        <th>Biển số</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers, let i = index">
+        <td>{{customer.id}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.dayOfBirth}}</td>
+        <td>{{customer.idCard}}</td>
+        <td>{{customer.phone}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.city}}</td>
+        <td>{{customer.img}}</td>
+        <td>{{customer.img}}</td>
+        <td style="width: 12%;">
+          <button class="btn btn-sm btn-warning mr-3">Sửa</button>
+          <button class="btn btn-sm btn-danger mr-3">Xóa</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="container paging-course">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item" (click)="onFirst()" [ngClass]="pageClicked==0?'disabled':''">
+            <a class="page-link">First</a>
+          </li>
+          <li class="page-item" (click)="onPrevious()" [ngClass]="pageClicked==0?'disabled':''">
+            <a class="page-link">Previous</a>
+          </li>
+          <li *ngIf="pageClicked != 0" class="page-item" (click)="onSubmit(pages[pageClicked-1])">
+            <a class="page-link">{{pageClicked}}</a>
+          </li>
+          <li [ngClass]="(pageClicked == pages[pageClicked]) ? 'active' : ''" class="page-item"
+              (click)="onSubmit(pages[pageClicked])">
+            <a class="page-link">{{pageClicked + 1}}</a>
+          </li>
+          <li *ngIf="pageClicked < pages.length -1" class="page-item" (click)="onSubmit(pages[pageClicked+1])">
+            <a class="page-link">{{pageClicked + 2}}</a>
+          </li>
+          <li *ngIf="pageClicked < pages.length -2" class="page-item">
+            <a class="page-link">...</a>
+          </li>
+          <li *ngIf="pageClicked < pages.length-2" class="page-item" (click)="onLast()">
+            <a class="page-link">{{pages[pages.length - 1] + 1}}</a>
+          </li>
+          <li class="page-item" (click)="onNext()" [ngClass]="pageClicked==totalPages-1?'disabled':''">
+            <a class="page-link">Next</a>
+          </li>
+          <li class="page-item" (click)="onLast()" [ngClass]="pageClicked==totalPages-1?'disabled':''"><a
+            class="page-link">Last</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="col-12 footer pt-3 float-left">
+  <p class="col-12 text-center">CodeGym Đà Nẵng</p>
+</div>

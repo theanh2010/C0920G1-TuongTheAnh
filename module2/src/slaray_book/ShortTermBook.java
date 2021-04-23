@@ -4,7 +4,7 @@ public class ShortTermBook extends SavingBook {
     public ShortTermBook() {
     }
 
-    public ShortTermBook(String id, String name, String startRentDate, String endRentDate, long rentTime, int amount, double moneyDeposits) {
+    public ShortTermBook(String id, String name, String startRentDate, String endRentDate, String rentTime, int amount, double moneyDeposits) {
         super(id, name, startRentDate, endRentDate, rentTime, amount, moneyDeposits);
     }
 

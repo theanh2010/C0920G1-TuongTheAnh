@@ -1,0 +1,44 @@
+{
+  "employee": [
+    {
+      "id": 5,
+      "name": "12/12/2020",
+      "birthday": "12/12/2020",
+      "gender": "9",
+      "address": "12",
+      "idCard": "8",
+      "phone": "Rain cost",
+      "employeeType": {
+        "id": 3,
+        "name": "Tuong The Anh"
+      }
+    },
+    {
+      "name": "Thế Anh",
+      "birthday": "123213213",
+      "gender": "bê đê",
+      "address": "1321312",
+      "phone": "123213",
+      "idCard": "123213",
+      "employeeType": {
+        "id": 2,
+        "name": "gold"
+      },
+      "id": 6
+    }
+  ],
+  "employee-type": [
+    {
+      "id": 1,
+      "name": "sliver"
+    },
+    {
+      "id": 2,
+      "name": "gold"
+    },
+    {
+      "id": 3,
+      "name": "diamond"
+    }
+  ]
+}

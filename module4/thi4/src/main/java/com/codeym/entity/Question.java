@@ -1,4 +1,4 @@
-package com.codegym.thi4.model;
+package com.codeym.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.Errors;
@@ -13,27 +13,25 @@ import java.util.Date;
 
 @Entity
 @Table(name = "customer")
-public class Question implements Validator {
+public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotBlank(message = "Name must not be Blank")
     private String title;
 
-    @NotBlank(message = "question must not be Blank")
+
     private String question;
 
-    @NotBlank(message = "answer must not be Blank")
+
     private String answer;
 
     @ManyToOne
     @JoinColumn(name = "question_id")
     private QuestionType questionType;
 
-    @DateTimeFormat(pattern = "yyyy-mm-dd")
-    @PastOrPresent
-    private Date dateCreate;
+
+    private String  dateCreate;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -93,11 +91,11 @@ public class Question implements Validator {
         this.questionType = questionType;
     }
 
-    public Date getDateCreate() {
+    public String getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Date dateCreate) {
+    public void setDateCreate(String dateCreate) {
         this.dateCreate = dateCreate;
     }
 
@@ -113,25 +111,5 @@ public class Question implements Validator {
         return status;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return Question.class.isAssignableFrom(clazz);
-    }
 
-    @Override
-    public void validate(Object target, Errors errors) {
-        Question question = (Question) target;
-        LocalDate today = LocalDate.now();
-        Date birth = question.getDateCreate();
-        if (birth == null) {
-            errors.rejectValue("dateOfBirth", "DateNotNull");
-        } else {
-            LocalDate birthLocal =  birth.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            if (Period.between(birthLocal, today).getYears()<18) {
-                errors.rejectValue("dateOfBirth", "DateCustomer");
-            }
-        }
-        //        ValidationUtils.rejectIfEmpty(errors, "name", "mess.empty");
-
-    }
 }

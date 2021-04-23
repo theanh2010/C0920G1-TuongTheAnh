@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!--    <th:block th:replace="~{view/layout::bootstrap}"></th:block>-->
+
+</head>
+<body background="/bg3.jpg">
+
+
+
+<div class="header text-center mt-5 mb-5">
+    <h1 class="text-center" style="color: white">Khach hang List</h1>
+    <h1 class="text-center" style="color:green;" th:text="${success}"></h1>
+    <a href="/home/create-question" class="btn btn-outline-success mt-2">Them moi</a>
+
+</div>
+<div class="content">
+    <div class="container mt-5 mb-5">
+        <div class="">
+            <form action="/home" class="form-inline">
+                <input name="title" class="form-control" type="text" placeholder="title">
+                <select class="form-control ml-2" name="questionType">
+                    <option value="">chon loai question</option>
+                    <option value="hoi">hoi</option>
+                    <option value="hoi nhieu">hoi nhieu</option>
+                </select>
+                <input type="submit" class="ml-2 btn btn-outline-success">
+            </form>
+        </div>
+        <div>
+            <table class="table table-dark bg-dark">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>question type</th>
+                    <th>date create</th>
+                    <th>user create</th>
+                    <th>user feedback</th>
+                    <th>status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="question : ${questionList}">
+                    <td th:text="${question.id}"></td>
+                    <td th:text="${question.title}"></td>
+                    <td th:text="${question.questionType.name}"></td>
+                    <td th:text="${question.dateCreate}"></td>
+                    <td th:text="${question.user.name}"></td>
+                    <td th:text="${question.user.name}"></td>
+                    <td th:text="${question.status}"></td>
+                    <td scope="col">
+                        <button class="btn btn-outline-info btn-lg btnModalView" id="btnModalView">View</button>
+                        <input type="hidden" th:value="${question.id}">
+
+                        <a class="btn btn-outline-dark" th:href="@{/question/edit/{id}(id=${question.getId()})}">Update</a>
+                        <button type="button" class="btn btn-outline-danger" id="btnModalDelete"
+                                th:onclick="'javascript:showDelete(\''+ ${question.id} + '\');'">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <span th:text="${message}" style="text-align: center; color: blue"></span>
+        <nav aria-label="Page navigation example" style="float: right; margin-right: 25px">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" th:href="@{/question(page = 0, searchNameCustomer = ${stringAfterCheck})}">Prevous</a></li>
+                <th:block th:each="i: ${#numbers.sequence(0, questionList.totalPages - 1)}">
+                    <li class="page-item">
+                        <a class="page-link" th:href="@{/question(page=${i},searchNameCustomer=${stringAfterCheck})}" th:text="${i + 1}"></a>
+                    </li>
+                </th:block>
+
+                <li class="page-item"><a class="page-link" th:href="@{/question(page = ${questionList.totalPages - 1}, searchNameCustomer = ${stringAfterCheck})}">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+</div>
+
+</div>
+    </div>
+</div>
+<div class="footer"></div>
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Body
+            </div>
+            <div class="modal-footer">
+                <!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script></script>
+
+<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script>
+
+    function showDelete(id) {
+        $.ajax({
+            type: "GET",
+            url: "question/delete/"+id,
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $("#modelId").modal('show');
+            }
+        })
+    }
+    function actionDelete(id){
+        console.log(id);
+        $.ajax({
+            type: "POST",
+            url: "question/actionDelete/" + id,
+            dataType: "HTML",
+            success: function (data) {
+                // console.log(id + "a");
+                let messageDelete = "Delete Success!!!";
+                setTimeout(function() {
+                    $("#modelId").modal('hide');
+                }, 6000);
+                $("#searchTable").html(data);
+
+                $(".modal-body").html(messageDelete);
+
+            }
+        })
+    }
+</script>
+<!--ajax View modal-->
+<script>
+    $(document).ready(function () {
+        $(".btnModalView").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "question/view/" + $(this).next().val(),
+                dataType: "HTML",
+                success: function (data) {
+                    $(".modal-body").html(data);
+                    $("#modelId").modal('show');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

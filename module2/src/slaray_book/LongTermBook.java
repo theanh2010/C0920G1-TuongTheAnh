@@ -6,7 +6,7 @@ public class LongTermBook extends SavingBook {
     public LongTermBook() {
     }
 
-    public LongTermBook(String id, String name, String startRentDate, String endRentDate, long rentTime, int amount, double moneyDeposits, String gift) {
+    public LongTermBook(String id, String name, String startRentDate, String endRentDate, String rentTime, int amount, double moneyDeposits, String gift) {
         super(id, name, startRentDate, endRentDate, rentTime, amount, moneyDeposits);
         this.gift = gift;
     }

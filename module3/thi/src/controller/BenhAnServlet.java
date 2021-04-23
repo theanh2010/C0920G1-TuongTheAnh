@@ -28,9 +28,9 @@ public class BenhAnServlet extends HttpServlet {
 
         switch (action) {
             case "create":
-                createCustomer(request, response);
-                getAllCustomer(request, response);
-                break;
+//                createCustomer(request, response);
+//                getAllCustomer(request, response);
+//                break;
             case "update":
                 updateCustomer(request, response);
                 getAllCustomer(request, response);
@@ -45,76 +45,76 @@ public class BenhAnServlet extends HttpServlet {
     }
 
 
-    private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
-        boolean flag = true;
-        String messageId = null;
-        String messageBirthday = null;
-        String messageIdCard = null;
-        String messagePhone = null;
-        String messageEmail = null;
-
-        String id = null;
-        try {
-            id = request.getParameter("id");
-            Validate.regexCustomerId(id);
-        } catch (IdException e) {
-            messageId = e.getMessage();
-            flag = false;
-        }
-        String name = request.getParameter("name");
-        System.out.println(name);
-        String birthday = null;
-        try {
-            birthday = request.getParameter("birthday");
-            Validate.regexDate(birthday);
-        } catch (DateException e) {
-            messageBirthday = e.getMessage();
-            flag = false;
-        }
-        String gender = request.getParameter("gender");
-        String idCard = null;
-        try {
-            idCard = request.getParameter("idCard");
-            Validate.regexIdCard(idCard);
-        } catch (IdCardException e) {
-            messageIdCard = e.getMessage();
-            flag = false;
-        }
-        String phoneNumber = null;
-        try {
-            phoneNumber = request.getParameter("phone");
-            Validate.regexPhone(phoneNumber);
-        } catch (NumberPhoneException e) {
-            messagePhone = e.getMessage();
-            flag = false;
-        }
-        String email = null;
-        try {
-            email = request.getParameter("email");
-            Validate.regexEmail(email);
-        } catch (EmailException e) {
-            messageEmail = e.getMessage();
-            flag = false;
-        }
-        String address = request.getParameter("address");
-        String customerType = request.getParameter("customerType");
-
-        if (!flag) {
-            request.setAttribute("messageId", messageId);
-            request.setAttribute("messageBirthday", messageBirthday);
-            request.setAttribute("messageIdCard", messageIdCard);
-            request.setAttribute("messagePhone", messagePhone);
-            request.setAttribute("messageEmail", messageEmail);
-
-            createJSP(request, response);
-
-        } else {
-
-            Customer customer = new Customer(id, name, birthday, idCard, phoneNumber, email, address, gender, customerType);
-            customerService.insertCustomer(customer);
-
-        }
-    }
+//    private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
+//        boolean flag = true;
+//        String messageId = null;
+//        String messageBirthday = null;
+//        String messageIdCard = null;
+//        String messagePhone = null;
+//        String messageEmail = null;
+//
+//        String id = null;
+//        try {
+//            id = request.getParameter("id");
+//            Validate.regexCustomerId(id);
+//        } catch (IdException e) {
+//            messageId = e.getMessage();
+//            flag = false;
+//        }
+//        String name = request.getParameter("name");
+//        System.out.println(name);
+//        String birthday = null;
+//        try {
+//            birthday = request.getParameter("birthday");
+//            Validate.regexDate(birthday);
+//        } catch (DateException e) {
+//            messageBirthday = e.getMessage();
+//            flag = false;
+//        }
+//        String gender = request.getParameter("gender");
+//        String idCard = null;
+//        try {
+//            idCard = request.getParameter("idCard");
+//            Validate.regexIdCard(idCard);
+//        } catch (IdCardException e) {
+//            messageIdCard = e.getMessage();
+//            flag = false;
+//        }
+//        String phoneNumber = null;
+//        try {
+//            phoneNumber = request.getParameter("phone");
+//            Validate.regexPhone(phoneNumber);
+//        } catch (NumberPhoneException e) {
+//            messagePhone = e.getMessage();
+//            flag = false;
+//        }
+//        String email = null;
+//        try {
+//            email = request.getParameter("email");
+//            Validate.regexEmail(email);
+//        } catch (EmailException e) {
+//            messageEmail = e.getMessage();
+//            flag = false;
+//        }
+//        String address = request.getParameter("address");
+//        String customerType = request.getParameter("customerType");
+//
+//        if (!flag) {
+//            request.setAttribute("messageId", messageId);
+//            request.setAttribute("messageBirthday", messageBirthday);
+//            request.setAttribute("messageIdCard", messageIdCard);
+//            request.setAttribute("messagePhone", messagePhone);
+//            request.setAttribute("messageEmail", messageEmail);
+//
+//            createJSP(request, response);
+//
+//        } else {
+//
+//            Customer customer = new Customer(id, name, birthday, idCard, phoneNumber, email, address, gender, customerType);
+//            customerService.insertCustomer(customer);
+//
+//        }
+//    }
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
         String id1 = request.getParameter("id_benh_an");
         String id2= request.getParameter("id_benh_nhan");
@@ -127,7 +127,7 @@ public class BenhAnServlet extends HttpServlet {
         banhAnService.updateBenhAn(benhAn);
     }
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
+        String id = request.getParameter("id_benh_an");
         banhAnService.deleteBenhAn(id);
     }
 
@@ -140,7 +140,7 @@ public class BenhAnServlet extends HttpServlet {
 
         switch (action) {
             case "create":
-//                createJSP(request, response);
+                createJSP(request, response);
                 break;
             case "find":
 //                findJSP(request, response);
@@ -155,7 +155,7 @@ public class BenhAnServlet extends HttpServlet {
         request.setAttribute("benhAnList", benhAnList);
         request.setAttribute("benhNhanList", benhNhanService.selectAllBenhNhan());
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/list.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
@@ -176,15 +176,15 @@ public class BenhAnServlet extends HttpServlet {
 //            e.printStackTrace();
 //        }
 //    }
-//
-//    private void createJSP(HttpServletRequest request, HttpServletResponse response) {
-//        request.setAttribute("customerTypeList", customerTypeService.selectAllCustomerType());
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/create.jsp");
-//        try {
-//            requestDispatcher.forward(request, response);
-//        } catch (ServletException | IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
+    private void createJSP(HttpServletRequest request, HttpServletResponse response) {
+        request.setAttribute("benhNhanList", benhNhanService.selectAllBenhNhan());
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

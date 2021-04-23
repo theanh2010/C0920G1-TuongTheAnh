@@ -10,10 +10,11 @@ public class Main {
     }
     public static void showMenu() {
         System.out.println("------------Menu-------------");
-        System.out.println("1.Thêm mới");
-        System.out.println("2.Xóa");
-        System.out.println("3.Xem danh sách");
-        System.out.println("4.Tìm kiếm");
+        System.out.println("1.Thêm mới sổ tiết kiệm");
+        System.out.println("2.Xóa sổ tiết kiệm");
+        System.out.println("3.Xem danh sách sổ tiết kiệm");
+        System.out.println("4.Xem thông tin khách hàng");
+        System.out.println("5.");
         System.out.println("5.Chỉnh sửa");
         System.out.println("6.Thoát");
         System.out.println("Chọn chức năng : ");

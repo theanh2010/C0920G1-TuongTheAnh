@@ -26,16 +26,16 @@ public class UserValidator implements Validator {
         User user = (User) target;
 
         if (userService.findByUsername(user.getUsername()) != null) {
-            errors.rejectValue("username","username.duplicate");
+            errors.rejectValue("username", "username.duplicate");
         }
 
         if (!Pattern.compile("^\\w{6,32}$").matcher(user.getUsername()).find()) {
-            errors.rejectValue("username","username.size.format");
+            errors.rejectValue("username", "username.size.format");
         }
 
 
         if (!Pattern.compile("^\\w{6,32}$").matcher(user.getPassword()).find()) {
-            errors.rejectValue("password","password.size.format");
+            errors.rejectValue("password", "password.size.format");
         }
 
 

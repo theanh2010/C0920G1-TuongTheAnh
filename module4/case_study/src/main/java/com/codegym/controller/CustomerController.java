@@ -46,7 +46,7 @@ public class CustomerController {
 
             String code;
             do {
-                code = String.valueOf(new Random().nextInt(9999-1000)+1000);
+                code = String.valueOf(new Random().nextInt(9999 - 1000) + 1000);
             } while (customerService.findByCode(code) != null);
 
             customer.setUser(mainUser);
@@ -73,7 +73,7 @@ public class CustomerController {
         }
 
         customerService.save(customer);
-        redirectAttributes.addFlashAttribute("success","Save successfully");
+        redirectAttributes.addFlashAttribute("success", "Save successfully");
         return "redirect:/customer/detail";
     }
 }

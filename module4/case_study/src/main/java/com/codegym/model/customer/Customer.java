@@ -15,9 +15,9 @@ public class Customer extends Person {
 
     @ManyToOne
     @JoinColumn(name = "customer_type_id",
-                referencedColumnName = "id",
-                nullable = false,
-                columnDefinition = "BIGINT DEFAULT 1")
+            referencedColumnName = "id",
+            nullable = false,
+            columnDefinition = "BIGINT DEFAULT 1")
     private CustomerType customerType;
 
     @OneToOne

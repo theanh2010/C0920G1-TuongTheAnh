@@ -51,8 +51,9 @@
                 <option value="1">Nữ</option>
             </select>
         </div>
-        <small style="margin-left: 16%; font-size: 100%; color: red"><c:if
-                test="${messageIdCard != null}">${messageIdCard}</c:if></small>
+        <small style="margin-left: 16%; font-size: 100%; color: red">
+            <c:if test="${messageIdCard != null}">${messageIdCard}</c:if>
+        </small>
         <div class="form-group row">
             <label class="col-2">ID Card </label>
             <input class="form-control col-8" type="text" name="idCard" value="${idCard}">

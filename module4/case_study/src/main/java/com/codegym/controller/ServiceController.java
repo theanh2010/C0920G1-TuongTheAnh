@@ -52,7 +52,7 @@ public class ServiceController {
         } else if (!idServiceType.equals("")) {
             model.addAttribute("idServiceType", idServiceType);
             model.addAttribute("serviceList", serviceDao.findByServiceType(serviceTypeDao.findById(Long.parseLong(idServiceType)), pageable));
-        }else {
+        } else {
             model.addAttribute("serviceList", serviceDao.findAll(pageable));
         }
 
@@ -123,7 +123,6 @@ public class ServiceController {
     }
 
 
-
     @GetMapping("/my-service")
     public String myService(Principal principal,
                             Model model,
@@ -144,7 +143,7 @@ public class ServiceController {
 
         Service service = serviceDao.findById(id);
 
-        model.addAttribute("service",service);
+        model.addAttribute("service", service);
         model.addAttribute("rentTypeList", rentTypeDao.findAll());
         model.addAttribute("serviceTypeList", serviceTypeDao.findAll());
 

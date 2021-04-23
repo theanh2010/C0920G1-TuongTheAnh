@@ -62,31 +62,31 @@ public class CustomerValidator implements Validator {
             }
         }
         // Check Name
-        if (!Pattern.compile("^(([A-Z][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+)(| ))+$").matcher(customer.getName()).find()) {
-            errors.rejectValue("name","customer.name.format");
+        if (!Pattern.compile("^([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}$").matcher(customer.getName()).find()) {
+            errors.rejectValue("name", "customer.name.format");
         }
 
 
         // Check Age
         if (LocalDate.now().getYear() - dateOfBirth.getYear() < 18) {
-            errors.rejectValue("dateOfBirth","customer.dateOfBirth.age");
+            errors.rejectValue("dateOfBirth", "customer.dateOfBirth.age");
         }
 
 
         // Check Address
         if (customer.getAddress().equals("")) {
-            errors.rejectValue("address","customer.address.format");
+            errors.rejectValue("address", "customer.address.format");
         }
 
 
         // Check Email
 
         if (!Pattern.compile("^\\w{5,}.?\\w+(@\\w{3,8})(.\\w{3,8})+$").matcher(customer.getEmail()).find()) {
-            errors.rejectValue("email","customer.email.format");
+            errors.rejectValue("email", "customer.email.format");
         }
 
         if (customer.getEmail().length() < 6 || customer.getEmail().length() > 32) {
-            errors.rejectValue("email","customer.email.size");
+            errors.rejectValue("email", "customer.email.size");
         }
 
 
@@ -94,7 +94,7 @@ public class CustomerValidator implements Validator {
 
 
         if (!Pattern.compile("^\\d{12}$").matcher(customer.getIdCard()).find()) {
-            errors.rejectValue("idCard","customer.idCard.format");
+            errors.rejectValue("idCard", "customer.idCard.format");
         }
 
 
@@ -102,7 +102,7 @@ public class CustomerValidator implements Validator {
 
 
         if (!Pattern.compile("^0\\d{9}$").matcher(customer.getPhone()).find()) {
-            errors.rejectValue("phone","customer.phone.format");
+            errors.rejectValue("phone", "customer.phone.format");
         }
 
     }

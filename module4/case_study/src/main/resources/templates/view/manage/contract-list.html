@@ -18,7 +18,7 @@
             color: white;
         }
 
-        .pagination .active a{
+        .pagination .active a {
             border: #3b3b3b;
             background-color: #3b3b3b !important;
         }
@@ -66,16 +66,24 @@
                 <td th:text="${contract.totalMoney}"></td>
                 <td th:if="${contract.customer}" th:text="${contract.customer.user.username}"></td>
                 <td th:unless="${contract.customer}" th:text="${contract.customer.user.username}"></td>
-                <td sec:authorize="hasRole('MANAGE')"><a th:if="${!contract.status}" th:onclick="'onUpdate('+${contract.id}+')'" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-edit"></i></a></td>
-                <td><a class="btn btn-outline-success" th:href="@{/manage/contract/detail/{idContract}(idContract=${contract.id})}"><i class="fa fa-eye"></i></a></td>
+                <td sec:authorize="hasRole('MANAGE')"><a th:if="${!contract.status}"
+                                                         th:onclick="'onUpdate('+${contract.id}+')'"
+                                                         class="btn btn-outline-primary" data-bs-toggle="modal"
+                                                         data-bs-target="#exampleModal"><i class="fa fa-edit"></i></a>
+                </td>
+                <td><a class="btn btn-outline-success"
+                       th:href="@{/manage/contract/detail/{idContract}(idContract=${contract.id})}"><i
+                        class="fa fa-eye"></i></a></td>
                 <td>
-                    <a th:if="${!contract.status}" th:href="@{/manage/contract/payment/{idContract}(idContract=${contract.id})}" class="btn btn-outline-light">Pay</a>
+                    <a th:if="${!contract.status}"
+                       th:href="@{/manage/contract/payment/{idContract}(idContract=${contract.id})}"
+                       class="btn btn-outline-light">Pay</a>
                 </td>
             </tr>
             </tbody>
         </table>
 
-        <nav  aria-label="Page navigation example ">
+        <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center">
                 <li class="page-item" th:if="${contractList.hasPrevious()}">
                     <a class="page-link" href="/manage/contract/list?page=0" aria-label="Previous">
@@ -83,30 +91,35 @@
                     </a>
                 </li>
                 <li class="page-item" th:if="${contractList.hasPrevious()}">
-                    <a class="page-link" th:href="@{/manage/contract/list(page=${contractList.number - 1})}" aria-label="Previous">
+                    <a class="page-link" th:href="@{/manage/contract/list(page=${contractList.number - 1})}"
+                       aria-label="Previous">
                         <span aria-hidden="true">&lsaquo;</span>
                     </a>
                 </li>
 
 
                 <li class="page-item" th:if="${contractList.hasPrevious()}">
-                    <a class="page-link"  th:text="${contractList.number}"  th:href="@{/manage/contract/list(page=${contractList.number - 1})}" ></a>
+                    <a class="page-link" th:text="${contractList.number}"
+                       th:href="@{/manage/contract/list(page=${contractList.number - 1})}"></a>
                 </li>
                 <li class="page-item active">
                     <a class="page-link" href="#" th:text="${contractList.number +1}"></a>
                 </li>
                 <li class="page-item" th:if="${contractList.hasNext()}">
-                    <a class="page-link"  th:text="${contractList.number +2}"  th:href="@{/manage/contract/list(page=${contractList.number + 1})}" ></a>
+                    <a class="page-link" th:text="${contractList.number +2}"
+                       th:href="@{/manage/contract/list(page=${contractList.number + 1})}"></a>
                 </li>
 
 
                 <li class="page-item" th:if="${contractList.hasNext()}">
-                    <a class="page-link"  th:href="@{/manage/contract/list(page=${contractList.number + 1})}"  aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/contract/list(page=${contractList.number + 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&rsaquo;</span>
                     </a>
                 </li>
                 <li class="page-item" th:if="${contractList.hasNext()}">
-                    <a class="page-link" th:href="@{/manage/contract/list(page=${contractList.totalPages - 1})}" aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/contract/list(page=${contractList.totalPages - 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
@@ -133,7 +146,8 @@
                         <div class="row">
                             <label class="col-form-label col-5">Employee</label>
                             <select type="text" class="form-control col-5" name="idEmployee">
-                                <option th:each="employee : ${employeeList}" th:value="${employee.id}" th:text="${employee.name}"></option>
+                                <option th:each="employee : ${employeeList}" th:value="${employee.id}"
+                                        th:text="${employee.name}"></option>
                             </select>
                         </div>
                     </div>

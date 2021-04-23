@@ -1,0 +1,37 @@
+{
+  "customer": [
+    {
+      "name": "Chien111",
+      "dateOfBirth": "Chien",
+      "gender": "gender",
+      "idcard": "idcard",
+      "phoneNumber": "phoneNumber",
+      "email": "phoneNumber",
+      "address": "Qb1",
+      "customerType": "1",
+      "id": 1
+    },
+    {
+      "name": "Anh",
+      "dateOfBirth": "1",
+      "gender": "1",
+      "idcard": "1",
+      "phoneNumber": "1",
+      "email": "1",
+      "address": "1",
+      "customerType": "1",
+      "id": 2
+    },
+    {
+      "name": "",
+      "dateOfBirth": "",
+      "gender": "",
+      "idcard": "",
+      "phoneNumber": "",
+      "email": "",
+      "address": "",
+      "customerType": "",
+      "id": 3
+    }
+  ]
+}

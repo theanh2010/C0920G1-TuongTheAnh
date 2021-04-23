@@ -1,9 +1,8 @@
 package slaray_book;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,10 +14,10 @@ public class ManagerSavingBook {
     public static void menu() {
         System.out.println("----------MENU----------");
         System.out.println("1. Add new saving book.");
-        System.out.println("2. Show list saving book.");
-        System.out.println("3. Search saving book by Id.");
-        System.out.println("4. Delete saving book by Id.");
-        System.out.println("5. Edit saving book by Id.");
+        System.out.println("2. Delete saving book by Id.");
+        System.out.println("3. Show saving book");
+        System.out.println("4. Display information customer.");
+        System.out.println("5. Search saving book by Id.");
         System.out.println("6. Exit.");
         System.out.println("Select your choice:");
         switch (CheckInPrimeData.checkIntPositive()) {
@@ -27,18 +26,17 @@ public class ManagerSavingBook {
                 writeFile();
                 break;
             case 2:
-                showSavingBook();
-                break;
-            case 3:
-                searchSavingBookById();
-                break;
-            case 4:
                 deleteSavingBookById();
                 writeFile();
                 break;
+            case 3:
+                showSavingBook();
+                break;
+            case 4:
+                showInformationCustomer();
+                break;
             case 5:
-                editSavingBookById();
-                writeFile();
+                searchSavingBookById();
                 break;
             case 6:
                 exit();
@@ -57,21 +55,17 @@ public class ManagerSavingBook {
             case 1:
                 System.out.println("Enter id saving book (STK-xxxx): ");
                 String idS = UtilitiesSavingBook.checkId();
-                System.out.println("Enter name customer: ");
-                String nameS = CheckInStringData.checkString();
+                System.out.println("Enter id customer: ");
+                String nameS = input.nextLine();
                 System.out.println("Enter start rent date: ");
                 String startRentDateS = RegexToString.regexDate(input.nextLine());
                 String endRentDateS = UtilitiesSavingBook.isCheckTimeRent(startRentDateS);
-
-                long millisecondsStartS = TimeToMilliseconds.dateToMilliseconds(startRentDateS);
-                long millisecondsEndS = TimeToMilliseconds.dateToMilliseconds(endRentDateS);
-                long millisecondsRentTimeS = millisecondsEndS - millisecondsStartS;
-                long rentTimeS = millisecondsRentTimeS / (1000 * 60 * 60 * 24);
-
-                System.out.println("Enter amount: ");
-                int amountS = CheckInPrimeData.checkIntPositive();
                 System.out.println("Enter money deposit (min 1.000.000 VND): ");
                 double moneyDepositsS = CheckInPrimeData.checkDoubleMinOneMillion();
+                System.out.println("Enter %money : ");
+                int amountS = CheckInPrimeData.checkIntPositive();
+                System.out.println("Enter month deposit :");
+                String rentTimeS = input.nextLine();
 
                 SavingBook shortTermBook = new ShortTermBook(idS, nameS, startRentDateS, endRentDateS, rentTimeS,
                         amountS, moneyDepositsS);
@@ -85,19 +79,15 @@ public class ManagerSavingBook {
                 System.out.println("Enter start rent date: ");
                 String startRentDateL = RegexToString.regexDate(input.nextLine());
                 String endRentDateL = UtilitiesSavingBook.isCheckTimeRent(startRentDateL);
-
-                long millisecondsStartL = TimeToMilliseconds.dateToMilliseconds(startRentDateL);
-                long millisecondsEndL = TimeToMilliseconds.dateToMilliseconds(endRentDateL);
-                long millisecondsRentTimeL = millisecondsEndL - millisecondsStartL;
-                long rentTimeL = millisecondsRentTimeL / (1000 * 60 * 60 * 24);
-
-
-                System.out.println("Enter amount: ");
+                System.out.println("Enter %money: ");
                 int amountL = CheckInPrimeData.checkIntPositive();
                 System.out.println("Enter money deposit (min 1.000.000 VND): ");
                 double moneyDepositsL = CheckInPrimeData.checkDoubleMinOneMillion();
+                System.out.println("Enter year deposit");
+                String rentTimeL= input.nextLine();
                 System.out.println("Enter gift: ");
                 String gift = CheckInStringData.checkString();
+
                 SavingBook longTermBook = new LongTermBook(idL, nameL, startRentDateL, endRentDateL, rentTimeL,
                         amountL, moneyDepositsL, gift);
                 arrListSavingBook.add(longTermBook);
@@ -163,85 +153,39 @@ public class ManagerSavingBook {
         }
     }
 
-    public static void editSavingBookById() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Input id saving book (STK-xxxx) want to edit: ");
-        String id = UtilitiesSavingBook.checkId();
-        boolean checkFind = false;
-        for (int i = 0; i < arrListSavingBook.size(); i++) {
-            if (id.equals(arrListSavingBook.get(i).getId())) {
-                if (checkAmountProperties(i) == 7){
-                    System.out.println("Enter id saving book (STK-xxxx): ");
-                    String idS = UtilitiesSavingBook.checkId();
-                    System.out.println("Enter name customer: ");
-                    String nameS = CheckInStringData.checkString();
-                    System.out.println("Enter start rent date: ");
-                    String startRentDateS = RegexToString.regexDate(input.nextLine());
-                    String endRentDateS = UtilitiesSavingBook.isCheckTimeRent(startRentDateS);
+    public static void showInformationCustomer() {
+        List<String> strings = readFileCustomer();
+        for(String customer :strings ){
+            System.out.println(customer);
+        }
+    }
 
-                    long millisecondsStartS = TimeToMilliseconds.dateToMilliseconds(startRentDateS);
-                    long millisecondsEndS = TimeToMilliseconds.dateToMilliseconds(endRentDateS);
-                    long millisecondsRentTimeS = millisecondsEndS - millisecondsStartS;
-                    long rentTimeS = millisecondsRentTimeS / (1000 * 60 * 60 * 24);
-
-                    System.out.println("Enter amount: ");
-                    int amountS = CheckInPrimeData.checkIntPositive();
-                    System.out.println("Enter money deposit (min 1.000.000 VND): ");
-                    double moneyDepositsS = CheckInPrimeData.checkDoubleMinOneMillion();
-
-                    arrListSavingBook.get(i).setId(idS);
-                    arrListSavingBook.get(i).setName(nameS);
-                    arrListSavingBook.get(i).setStartRentDate(startRentDateS);
-                    arrListSavingBook.get(i).setEndRentDate(endRentDateS);
-                    arrListSavingBook.get(i).setRentTime(rentTimeS);
-                    arrListSavingBook.get(i).setAmount(amountS);
-                    arrListSavingBook.get(i).setMoneyDeposits(moneyDepositsS);
+    public static List<String> readFileCustomer() {
+        List<String> list = new ArrayList<>();
+        File file = new File("src/slaray_book/CustomerBank.csv");
+        FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = null;
+            while (true) {
+                line = bufferedReader.readLine();
+                if (line == null) {
+                    break;
                 }
-                else if (checkAmountProperties(i) == 8){
-                    System.out.println("Enter id saving book (STK-xxxx): ");
-                    String idL = UtilitiesSavingBook.checkId();
-                    System.out.println("Enter name customer: ");
-                    String nameL = CheckInStringData.checkString();
-                    System.out.println("Enter start rent date: ");
-                    String startRentDateL = RegexToString.regexDate(input.nextLine());
-                    String endRentDateL = UtilitiesSavingBook.isCheckTimeRent(startRentDateL);
-
-                    long millisecondsStartL = TimeToMilliseconds.dateToMilliseconds(startRentDateL);
-                    long millisecondsEndL = TimeToMilliseconds.dateToMilliseconds(endRentDateL);
-                    long millisecondsRentTimeL = millisecondsEndL - millisecondsStartL;
-                    long rentTimeL = millisecondsRentTimeL / (1000 * 60 * 60 * 24);
-
-
-                    System.out.println("Enter amount: ");
-                    int amountL = CheckInPrimeData.checkIntPositive();
-                    System.out.println("Enter money deposit (min 1.000.000 VND): ");
-                    double moneyDepositsL = CheckInPrimeData.checkDoubleMinOneMillion();
-                    System.out.println("Enter gift: ");
-                    String gift = CheckInStringData.checkString();
-
-                    arrListSavingBook.get(i).setId(idL);
-                    arrListSavingBook.get(i).setName(nameL);
-                    arrListSavingBook.get(i).setStartRentDate(startRentDateL);
-                    arrListSavingBook.get(i).setEndRentDate(endRentDateL);
-                    arrListSavingBook.get(i).setRentTime(rentTimeL);
-                    arrListSavingBook.get(i).setAmount(amountL);
-                    arrListSavingBook.get(i).setMoneyDeposits(moneyDepositsL);
-                    //arrListSavingBook.get(i).setGift(gift);
-
-                }
-                checkFind = true;
-                break;
+                list.add(line);
             }
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        if (!checkFind) {
-            System.out.println("Do NOT find saving book!");
-        }
+        return list;
+
     }
 
-    public static int checkAmountProperties(int index){
-        List<String> arrListStr = Arrays.asList(arrListSavingBook.get(index).toString().split(","));
-        return arrListStr.size();
-    }
+
 
     public static void readFile() {
         List<String> arrListStr = null;
@@ -256,13 +200,13 @@ public class ManagerSavingBook {
             arrStr = Arrays.asList(str.split(","));
             if (arrStr.size() == 8) {
                 SavingBook longTermBook = new LongTermBook(arrStr.get(0), arrStr.get(1), arrStr.get(2), arrStr.get(3),
-                        Long.parseLong(arrStr.get(4)), Integer.parseInt(arrStr.get(5)),
+                        arrStr.get(4), Integer.parseInt(arrStr.get(5)),
                         Double.parseDouble(arrStr.get(6)), arrStr.get(7));
                 arrListSavingBook.add(longTermBook);
 
             } else {
                 SavingBook shortTermBook = new ShortTermBook(arrStr.get(0), arrStr.get(1), arrStr.get(2), arrStr.get(3),
-                        Long.parseLong(arrStr.get(4)), Integer.parseInt(arrStr.get(5)),
+                       arrStr.get(4), Integer.parseInt(arrStr.get(5)),
                         Double.parseDouble(arrStr.get(6)));
                 arrListSavingBook.add(shortTermBook);
             }

@@ -70,15 +70,14 @@ public class ManagerController {
 
     @GetMapping("/service/list")
     public String goListService(Model model, @PageableDefault(size = 5) Pageable pageable) {
-        model.addAttribute("serviceList",serviceDao.findAll(pageable));
+        model.addAttribute("serviceList", serviceDao.findAll(pageable));
         return "view/manage/service-list";
     }
 
 
-
     @GetMapping("/customer/list")
     public String goListCustomer(Model model,
-                                 @PageableDefault(size = 5)Pageable pageable,
+                                 @PageableDefault(size = 5) Pageable pageable,
                                  @RequestParam(defaultValue = "") String nameCustomer,
                                  @RequestParam(defaultValue = "") String idCustomerType) {
 
@@ -87,9 +86,9 @@ public class ManagerController {
             model.addAttribute("customerList", customerService.findAllByNameCustomer(nameCustomer, pageable));
         } else if (!idCustomerType.equals("")) {
             model.addAttribute("idCustomerType", idCustomerType);
-            model.addAttribute("customerList", customerService.findAllByCustomerType(customerTypeService.findById(Long.parseLong(idCustomerType)),pageable));
-        }else {
-            model.addAttribute("customerList",customerService.findAll(pageable));
+            model.addAttribute("customerList", customerService.findAllByCustomerType(customerTypeService.findById(Long.parseLong(idCustomerType)), pageable));
+        } else {
+            model.addAttribute("customerList", customerService.findAll(pageable));
         }
 
         model.addAttribute("customerTypeList", customerTypeService.findAll());
@@ -98,27 +97,27 @@ public class ManagerController {
 
 
     @GetMapping("/employee/list")
-    public String goListEmployee(Model model, @PageableDefault(size = 5)Pageable pageable) {
-        model.addAttribute("employeeList",employeeService.findAll(pageable));
-        model.addAttribute("positionList",positionService.findAll());
-        model.addAttribute("educationDegreeList",educationDegreeService.findAll());
-        model.addAttribute("divisionList",divisionService.findAll());
+    public String goListEmployee(Model model, @PageableDefault(size = 5) Pageable pageable) {
+        model.addAttribute("employeeList", employeeService.findAll(pageable));
+        model.addAttribute("positionList", positionService.findAll());
+        model.addAttribute("educationDegreeList", educationDegreeService.findAll());
+        model.addAttribute("divisionList", divisionService.findAll());
 
         return "view/manage/employee-list";
     }
 
 
     @GetMapping("/contract/list")
-    public String goListContract(Model model, @PageableDefault(size = 5)Pageable pageable) {
+    public String goListContract(Model model, @PageableDefault(size = 5) Pageable pageable) {
         model.addAttribute("employeeList", employeeService.findAll());
-        model.addAttribute("contractList",contractService.findAll(pageable));
+        model.addAttribute("contractList", contractService.findAll(pageable));
         return "view/manage/contract-list";
     }
 
 
     @GetMapping("/user/list")
-    public String goListUser(Model model, @PageableDefault(size = 10)Pageable pageable) {
-        model.addAttribute("userList",userService.findAll(pageable));
+    public String goListUser(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        model.addAttribute("userList", userService.findAll(pageable));
         model.addAttribute("roleList", roleService.findAll());
         return "view/manage/user-list";
     }
@@ -126,14 +125,14 @@ public class ManagerController {
 
     @GetMapping("/attach-service/list")
     public String goListAttachService(Model model) {
-        model.addAttribute("attachServiceList",attachServiceDao.findAll());
+        model.addAttribute("attachServiceList", attachServiceDao.findAll());
         return "view/manage/attach-service-list";
     }
 
 
     @GetMapping("/contract/detail/{idContract}")
     public String goDetailContract(@PathVariable Long idContract, Model model) {
-        model.addAttribute("contract",contractService.findById(idContract));
+        model.addAttribute("contract", contractService.findById(idContract));
         return "view/manage/contract-detail";
     }
 
@@ -172,8 +171,6 @@ public class ManagerController {
     }
 
 
-
-
     //     Delete Service
     @GetMapping("/service/delete/{id}")
     public String deleteServiceById(@PathVariable Long id) {
@@ -190,7 +187,6 @@ public class ManagerController {
 
         return "redirect:/manage/employee/list";
     }
-
 
 
     @PostMapping("/customer/update")

@@ -2,20 +2,11 @@ package test;
 
 public class ChuNhat {
     public static void main(String [] args)     {
-        try {
-            badMethod();
-            System.out.print("A");
-        }catch (RuntimeException ex){
-            System.out.print("B");
-        }catch (Exception ex1){
-            System.out.print("C");
-        }finally{
-            System.out.print("D");
+        for (int i = 0 ; i < 13 ; i++ ){
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
         }
-        System.out.print("E");
-    }
-    public static void badMethod(){
-        throw new RuntimeException();
     }
 }
 

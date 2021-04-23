@@ -18,7 +18,7 @@
             color: white;
         }
 
-        .pagination .active a{
+        .pagination .active a {
             border: #3b3b3b;
             background-color: #3b3b3b !important;
         }
@@ -27,7 +27,7 @@
 <body>
 <div th:replace="view/layout::header"></div>
 
-<div class="content"  >
+<div class="content">
     <div>
         <table class="table table-striped table-dark text-center" style="font-size: 15px ">
             <thead>
@@ -72,15 +72,21 @@
                 </th:block>
                 <td th:text="${employee.user.username}"></td>
                 <td>
-                    <a th:if="${employee.position}" th:onclick="'onUpdate('+${employee.id}+','+${employee.position.id}+','+${employee.educationDegree.id}+','+${employee.division.id}+')'" class="btn btn-outline-primary bg-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-edit"></i></a>
-                    <a th:unless="${employee.position}" th:onclick="'onUpdate('+${employee.id}+')'" class="btn btn-outline-primary bg-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-edit"></i></a>
+                    <a th:if="${employee.position}"
+                       th:onclick="'onUpdate('+${employee.id}+','+${employee.position.id}+','+${employee.educationDegree.id}+','+${employee.division.id}+')'"
+                       class="btn btn-outline-primary bg-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa fa-edit"></i></a>
+                    <a th:unless="${employee.position}" th:onclick="'onUpdate('+${employee.id}+')'"
+                       class="btn btn-outline-primary bg-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa fa-edit"></i></a>
                 </td>
-                <td><a th:onclick="'onDel('+${employee.id}+')'" class="btn btn-outline-danger bg-light"  data-bs-toggle="modal" data-bs-target="#exampleModalDel"><i class="fa fa-recycle"></i></a></td>
+                <td><a th:onclick="'onDel('+${employee.id}+')'" class="btn btn-outline-danger bg-light"
+                       data-bs-toggle="modal" data-bs-target="#exampleModalDel"><i class="fa fa-recycle"></i></a></td>
             </tr>
             </tbody>
         </table>
 
-        <nav  aria-label="Page navigation example ">
+        <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center">
                 <li class="page-item" th:if="${employeeList.hasPrevious()}">
                     <a class="page-link" href="/manage/employee/list?page=0" aria-label="Previous">
@@ -88,30 +94,35 @@
                     </a>
                 </li>
                 <li class="page-item" th:if="${employeeList.hasPrevious()}">
-                    <a class="page-link" th:href="@{/manage/employee/list(page=${employeeList.number - 1})}" aria-label="Previous">
+                    <a class="page-link" th:href="@{/manage/employee/list(page=${employeeList.number - 1})}"
+                       aria-label="Previous">
                         <span aria-hidden="true">&lsaquo;</span>
                     </a>
                 </li>
 
 
                 <li class="page-item" th:if="${employeeList.hasPrevious()}">
-                    <a class="page-link"  th:text="${employeeList.number}"  th:href="@{/manage/employee/list(page=${employeeList.number - 1})}" ></a>
+                    <a class="page-link" th:text="${employeeList.number}"
+                       th:href="@{/manage/employee/list(page=${employeeList.number - 1})}"></a>
                 </li>
                 <li class="page-item active">
                     <a class="page-link" href="#" th:text="${employeeList.number +1}"></a>
                 </li>
                 <li class="page-item" th:if="${employeeList.hasNext()}">
-                    <a class="page-link"  th:text="${employeeList.number +2}"  th:href="@{/manage/employee/list(page=${employeeList.number + 1})}" ></a>
+                    <a class="page-link" th:text="${employeeList.number +2}"
+                       th:href="@{/manage/employee/list(page=${employeeList.number + 1})}"></a>
                 </li>
 
 
                 <li class="page-item" th:if="${employeeList.hasNext()}">
-                    <a class="page-link"  th:href="@{/manage/employee/list(page=${employeeList.number + 1})}"  aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/employee/list(page=${employeeList.number + 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&rsaquo;</span>
                     </a>
                 </li>
                 <li class="page-item" th:if="${employeeList.hasNext()}">
-                    <a class="page-link" th:href="@{/manage/employee/list(page=${employeeList.totalPages - 1})}" aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/employee/list(page=${employeeList.totalPages - 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
@@ -145,8 +156,9 @@
                     <div class="form-group">
                         <div class="row">
                             <label for="" class="col-form-label col-5">Education degree</label>
-                            <select id="eduId" name="eduId"  class="form-control col-6">
-                                <option th:each="educationDegree : ${educationDegreeList}" th:value="${educationDegree.id}"
+                            <select id="eduId" name="eduId" class="form-control col-6">
+                                <option th:each="educationDegree : ${educationDegreeList}"
+                                        th:value="${educationDegree.id}"
                                         th:text="${educationDegree.name}"></option>
                             </select>
                         </div>
@@ -154,7 +166,7 @@
                     <div class="form-group">
                         <div class="row">
                             <label for="" class="col-form-label col-5">Division</label>
-                            <select id="divId" name="divId"  class="form-control col-6">
+                            <select id="divId" name="divId" class="form-control col-6">
                                 <option th:each="division : ${divisionList}" th:value="${division.id}"
                                         th:text="${division.name}"></option>
                             </select>
@@ -184,7 +196,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="del"  class="btn btn-outline-danger">Delete</a>
+                <a id="del" class="btn btn-outline-danger">Delete</a>
             </div>
         </div>
     </div>
@@ -206,7 +218,7 @@
 
 
     function onDel(id) {
-        $('#del').attr('href','/manage/employee/delete/'+id)
+        $('#del').attr('href', '/manage/employee/delete/' + id)
     }
 </script>
 </body>

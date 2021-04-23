@@ -18,7 +18,7 @@
             color: white;
         }
 
-        .pagination .active a{
+        .pagination .active a {
             border: #3b3b3b;
             background-color: #3b3b3b !important;
         }
@@ -66,8 +66,12 @@
                     <td th:case="*">Still</td>
                 </th:block>
                 <td th:text="${service.user.username}"></td>
-                <td><a th:onclick="'onDetail('+${service.id}+')'" href="" class="btn btn-outline-success bg-light" data-bs-toggle="modal" data-bs-target="#exampleModalDetail"><i class="fa fa-eye"></i></a></td>
-                <td sec:authorize="hasAnyRole('MANAGE,ADMIN')"><a th:onclick="'onDel('+${service.id}+')'" class="btn btn-outline-danger bg-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-recycle"></i></a></td>
+                <td><a th:onclick="'onDetail('+${service.id}+')'" href="" class="btn btn-outline-success bg-light"
+                       data-bs-toggle="modal" data-bs-target="#exampleModalDetail"><i class="fa fa-eye"></i></a></td>
+                <td sec:authorize="hasAnyRole('MANAGE,ADMIN')"><a th:onclick="'onDel('+${service.id}+')'"
+                                                                  class="btn btn-outline-danger bg-light"
+                                                                  data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                        class="fa fa-recycle"></i></a></td>
             </tr>
             </tbody>
         </table>
@@ -80,30 +84,35 @@
                     </a>
                 </li>
                 <li class="page-item" th:if="${serviceList.hasPrevious()}">
-                    <a class="page-link" th:href="@{/manage/service/list(page=${serviceList.number - 1})}" aria-label="Previous">
+                    <a class="page-link" th:href="@{/manage/service/list(page=${serviceList.number - 1})}"
+                       aria-label="Previous">
                         <span aria-hidden="true">&lsaquo;</span>
                     </a>
                 </li>
 
 
                 <li class="page-item" th:if="${serviceList.hasPrevious()}">
-                    <a class="page-link"  th:text="${serviceList.number}"  th:href="@{/manage/service/list(page=${serviceList.number - 1})}" ></a>
+                    <a class="page-link" th:text="${serviceList.number}"
+                       th:href="@{/manage/service/list(page=${serviceList.number - 1})}"></a>
                 </li>
                 <li class="page-item active">
                     <a class="page-link" href="#" th:text="${serviceList.number +1}"></a>
                 </li>
                 <li class="page-item" th:if="${serviceList.hasNext()}">
-                    <a class="page-link"  th:text="${serviceList.number +2}"  th:href="@{/manage/service/list(page=${serviceList.number + 1})}" ></a>
+                    <a class="page-link" th:text="${serviceList.number +2}"
+                       th:href="@{/manage/service/list(page=${serviceList.number + 1})}"></a>
                 </li>
 
 
                 <li class="page-item" th:if="${serviceList.hasNext()}">
-                    <a class="page-link"  th:href="@{/manage/service/list(page=${serviceList.number + 1})}"  aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/service/list(page=${serviceList.number + 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&rsaquo;</span>
                     </a>
                 </li>
                 <li class="page-item" th:if="${serviceList.hasNext()}">
-                    <a class="page-link" th:href="@{/manage/service/list(page=${serviceList.totalPages - 1})}" aria-label="Next">
+                    <a class="page-link" th:href="@{/manage/service/list(page=${serviceList.totalPages - 1})}"
+                       aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
@@ -115,17 +124,16 @@
 <div th:replace="view/layout::footer"></div>
 
 
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelDelete">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabelDelete">Delete Service</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h1 class="text-center" style="color: red">You are sure ?</h1>
+                <h1 class="text-center" style="color: red">You are sure delete ?</h1>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -136,19 +144,19 @@
 </div>
 
 
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModalDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelDetail">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabelDetail">Detail Service</h5>
                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" aria-label="Close">x</button>
             </div>
-            <div  class="modal-body">
+            <div class="modal-body">
                 <div id="bodyDetail">
                     <!-- Default form contact -->
-                    <form id="formContract" class="text-center border border-light p-5" action="/service/booking"  method="post">
+                    <form id="formContract" class="text-center border border-light p-5" action="/service/booking"
+                          method="post">
 
                         <p class="h4 mb-4">Detail Service</p>
 
@@ -203,7 +211,8 @@
                         <div class="form-group">
                             <div class="row">
                                 <label class=" col-form-label col-3">Description: </label>
-                                <textarea rows="5" id="description"  class="form-control col-8" type="text" readonly></textarea>
+                                <textarea rows="5" id="description" class="form-control col-8" type="text"
+                                          readonly></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -233,15 +242,15 @@
 <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
 <script>
     function onDel(id) {
-        $('#delete').attr('href','/manage/service/delete/'+id);
+        $('#delete').attr('href', '/manage/service/delete/' + id);
     }
 
     function onDetail(id) {
         $.ajax({
-            type : "GET",
-            url : "http://localhost:8080/api-service/detail/"+ id,
-            dataType : "JSON",
-            success : function (result) {
+            type: "GET",
+            url: "http://localhost:8080/api-service/detail/" + id,
+            dataType: "JSON",
+            success: function (result) {
                 if (result.serviceType.name === 'Room') {
                     $('#divfloor').hide();
                     $('#divPool').hide();

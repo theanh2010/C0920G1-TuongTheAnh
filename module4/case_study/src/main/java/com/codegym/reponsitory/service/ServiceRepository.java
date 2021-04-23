@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ServiceRepository extends JpaRepository<Service,Long> {
+public interface ServiceRepository extends JpaRepository<Service, Long> {
     Service findByCode(String code);
 
     Page<Service> findAllByServiceType(ServiceType serviceType, Pageable pageable);

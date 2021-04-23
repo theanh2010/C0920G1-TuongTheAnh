@@ -14,6 +14,7 @@ public class ServiceDaoImpl implements ServiceDao {
 
     @Autowired
     ServiceRepository serviceRepository;
+
     @Override
     public Page<Service> findAll(Pageable pageable) {
         return serviceRepository.findAll(pageable);
@@ -36,7 +37,7 @@ public class ServiceDaoImpl implements ServiceDao {
 
     @Override
     public Page<Service> findByServiceType(ServiceType serviceType, Pageable pageable) {
-        return serviceRepository.findAllByServiceType(serviceType,pageable);
+        return serviceRepository.findAllByServiceType(serviceType, pageable);
     }
 
     @Override
@@ -46,11 +47,11 @@ public class ServiceDaoImpl implements ServiceDao {
 
     @Override
     public Page<Service> findByName(String nameService, Pageable pageable) {
-        return serviceRepository.findAllByNameContaining(nameService,pageable);
+        return serviceRepository.findAllByNameContaining(nameService, pageable);
     }
 
     @Override
     public Page<Service> findAllByUser(User userMain, Pageable pageable) {
-        return serviceRepository.findAllByUser(userMain,pageable);
+        return serviceRepository.findAllByUser(userMain, pageable);
     }
 }

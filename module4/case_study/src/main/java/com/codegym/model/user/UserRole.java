@@ -16,7 +16,7 @@ public class UserRole {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "role_id", referencedColumnName = "id",columnDefinition = "BIGINT DEFAULT 1", nullable = false)
+    @JoinColumn(name = "role_id", referencedColumnName = "id", columnDefinition = "BIGINT DEFAULT 1", nullable = false)
     private Role role;
 
     public UserRole() {

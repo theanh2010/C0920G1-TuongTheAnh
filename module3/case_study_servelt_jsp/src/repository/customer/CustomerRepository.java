@@ -57,6 +57,7 @@ public class CustomerRepository implements ICustomerRepository {
             " customer_address,"+
             " customer_type_name FROM (customer" +
             " JOIN customer_type on (customer.customer_type_id = customer_type.customer_type_id)) WHERE customer_name LIKE ?;";
+//    neu la id thi where customer_id= ?;
 
     @Override
     public List<Customer> selectAllCustomer() {

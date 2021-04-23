@@ -1,0 +1,125 @@
+<div class="col-2 float-left menu-left-admin">
+  <div class="row">
+    <ul class="col-12">
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2"></i>Nhân viên</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-female mr-2"></i>Khách hàng</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-file-signature mr-2"></i>Hợp đồng</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2"></i>Đền bù</a>
+      </li>
+      <li class="pl-4 pt-2 pb-2 menu-var">
+        <a><i class="fas fa-user-friends mr-2"></i>Sản phẩm</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col-10 float-right mt-3">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <h3 class="col-6 mt-3 float-left">Danh Sách Nhân Viên</h3>
+      <div class="col-6 mt-3 float-right input-group">
+        <button type="button" class="btn btn-dark mr-2" [routerLink]="['/employee-create']">Thêm</button>
+          <input id="addLink" type="text" class="form-control float-left" placeholder="Nhập tên hoặc số điện thoại" aria-label="Recipient's username"
+             (keyup.enter)="search(0)"    aria-describedby="basic-addon2" [(ngModel)]="searchInput">
+          <div class="input-group-append float-left">
+            <button id="linkAdd" class="btn btn-outline-primary" type="submit" (click)="search(0)">Tìm</button>
+          </div>
+
+      </div>
+      <table class="table table-hover" style="font-size: 12px;">
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" width="6%" (click)="onSortingChange('id')">Mã NV</th>
+          <th scope="col" (click)="onSortingChange('name')">Họ tên</th>
+          <th scope="col" (click)="onSortingChange('dateOfBirth')">Ngày sinh</th>
+          <th scope="col">Giới tính</th>
+          <th scope="col">CMND</th>
+          <th scope="col" >Điện thoại</th>
+          <th scope="col" (click)="onSortingChange('address')">Địa chỉ</th>
+          <th scope="col">Thành phố</th>
+<!--          <th scope="col">Số tài khoản</th>-->
+<!--          <th scope="col">Ngân hàng</th>-->
+          <th scope="col">Chức vụ</th>
+          <th scope="col">Tài khoản</th>
+<!--          <th scope="col">Tài khoản</th>-->
+          <th scope="col">Hoạt Động</th>
+        </tr>
+        </thead>
+        <tbody *ngFor  = "let e of employees; let i = index">
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>{{e.id}}</td>
+          <td>{{e.name}}</td>
+          <td>{{e.dateOfBirth}}</td>
+          <td [ngSwitch]="e.gender">
+              <span *ngSwitchCase="1">Nam</span>
+              <span *ngSwitchCase="0">Nữ</span>
+              <span *ngSwitchDefault>Others</span>
+          </td>
+          <td>{{e.idCard}}</td>
+          <td>{{e.phone}}</td>
+          <td>{{e.address}}</td>
+          <td>{{e.city}}</td>
+<!--          <td>{{e.img}}</td>-->
+          <td>{{e.position.name}}</td>
+          <td>{{e.users.userName}}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" [routerLink]="['/employee-edit', e.id]">Sửa</button>
+            <!--                <button class="btn btn-danger btn-sm" (click)="openDialog(employee.id)">Delete</button>-->
+            <button class="btn btn-danger btn-sm ml-2">Xóa</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="container paging-course">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item" (click)="onFirst()" [ngClass]="pageClicked==0?'disabled':''">
+              <a class="page-link">First</a>
+            </li>
+            <li class="page-item" (click)="onPrevious()" [ngClass]="pageClicked==0?'disabled':''">
+              <a class="page-link">Previous</a>
+            </li>
+            <li *ngIf="pageClicked != 0" class="page-item" (click)="onSubmit(pages[pageClicked-1])">
+              <a class="page-link">{{pageClicked}}</a>
+            </li>
+            <li [ngClass]="(pageClicked == pages[pageClicked]) ? 'active' : ''" class="page-item"
+                (click)="onSubmit(pages[pageClicked])">
+              <a class="page-link">{{pageClicked + 1}}</a>
+            </li>
+            <li *ngIf="pageClicked < pages.length -1" class="page-item" (click)="onSubmit(pages[pageClicked+1])">
+              <a class="page-link">{{pageClicked + 2}}</a>
+            </li>
+            <li *ngIf="pageClicked < pages.length -2" class="page-item">
+              <a class="page-link">...</a>
+            </li>
+            <li *ngIf="pageClicked < pages.length-2" class="page-item" (click)="onLast()">
+              <a class="page-link">{{pages[pages.length - 1] + 1}}</a>
+            </li>
+            <li class="page-item" (click)="onNext()" [ngClass]="pageClicked==totalPages-1?'disabled':''">
+              <a class="page-link">Next</a>
+            </li>
+            <li class="page-item" (click)="onLast()" [ngClass]="pageClicked==totalPages-1?'disabled':''"><a
+              class="page-link">Last</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  document.querySelector("#addLink").addEventListener("keyup", event => {
+    if(event.key !== "Enter") return; // Use `.key` instead.
+    document.querySelector("#linkAdd").click(); // Things you want to do.
+    event.preventDefault(); // No need to `return false;`.
+  });
+</script>

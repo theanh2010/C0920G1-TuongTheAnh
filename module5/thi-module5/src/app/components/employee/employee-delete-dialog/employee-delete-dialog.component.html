@@ -1,0 +1,7 @@
+<h4>delete employee</h4>
+<hr>
+<p>Bạn có chắc chắn muốn xóa nhân viên số <span class="text-danger font-weight-bold">{{employeeOfId}}</span> này ko ?</p>
+<div class="row d-flex justify-content-end">
+  <button class="btn btn-warning mr-3" mat-dialog-close="">Hủy bỏ</button>
+  <button class="btn btn-danger mr-3" (click)="deleteEmployee()">Xóa</button>
+</div>
