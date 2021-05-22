@@ -1,0 +1,11 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "age": "typicode",
+      "address": "typicode",
+      "tags": "typicode"
+    }
+  ]
+}

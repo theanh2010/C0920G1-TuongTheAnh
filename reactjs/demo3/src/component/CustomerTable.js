@@ -1,10 +1,11 @@
 import React from 'react'
 import { Table, Tag, Space } from 'antd';
-import {DeleteFilled,EditFilled } from '@ant-design/icons';
+import {DeleteFilled,EditFilled } from '@ant-design/icons'
 
+const CustomerTable = (props) => {
+  console.log(props)
+  // const { id, name} = props.customer;
 
-
-const listCustomer = ({customer, onDelete}) => {
     const pagination = {
         showSizeChanger: true,
         pageSizeOptions: [5, 10, 15, 20, 25]
@@ -67,33 +68,23 @@ const columns = [
       render: (text, record) => (
         <Space size="middle">
           <a><EditFilled /></a>
-          <a>< DeleteFilled  style ={{ color :'red' , cursor: 'pointer' }}
-            onClick = {() => window.confirm("bạn có chắc muốn xóa ")  && onDelete(customer.id)} /></a>
+          <a>< DeleteFilled  style ={{ color :'red' , cursor: 'pointer' }} /></a>
         </Space>
       ),
     },
   ];
   
-  const data = [];
-  for (let i = 0 ; i <5 ; i++){
-      data.push({
-          id : Math.floor(Math.random() * 10* (i+1)),
-          key : i,
-          name :`Thế Anh ${ Math.floor(Math.random() * 10* (i+1))}`,
-          age : Math.floor(Math.random() * 10* (i+1)),
-          address: `Đà Nẵng ${ Math.floor(Math.random() * 10* (i+1))}`,
-          tags: ['nice', 'developer','loser'],
-
-      })
-  }
+  const data = []
+ 
   
  
     return (
         <div>
             <Table columns={columns} dataSource={data} pagination ={pagination}
             />
+            
         </div>
     )
 }
 
-export default listCustomer
+export default CustomerTable

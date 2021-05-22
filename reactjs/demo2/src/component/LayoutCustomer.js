@@ -1,13 +1,39 @@
 import React from 'react'
+import { useState,useEffect } from 'react'
 import Avatar from 'antd/lib/avatar/avatar';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { Layout, Menu, Breadcrumb, Typography  } from 'antd';
-import ListCustomer from './ListCustomer'
+import ListCustomers from './ListCustomers'
 const { Header, Footer, Sider, Content } = Layout;
 const { Title } = Typography;
 
 
+
 const LayoutCustomer = () => {
+  const [customers, setCustomers] = useState([])
+
+  useEffect(() => {
+    const getCustomers = async () => {
+      const customersFromServer = await fetchTasks()
+      setCustomers(customersFromServer)
+    }
+      getCustomers()
+  }, [])
+
+//  FETCH 
+  const fetchTasks = async () => {
+    const res = await fetch(`http://localhost:3000/customers`)
+    const data = await res.json()
+    return data
+  }
+
+  const deleteCustomer = async (id) => {
+    await fetch(`http://localhost:3000/customers/${id}` , {
+      method: 'DELETE',
+    })
+    
+    setCustomers(customers.filter( (customer) => customer.id !== id))
+  }
     return (
         <div>
             <Layout>
@@ -50,8 +76,11 @@ const LayoutCustomer = () => {
         
       <div style={{ background: '#fff', padding: 24, minHeight: 580 }}>
       <Title>Danh sách khách hàng</Title>
-      <ListCustomer/>
-      </div>
+      {customers.length > 0 ? (
+        <ListCustomers customers = {customers} onDelete = {deleteCustomer}/>
+      ) : (
+        'không có dữ liệu trong bảng'
+      )}      </div>
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>      </Layout>
     </Layout>
